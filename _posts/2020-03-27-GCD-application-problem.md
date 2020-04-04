@@ -1,8 +1,10 @@
 ---
 layout:	post
-title:  "최대공약수 응용 문제"
+title:  Greatest common measure depth problem
 date:   2020-03-27 12:02:15 +0900
+image:  post-1.jpg
 author: GyuMyeong
+tags:   Comp. Algorithm
 ---
 
 
