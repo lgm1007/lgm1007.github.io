@@ -49,7 +49,7 @@ social:
 
 # About Section
 blurb:
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  I am Gyu-myeong Lee, and my goal is to be a Full-Stack Developer. I am a student in the Information & Communication Engineering Major of Incheon National Univ.
 
 blurb-btn-link: '/about'
 blurb-btn-name: know more
@@ -81,16 +81,6 @@ skills:
 - {name: Python, color: '#bdecf6', value: '50%'}
 - {name: Web App, color: '#ffbcaa', value: '80%'}
 - {name: Logo Design, color: '#9473e6', value: '70%'}
-
-
-#-------------------------------
-# Exprerience Section
-
-experience-title: Experience
-experience:
-- {name: Junior UX Designer, icon: 'icon-1.png', date: 'Jan 2007 - Feb 2009', organization: 'WEBEX'}
-- {name: UX & UI Designer, icon: 'icon-2.png', date: 'Mar 2009 - Aug 2014', organization: 'AUGMEDIX'}
-- {name: Senior UI Designer, icon: 'icon-3.png', date: 'Sep 2014 - Present', organization: 'THEMEFISHER'}
 
 
 #-------------------------------

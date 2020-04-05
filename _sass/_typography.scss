@@ -1,6 +1,12 @@
 /*  typography */
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500,700');
 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+}
+
 @font-face {
   font-family: 'BwNistaInt-xBd';
   src: url("../plugins/fonts/BwNistaInt-xBd.woff") format("woff");
@@ -10,7 +16,7 @@
 
 body {
   line-height: 1.2;
-  font-family: $primary-font;
+  font-family: "Nanum Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: $text-color;
