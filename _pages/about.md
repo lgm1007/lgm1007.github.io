@@ -6,11 +6,13 @@ image: assets/images/about/author.jpg
 signature: assets/images/about/signature.png
 ---
 
-#### I am Gyu-myeong Lee, and my goal is to be a Full-Stack Developer.  I am a student in the Information & Communication Engineering Major of Incheon National Univ.
+### Introduce
 
+#### I am Gyu-myeong Lee, and my goal is to be a Full-Stack Developer.  I am a student in the Information & Communication Engineering Major of Incheon National Univ. 
 
+ 
 
-## SKILL
+### SKILL
 
 #### 1. Web
 
@@ -33,9 +35,10 @@ signature: assets/images/about/signature.png
 #### 4. Others
 
 - Markdown
-- Git
+- Git  
 
-
+ 
 
 [My_github](https://github.com/lgm1007)
 
+[My_Study Blog](https://erichika.tistory.com)

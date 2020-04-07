@@ -50,11 +50,10 @@ layout: default
         <article class="card shadow">
           <img class="rounded card-img-top" src="{{ site.baseurl }}/assets/images/blog/{{ post.image }}" alt="{{ post.title }}">
           <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="{{ post.url | relative_url }}">Amazon increase income 1.5 Million</a>
+            <h4 class="card-title"><a class="text-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
+            <p class="cars-text">Published on {{ post.date | date: '%b %d, %Y' }} by <span class="text-primary">{{ post.author }}</span
+            class="text-primary"> on {% for tag in page.tags %}<span>{{ tag }} </span>{% endfor %}</p>
             <a href="{{ post.url | relative_url }}" class="btn btn-xs btn-primary">Read More</a>
           </div>
         </article>
