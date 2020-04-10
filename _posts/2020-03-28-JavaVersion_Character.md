@@ -5,6 +5,7 @@ date:   2020-03-28 14:37:00 +0900
 image:  post-2.jpg
 author: GyuMyeong
 tags:   Theory
+comments: true
 ---
 
 {:toc}

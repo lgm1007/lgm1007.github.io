@@ -5,6 +5,7 @@ date:   2020-04-05 19:02:00 +0900
 image:  post-3.jpg
 author: GyuMyeong
 tags:   Comp. Algorithm
+comments: true
 ---
 
 ## 일반적인 행렬의 곱
