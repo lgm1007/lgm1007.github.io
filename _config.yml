@@ -13,6 +13,10 @@ defaults:
       path: '_pages'
     values:
       permalink: /:basename:output_ext
+      comments: true
+      share: true
+      related: true
+
 
 include:
   - _pages
@@ -26,3 +30,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+comments:
+  provider : "disqus"
+  disqus:
+    shortname : "lgm1007-github-io"
+
+search : true
