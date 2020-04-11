@@ -32,7 +32,7 @@ for(int i = 0; i < size; i++)
 
 #### 분석 / 풀이
 
-* 슈트라센 알고리즘은 독일의 수학자 슈트라센이 1969년에 만든 `행렬 곱셈 알고리즘`으로 기존 방식에 비해 시간복잡도가 낮은 `O(n^2.81)`의 복잡도를 보여준다.
+* 슈트라센 알고리즘은 독일의 수학자 슈트라센이 1969년에 만든 `행렬 곱셈 알고리즘`으로 기존 방식에 비해 시간복잡도가 낮은 `O(n^2.807)`의 복잡도를 보여준다.
 * 행렬 C는 행렬 A와 B의 연산으로 이루어지며 행렬 A와 B는 `2n * 2n`의 크기를 지닌다. (n은 임의의 정수) 만약 2n * 2n이 아닐 경우 빈 자리를 0으로 채워 2n * 2n꼴로 만들고 슈트라센 행렬 곱을 진행한다.
 * 즉 행렬 A, B, C는 서로 크기가 같은 4개의 부분 행렬로 분할 가능하다.
 
@@ -43,26 +43,7 @@ for(int i = 0; i < size; i++)
 
 ![](http://yimoyimo.tk/images/strassen3.png)
 
-```c
-void strassen(int n, matrix A, matrix B, matrix C)
-{
-    // 임계점을 넘지 못할 경우
-    if(n <= threshold) {
-        기존의 행렬 곱 사용
-    } else {
-        A를 4개의 부분행렬 a11, a12, a21, a22로 분할
-        B를 4개의 부분행렬 b11, b12, b21, b22로 분할
-            
-        슈트라센 방법을 재귀적으로 구현하여 m1 ~ m7에 저장
-        strassen(n/2, a11+a22, b11+b22, m1);
-        strassen(n/2, a21+a22, b11, m2);
-            .
-            .
-            .
-       계산된 m1 ~ m7 결과로 matrix C를 만든다.
-    }
-}
-```
+
 
 #### Java 코드로 구현한 슈트라센 알고리즘
 
@@ -76,7 +57,7 @@ public class Strassen
     {
         int n = A.length;
         int[][] R = new int[n][n];
-        //Base Case
+        
         if(n == 1)
             R[0][0] = A[0][0] * B[0][0];
         else
@@ -163,4 +144,87 @@ public class Strassen
     }
 }
 ```
+
+### 실행 시간 비교
+
+``` java
+public class MaxrixTimeTest {
+
+	public static void main(String[] args) {
+		
+		//일반 행렬의 곱셈식 실행시간
+        //배열의 크기는 500으로 한다.
+		int size = 500;
+		int[][] basicM, A, B;
+		A = new int[size][size];
+		B = new int[size][size];
+		basicM = new int[size][size];
+		
+		for(int i = 0; i < size; i++) {
+			for(int j  = 0; j < size; j++) {
+				A[i][j] = (int)(Math.random() * 9);
+				B[i][j] = (int)(Math.random() * 9);
+			}
+		}
+		
+		long beforeBasicTime = System.currentTimeMillis();
+		for(int i = 0; i < size; i++)
+		{
+		    for(int j = 0; j < size; j++) {
+		        for(int k = 0; k < size; k++) {
+		        	basicM[i][j] += A[i][k] * B[k][j];
+		        }
+		    }
+		}
+		long afterBasicTime = System.currentTimeMillis();
+		System.out.println("일반적인 행렬 곱 연산 시 실행시간: " + ((afterBasicTime - beforeBasicTime) / 1000.0));
+	}
+
+}
+```
+
+###### 위 코드의 결과값 : 
+
+-일반적인 행렬 곱 연산 시 실행시간: 0.458
+
+``` java
+public class StrassenTimeTest {
+
+	public static void main(String[] args) {
+		
+		//일반 행렬의 곱셈식 실행시간
+		int size = 500;
+		int[][] strasM, A, B;
+		A = new int[size][size];
+		B = new int[size][size];
+		strasM = new int[size][size];
+		
+		for(int i = 0; i < size; i++) {
+			for(int j  = 0; j < size; j++) {
+				A[i][j] = (int)(Math.random() * 9);
+				B[i][j] = (int)(Math.random() * 9);
+			}
+		}
+		
+		long beforeBasicTime = System.currentTimeMillis();
+		
+		strasM = new Strassen().multiply(A, B);
+		
+		long afterBasicTime = System.currentTimeMillis();
+		System.out.println("슈트라센 행렬 곱 연산 시 실행시간: " + ((afterBasicTime - beforeBasicTime) / 1000.0));
+	}
+
+}
+```
+
+###### 위 코드의 결과값 : 
+
+-슈트라센 행렬 곱 연산 시 실행시간: 5.407
+
+
+
+- 슈트라센 알고리즘(`O(n^2.807)`)은 복잡도만 보자면 일반적인 행렬 곱셈(`O(n^3)`) 보다 성능이 좋다.
+- 하지만 코드로 구현해보면 재귀적으로 실행하게 되어 실행시간이 더 많이 걸리는 것을 볼 수 있다. 그렇다고 슈트라센 알고리즘을 반복문을 이용해 구현하는 것은 매우 어렵다.
+- 또한 슈트라센 코드를 보면 M1, M2, ..., M7 나 C11,C12, ..., C22 등 식들의 결과값을 받을 변수들이 많아 메모리의 자리를 많이 차지하게 된다.
+- 실험 결과: 슈트라센 알고리즘을 효율적으로 사용하기 위한 경우로는 굉장히 큰 사이즈의 행렬 연산일 경우가 될 것 같다. 즉, 웬만한 크기의 행렬 연산은 오히려 실행시간이 슈트라센 알고리즘이 더 크게 나온다
 
