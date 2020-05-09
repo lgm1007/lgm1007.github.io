@@ -201,7 +201,7 @@ $$
 
 우선 x(t)의 그래프를 보면 다음과 같다.
 
-![xt](./assets/images/x(t).JPG)
+![xt](https://raw.githubusercontent.com/lgm1007/lgm1007.github.io/master/assets/images/x(t).JPG)
 
 그래프를 보면 T=0.2 주기를 가지고 계속 반복하는 형태를 보인다. 따라서 x(t)의 표본을 따야 하는데 이는 n=8이라고 하면 0부터 0.2/8 = 0.025의 간격으로 표본을 구하고, 그에 대한 배열을 FFT함수에 입력값으로 넣은 후 반환된 복소수 배열의 값을 출력한 뒤 출력값을 이용해 그래프를 그리면 되겠다.<br/>
 
@@ -238,10 +238,10 @@ public static void show(Complex[] y) {
 
 **실행 결과**
 
-![](./assets/images/fftresult.JPG)
+![](https://raw.githubusercontent.com/lgm1007/lgm1007.github.io/master/assets/images/fftresult.JPG)
 
 `n = 8`일 때 X(f) 값의 결과를 얻을 수 있었다. 해당 결과값은 x(t)의 주기 `T=0.2`내에서의 값으로만 구한 값이기 때문에 t의 범위가 `0<=t<=0.175`가 된다. 주어진 문제에서 t의 범위는 `0<=t<=1` 이므로 해당 범위의 결과값은 주어진 결과값이 `t=1`때까지 반복하는 값을 가질 것이다.
 
 **결과값 그래프 표시**
 
-![](./assets/images/x(f)graph.JPG)
+![](https://raw.githubusercontent.com/lgm1007/lgm1007.github.io/master/assets/images/x(f)graph.JPG)
