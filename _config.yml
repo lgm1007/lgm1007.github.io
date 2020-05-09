@@ -17,6 +17,12 @@ defaults:
       share: true
       related: true
 
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 include:
   - _pages
