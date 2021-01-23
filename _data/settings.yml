@@ -79,8 +79,8 @@ skills-title: Skills
 skills:
 - {name: Java & JSP, color: '#fdb157', value: '90%'}
 - {name: Python, color: '#bdecf6', value: '50%'}
-- {name: Web App, color: '#ffbcaa', value: '80%'}
-- {name: Logo Design, color: '#9473e6', value: '70%'}
+- {name: Spring, color: '#ffbcaa', value: '60%'}
+- {name: Web App, color: '#9473e6', value: '70%'}
 
 
 #-------------------------------
@@ -88,8 +88,8 @@ skills:
 
 education-title: Education
 education:
-- {name: University Enter, date: '2015', organization: 'Incheon National University'}
-- {name: Higher Secondary Certificat, date: '2014', organization: 'Kwangyoung HighSchool'}
+- {name: University Enter, date: '2015', organization: 'Incheon National University (Information & Communication Engineering'}
+- {name: Higher Secondary Certificate, date: '2014', organization: 'Kwangyoung HighSchool'}
 - {name: Secondary School Certificate, date: '2011', organization: 'Kangshin MiddleSchool'}
 
 
@@ -98,86 +98,39 @@ education:
 
 # Portfolio Home Section
 portfolio-home-items:
-  - image : "assets/images/portfolio/item-1.png"
-    url: "#"
+  - image : "assets/images/portfolio/item-9.png"
+    url: "https://github.com/lgm1007/webSNS_SpringProject"
     
-  - image : "assets/images/portfolio/item-2.png"
-    url: "#"
-    
-  - image : "assets/images/portfolio/item-3.png"
-    url: "#"
-    
-  - image : "assets/images/portfolio/item-4.png"
-    url: "#"
-    
-  - image : "assets/images/portfolio/item-5.png"
-    url: "#"
+  - image : "assets/images/portfolio/item-10.png"
+    url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
 
 
 # Portfolio Page
 portfolio-label:
 - {
-    title : "UI/UX Design",
-    type : "design"
+    title : "WEB PROJECT",
+    type : "web"
   }
 - {
-    title : "BRANDING",
-    type : "branding"
+    title : "IoT",
+    type : "IoT"
   }
 - {
-    title : "ILLUSTRATION",
-    type : "illustration"
+    title : "APPLICATION",
+    type : "application"
   }
 
+
 portfolio-items:
-  - image : "assets/images/portfolio/item-1.png"
-    url: "#"
+  - image : "assets/images/portfolio/item-9.png"
+    url: "https://github.com/lgm1007/webSNS_SpringProject"
     portfolio-type:
-     - type: "design"
-     - type: "illustration"
+     - type: "web"
       
-  - image : "assets/images/portfolio/item-2.png"
-    url: "#"
+  - image : "assets/images/portfolio/item-10.png"
+    url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
     portfolio-type:
-      - type: "branding"
-      
-  - image : "assets/images/portfolio/item-3.png"
-    url: "#"
-    portfolio-type:
-      - type: "illustration"
-      
-  - image : "assets/images/portfolio/item-6.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      - type: "branding"
-      
-  - image : "assets/images/portfolio/item-8.png"
-    url: "#"
-    portfolio-type:
-      - type: "illustration"
-      
-  - image : "assets/images/portfolio/item-5.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      
-  - image : "assets/images/portfolio/item-1.png"
-    url: "#"
-    portfolio-type:
-      - type: "branding"
-      
-  - image : "assets/images/portfolio/item-3.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      - type: "illustration"
-      - type: "branding"
-      
-  - image : "assets/images/portfolio/item-7.png"
-    url: "#"
-    portfolio-type:
-      - type: "illustration"
+      - type: "IoT"
 
 
 #-------------------------------
@@ -218,4 +171,4 @@ client-slider-items:
 # Contact Section
 
 contact-title: Contact Info
-contact-email: steve.fruits@email.com
+contact-email: flxl654@gmail.com
