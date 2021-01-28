@@ -98,10 +98,10 @@ education:
 
 # Portfolio Home Section
 portfolio-home-items:
-  - image : "assets/images/portfolio/item-9.png"
+  - image : "assets/images/portfolio/item-11.jpg"
     url: "https://github.com/lgm1007/webSNS_SpringProject"
     
-  - image : "assets/images/portfolio/item-10.png"
+  - image : "assets/images/portfolio/item-10.jpg"
     url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
 
 
@@ -122,12 +122,12 @@ portfolio-label:
 
 
 portfolio-items:
-  - image : "assets/images/portfolio/item-9.png"
+  - image : "assets/images/portfolio/item-11.jpg"
     url: "https://github.com/lgm1007/webSNS_SpringProject"
     portfolio-type:
      - type: "web"
       
-  - image : "assets/images/portfolio/item-10.png"
+  - image : "assets/images/portfolio/item-10.jpg"
     url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
     portfolio-type:
       - type: "IoT"
