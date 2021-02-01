@@ -104,6 +104,8 @@ portfolio-home-items:
   - image : "assets/images/portfolio/item-10.jpg"
     url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
 
+  - image : "assets/images/portfolio/graphs.png"
+    url: "https://github.com/lgm1007/LineRegressionOnClient"
 
 # Portfolio Page
 portfolio-label:
@@ -131,6 +133,11 @@ portfolio-items:
     url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
     portfolio-type:
       - type: "IoT"
+
+  - image : "assets/images/portfolio/graphs.png"
+    url: "https://github.com/lgm1007/LineRegressionOnClient"
+    portfolio-type:
+      - type: "application"
 
 
 #-------------------------------
