@@ -137,7 +137,7 @@ portfolio-items:
   - image : "assets/images/portfolio/graphs.png"
     url: "https://github.com/lgm1007/LineRegressionOnClient"
     portfolio-type:
-      - type: "application"
+      - type: "web"
 
 
 #-------------------------------

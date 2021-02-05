@@ -8,7 +8,7 @@ signature: assets/images/about/signature.png
 
 ### **Introduce**
 
-##### I am Gyu-myeong Lee, and my goal is to be a Full-Stack Developer of Web Application.<br/> I studied at Information & Communication Engineering Major of Incheon National Univ. 
+##### I am Gyu-myeong Lee, and my goal is to be a Back-end Developer of Web & Hybrid Application.<br/> I studied at Information & Communication Engineering Major of Incheon National Univ. 
 
  <br/>
 
