@@ -107,6 +107,9 @@ portfolio-home-items:
   - image : "assets/images/portfolio/graphs.png"
     url: "https://github.com/lgm1007/LineRegressionOnClient"
 
+  - image : "assets/images/portfolio/item-2.png"
+    url: "https://play.google.com/store/apps/details?id=com.gyuthing.predict2regression"
+
 # Portfolio Page
 portfolio-label:
 - {
@@ -138,6 +141,11 @@ portfolio-items:
     url: "https://github.com/lgm1007/LineRegressionOnClient"
     portfolio-type:
       - type: "web"
+
+  - image : "assets/images/portfolio/item-2.png"
+    url: "https://play.google.com/store/apps/details?id=com.gyuthing.predict2regression"
+    portfolio-type:
+      - type: "application"
 
 
 #-------------------------------
