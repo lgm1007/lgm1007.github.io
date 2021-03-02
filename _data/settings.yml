@@ -110,6 +110,9 @@ portfolio-home-items:
   - image : "assets/images/portfolio/item-2.png"
     url: "https://play.google.com/store/apps/details?id=com.gyuthing.predict2regression"
 
+  - image : "assets/images/portfolio/working.png"
+    url: "https://github.com/lgm1007/RESTAPIBoardPractice"
+
 # Portfolio Page
 portfolio-label:
 - {
@@ -123,6 +126,10 @@ portfolio-label:
 - {
     title : "APPLICATION",
     type : "application"
+  }
+- {
+    title : "API",
+    type : "api"
   }
 
 
@@ -146,6 +153,11 @@ portfolio-items:
     url: "https://play.google.com/store/apps/details?id=com.gyuthing.predict2regression"
     portfolio-type:
       - type: "application"
+
+  - image : "assets/images/portfolio/working.png"
+    url: "https://github.com/lgm1007/RESTAPIBoardPractice"
+    portfolio-type:
+      - type: "api"
 
 
 #-------------------------------
