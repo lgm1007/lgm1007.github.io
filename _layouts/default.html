@@ -5,33 +5,25 @@
 
 <body>
 
-  {% if site.google-analytics %}
-    {% include google-analytics.html %}
+  {% if site.data.settings.google-analytics %}
+  {% include google-analytics.html %}
   {% endif %}
 
-  {% if page.use_math %}
-    {% include mathjax_support.html %}
-  {% endif %}
-  
   {% include header.html %}
 
-  {{ content }}
+  <!-- begin content -->
+  <main class="content" aria-label="Content">
+    {{ content }}
+  </main>
+  <!-- end content -->
 
-  {% include contact-section.html %}
-  
+  <div class="top ion ion-ios-arrow-up" title="Top"></div>
+
+  {% include search.html %}
+
   {% include footer.html %}
 
-  <!-- jQuery -->
-  <script src="{{ site.baseurl }}/assets/plugins/jQuery/jquery.min.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="{{ site.baseurl }}/assets/plugins/bootstrap/bootstrap.min.js"></script>
-  <!-- slick slider -->
-  <script src="{{ site.baseurl }}/assets/plugins/slick/slick.min.js"></script>
-  <!-- filter -->
-  <script src="{{ site.baseurl }}/assets/plugins/shuffle/shuffle.min.js"></script>
-
-  <!-- Main Script -->
-  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+  {% include javascripts.html %}
 </body>
 
 </html>

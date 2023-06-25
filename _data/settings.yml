@@ -1,201 +1,44 @@
 #-------------------------------
 # General Site Settings
-
-title: GM's Idle Blog
-logo: logo.png
-email: flxl654@gmail.com
-phone: +82 010 0000 0000
-address: 125/A, Yangcheon-gu Shinwol-dong, Seoul, South Korea
-
-menu:
-- {name: About, link: '/about'}
-- {name: Blog, link: '/blog'}
-- {name: Portfolio, link: '/portfolio'}
-- {name: Contact, link: '/contact'}
+title: Zolan
+logo: logo.svg # You can add own logo.
+description: Zolan is modern minimal theme for Jekyll
 
 
 #-------------------------------
-# Google Analytics Section
+# Author Settings
+author:
+  name: Alex Rodriguez
+  image: 01.jpg
+  say-hello: Hello, I’m <strong>Alex Rodriguez</strong>
+  bio: Designs, talks, and writes about <strong>web</strong>, <strong>ethics</strong>, <strong>privacy</strong>, and dev. I share design tutorials, free resources and inspiration. Loves <a href="#">music</a> & riding his bicycle.
 
-# Analytics helps you understand who visits your website.
-# Learn more at: http://support.google.com/analytics/answer/1008065
 
-# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
-
-google-analytics: # UA-XXXXXX-X
+#-------------------------------
+# Contact links
+twitter: https://twitter.com/ # Add your Twitter handle
+facebook: https://facebook.com/ # Add your Facebook handle
+dribbble: https://dribbble.com/ # Add your Dribbble handle
+instagram: https://instagram.com/ # Add your Instagram handle
+pinterest: https://pinterest.com/ # Add your Pinterest handle
 
 
 #-------------------------------
 # Comment Section (Disqus)
-
-disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
-
-
-#-------------------------------
-# Hero Section
-
-hero:
-  hero-title: Hi! I’m <br> GyuMyeong <br> Lee!
-
-social:
-- {icon: "ti-facebook", link: "#"}
-- {icon: "ti-instagram", link: "#"}
-- {icon: "ti-dribbble", link: "#"}
-- {icon: "ti-twitter", link: "#"}
+disqus-identifier: mr-brown # add your shortname for Disqus Comment. For example mr-brown
 
 
 #-------------------------------
-# About (Section and Page)
-
-# About Section
-blurb:
-  I am Gyu-myeong Lee, and my goal is to be a Full-Stack Developer. I am a student in the Information & Communication Engineering Major of Incheon National Univ.
-
-blurb-btn-link: '/about'
-blurb-btn-name: know more
-
-
-# About Page
-
-# Work Process Section
-work-process:
-  - title : "Research and Plan"
-    icon : "assets/images/icons/plan.png"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    
-  - title : "Design and Develop"
-    icon : "assets/images/icons/design.png"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    
-  - title : "Deliver"
-    icon : "assets/images/icons/print.png"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+# Instagram Feed
+instafeed: # To enable the instafeed, use the value true. To turn off use the value false.
+instagram-profile: artemsheludko_ # Add instagram username
 
 
 #-------------------------------
-# Skills Section
-
-skills-title: Skills
-skills:
-- {name: Java & JSP, color: '#fdb157', value: '90%'}
-- {name: Python, color: '#bdecf6', value: '50%'}
-- {name: Spring, color: '#ffbcaa', value: '60%'}
-- {name: Web App, color: '#9473e6', value: '70%'}
+# Google Analytics
+google-analytics: # Add your identifier. For example UA-99631805-1.
 
 
 #-------------------------------
-# Education Section
-
-education-title: Education
-education:
-- {name: University Enter, date: '2015', organization: 'Incheon National University (Information & Communication Engineering'}
-- {name: Higher Secondary Certificate, date: '2014', organization: 'Kwangyoung HighSchool'}
-- {name: Secondary School Certificate, date: '2011', organization: 'Kangshin MiddleSchool'}
-
-
-#-------------------------------
-# Portfolio (Section and Page)
-
-# Portfolio Home Section
-portfolio-home-items:
-  - image : "assets/images/portfolio/item-11.jpg"
-    url: "https://github.com/lgm1007/webSNS_SpringProject"
-    
-  - image : "assets/images/portfolio/item-10.jpg"
-    url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
-
-  - image : "assets/images/portfolio/graphs.png"
-    url: "https://github.com/lgm1007/LineRegressionOnClient"
-
-  - image : "assets/images/portfolio/item-2.png"
-    url: "https://play.google.com/store/apps/details?id=com.gyuthing.predict2regression"
-
-  - image : "assets/images/portfolio/working.png"
-    url: "https://github.com/lgm1007/RESTAPIBoardPractice"
-
-# Portfolio Page
-portfolio-label:
-- {
-    title : "WEB PROJECT",
-    type : "web"
-  }
-- {
-    title : "IoT",
-    type : "IoT"
-  }
-- {
-    title : "APPLICATION",
-    type : "application"
-  }
-- {
-    title : "API",
-    type : "api"
-  }
-
-
-portfolio-items:
-  - image : "assets/images/portfolio/item-11.jpg"
-    url: "https://github.com/lgm1007/webSNS_SpringProject"
-    portfolio-type:
-     - type: "web"
-      
-  - image : "assets/images/portfolio/item-10.jpg"
-    url: "https://github.com/lgm1007/Living-lab-Arduino-Python"
-    portfolio-type:
-      - type: "IoT"
-
-  - image : "assets/images/portfolio/graphs.png"
-    url: "https://github.com/lgm1007/LineRegressionOnClient"
-    portfolio-type:
-      - type: "web"
-
-  - image : "assets/images/portfolio/item-2.png"
-    url: "https://play.google.com/store/apps/details?id=com.gyuthing.predict2regression"
-    portfolio-type:
-      - type: "application"
-
-  - image : "assets/images/portfolio/working.png"
-    url: "https://github.com/lgm1007/RESTAPIBoardPractice"
-    portfolio-type:
-      - type: "api"
-
-
-#-------------------------------
-# Client Slider Section
-
-client-slider-items:
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-2.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-3.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-4.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-5.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-2.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-3.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-4.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-5.png"
-    url: "#"
-
-#-------------------------------
-# Contact Section
-
-contact-title: Contact Info
-contact-email: flxl654@gmail.com
+# Newsletter
+mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e

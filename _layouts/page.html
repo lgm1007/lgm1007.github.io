@@ -1,26 +1,31 @@
 ---
 layout: default
-comments: true
 ---
+<div class="container">
+	<div class="page-title-box">
+		<div class="row">
+			<div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
+				<h1 class="page-title">{{ page.title | escape }}</h1>
+			</div>
+		</div>
+	</div>
 
-<!-- page title -->
-<section class="page-title bg-primary position-relative">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h1 class="text-white font-tertiary">{{ page.title }}</h1>
-      </div>
-    </div>
-  </div>
-  <!-- background shapes -->
-  <img src="{{ site.baseurl }}/assets/images/illustrations/page-title.png" alt="illustrations" class="bg-shape-1 w-100">
-  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-pink-round.png" alt="illustrations" class="bg-shape-2">
-  <img src="{{ site.baseurl }}/assets/images/illustrations/dots-cyan.png" alt="illustrations" class="bg-shape-3">
-  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-4">
-  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-5">
-  <img src="{{ site.baseurl }}/assets/images/illustrations/dots-group-cyan.png" alt="illustrations" class="bg-shape-6">
-  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-cyan-lg.png" alt="illustrations" class="bg-shape-7">
-</section>
-<!-- /page title -->
+	{% if page.image %}
+	<div class="page__head">
+		<div class="page-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div>
+	</div>
+	{% endif %}
+</div>
 
-{{ content }}
+
+<div class="container">
+	<div class="row">
+		<!-- begin page -->
+		<article class="page col col-8 col-t-10 col-m-12">
+			<div class="page__content">
+				{{ content }}
+			</div>
+		</article>
+		<!-- end page -->
+	</div>
+</div>
