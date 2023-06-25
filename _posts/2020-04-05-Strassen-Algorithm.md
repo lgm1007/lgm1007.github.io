@@ -2,9 +2,9 @@
 layout:	post
 title:  Strassen Algorithm
 date:   2020-04-05 19:02:00 +0900
-image:  post-3.jpg
+image:  post-2.jpg
 author: GyuMyeong
-tags:   Comp. Algorithm
+tags:   Algorithm
 comments: true
 ---
 

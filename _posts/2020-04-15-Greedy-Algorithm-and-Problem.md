@@ -2,9 +2,9 @@
 layout:	post
 title:  Greedy Algorithm & 응용문제
 date:   2020-04-15 12:31:00 +0900
-image:  greedy.jpg
+image:  01.jpg
 author: GyuMyeong
-tags:   Comp. Algorithm
+tags:   Algorithm
 comments: true
 ---
 

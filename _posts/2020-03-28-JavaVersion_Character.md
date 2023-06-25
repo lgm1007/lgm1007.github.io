@@ -2,9 +2,9 @@
 layout:	post
 title:  JavaVersion_Character
 date:   2020-03-28 14:37:00 +0900
-image:  post-2.jpg
+image:  post-1.jpg
 author: GyuMyeong
-tags:   Theory
+tags:   Language
 comments: true
 ---
 
