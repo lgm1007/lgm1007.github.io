@@ -1,6 +1,6 @@
 #-------------------------------
 # General Site Settings
-title: Zolan
+title: Gmlee
 logo: logo.svg # You can add own logo.
 description: Zolan is modern minimal theme for Jekyll
 
@@ -8,19 +8,19 @@ description: Zolan is modern minimal theme for Jekyll
 #-------------------------------
 # Author Settings
 author:
-  name: Alex Rodriguez
-  image: 01.jpg
-  say-hello: Hello, I’m <strong>Alex Rodriguez</strong>
-  bio: Designs, talks, and writes about <strong>web</strong>, <strong>ethics</strong>, <strong>privacy</strong>, and dev. I share design tutorials, free resources and inspiration. Loves <a href="#">music</a> & riding his bicycle.
+  name: Gyumyeong Lee
+  image: hero.jpg
+  say-hello: Hello, I’m <strong>Gyumyeong Lee</strong>
+  bio: Backend Programmer, <strong>Java Spring boot</strong>, <strong>Kotlin</strong>, <strong>Python flask</strong>. and I consider it important to <strong>record</strong>. Such as <a href="https://github.com/lgm1007/TIL" target="blank">TIL</a> and Blog.
 
 
 #-------------------------------
 # Contact links
-twitter: https://twitter.com/ # Add your Twitter handle
-facebook: https://facebook.com/ # Add your Facebook handle
-dribbble: https://dribbble.com/ # Add your Dribbble handle
-instagram: https://instagram.com/ # Add your Instagram handle
-pinterest: https://pinterest.com/ # Add your Pinterest handle
+github: https://github.com/lgm1007/ # Add your Twitter handle
+#twitter: https://twitter.com/ # Add your Twitter handle
+#facebook: https://facebook.com/ # Add your Facebook handle
+#instagram: https://instagram.com/ # Add your Instagram handle
+#pinterest: https://pinterest.com/ # Add your Pinterest handle
 
 
 #-------------------------------
