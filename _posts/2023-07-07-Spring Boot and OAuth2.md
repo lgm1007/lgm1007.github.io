@@ -270,6 +270,111 @@ Spring Boot는 `@SpringBootApplication`으로 주석이 달린 클래스의 `Web
 
 이러한 변경 사항이 적용되어 애플리케이션이 완료되었으며, 이를 실행하고 홈 페이지를 방문하면 "GitHub로 로그인"하는 멋진 스타일의 HTML 링크를 볼 수 있습니다. 링크를 통해 GitHub로 직접 이동하는 것이 아니라 인증을 처리하는 로컬 경로로 이동하고 GitHub로 리디렉션됩니다. 인증이 완료되면 로컬 앱으로 다시 리디렉션되고, 이제 사용자 이름이 표시됩니다. (GitHub에서 해당 데이터에 대한 액세스 권한을 설정했다고 가정) <br/>
 
+### 로그아웃 버튼 추가
+사용자가 앱에서 로그아웃할 수 있는 버튼을 추가하여 구축한 [클릭](https://spring.io/guides/tutorials/spring-boot-oauth2/#_social_login_click) 앱을 수정합니다. 이 기능은 단순한 기능처럼 보이지만 구현에는 약간의 주의가 필요하므로 정확한 방법을 논의해야 합니다. 대부분의 변경 사항은 앱을 읽기 전용 리소스에서 읽기-쓰기 리소스로 변환하고 있기 때문에(로그아웃 시 상태 변경 필요), 정적 컨텐츠가 아닌 실제 애플리케이션에서도 동일한 변경 사항이 필요합니다. <br/>
+
+#### 클라이언트 사이드 변경
+클라이언트에서 로그아웃 버튼과 서버에 다시 호출하여 인증 취소를 요청할 수 있는 JavaScript를 제공하기만 하면 됩니다. 먼저 UI의 "authenticated" 섹션에서 다음과 같은 버튼을 추가합니다: <br/>
+index.html
+```html
+<div class="container authenticated">
+  Logged in as: <span id="user"></span>
+  <div>
+    <button onClick="logout()" class="btn btn-primary">Logout</button>
+  </div>
+</div>
+```
+그런 다음 JavaScript에서 참조하는 `logout()` 함수를 제공합니다: <br/>
+index.html
+```javascript
+var logout = function() {
+    $.post("/logout", function() {
+        $("#user").html('');
+        $(".unauthenticated").show();
+        $(".authenticated").hide();
+    })
+    return true;
+}
+```
+`logout()` 기능은 POST to `/logout`을 수행한 다음 동적 컨텐츠를 지웁니다. 이제 서버 측으로 전환하여 해당 엔드포인트를 구현할 수 있습니다. <br/>
+
+#### 로그아웃 엔드포인트 추가
+Spring Security는 `/logout` 엔드포인트에 대한 지원 기능을 제공합니다. (세션 삭제 및 쿠키 무효화) 엔드포인트를 구성하려면 `WebSecurityConfigurerAdapter`의 기존 `configure()` 메서드를 상속받기만 하면 됩니다: <br/>
+SocialApplication.java
+```java
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+	// @formatter:off
+    http
+        // ... existing code here
+        .logout(l -> l
+            .logoutSuccessUrl("/").permitAll()
+        )
+        // ... existing code here
+    // @formatter:on
+}
+```
+
+`/logout` 엔드포인트는 `/logout` 엔드포인트에 POST해야 하며, 사용자를 사이트 간 요청 위조(Cross Site Request Forgery; CSRF) 로부터 보호하려면 요청에 토큰을 포함해야 합니다. 토큰의 값은 보호 기능을 제공하는 현재 세션에 연결되어 있으므로 해당 데이터를 JavaScript 앱으로 가져올 수 있는 방법이 필요합니다. <br/>
+
+많은 JavaScript 프레임워크는 CSRF (Angular에서 XSRF라고 부르는)를 지원하지만, Spring Security의 기본 동작과는 약간 다른 방식으로 구현되는 경우가 많습니다. <br/>
+예를 들어, Angular에서 프런트 엔드는 서버가 "XSRF-TOKEN"이라는 쿠키를 전송하고 이를 확인하면 "X-XSRF-TOKEN"이라는 헤더로 값을 다시 전송합니다. 단순한 jQuery 클라이언트에서도 동일한 동작을 구현할 수 있으며, 서버 측 변경사항은 변경사항이 없거나 거의 없이 다른 프론트 엔드 구현과 함께 작동합니다. <br/>
+Spring Security에 이를 알려주기 위해서는 쿠키를 생성하는 필터를 추가해야 합니다. <br/>
+
+`WebSecurityConfigurerAdapter`에서 다음 작업을 수행합니다: <br/>
+SocialApplication.java
+```java
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+	// @formatter:off
+    http
+        // ... existing code here
+        .csrf(c -> c
+            .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+        )
+        // ... existing code here
+    // @formatter:on
+}
+```
+<br/>
+
+#### 클라이언트에서 CSRF 토큰 추가
+이 샘플에서는 더 높은 수준의 프레임워크를 사용하지 않으므로 백엔드에서 쿠키로 사용할 수 있도록 만든 CSRF 토큰을 명시적으로 추가해야 합니다. 코드를 조금 더 간단하게 만들려면 `js-cookie` 라이브러리를 포함합니다: <br/>
+pom.xml
+```xml
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>js-cookie</artifactId>
+    <version>2.1.0</version>
+</dependency>
+```
+그런 다음 HTML에서 참조할 수 있습니다: <br/>
+index.html
+```html
+<script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
+```
+마지막으로 XHR에서 `Cookies` 편리성 방법을 사용할 수 있습니다: <br/>
+index.html
+```javascript
+$.ajaxSetup({
+  beforeSend : function(xhr, settings) {
+    if (settings.type == 'POST' || settings.type == 'PUT'
+        || settings.type == 'DELETE') {
+      if (!(/^http:.*/.test(settings.url) || /^https:.*/
+        .test(settings.url))) {
+        // Only send the token to relative URLs i.e. locally.
+        xhr.setRequestHeader("X-XSRF-TOKEN",
+          Cookies.get('XSRF-TOKEN'));
+      }
+    }
+  }
+});
+```
+#### 준비 완료!
+이러한 변경 사항이 적용되면 앱을 실행하고 새 로그아웃 버튼을 사용해 볼 준비가 되었습니다. 앱을 시작하고 홈 페이지를 새 브라우저 창에 로드합니다. "로그인" 링크를 클릭하여 GitHub으로 이동합니다. (이미 로그인한 경우에는 리디렉션이 표시되지 않을 수 있습니다.) 현재 세션을 취소하고 앱을 인증되지 않은 상태로 되돌리려면 "로그아웃" 버튼을 클릭하십시오. 궁금한 경우 브라우저가 로컬 서버와 교환하는 요청에서 새 쿠키 및 헤더를 볼 수 있습니다. <br/>
+
+이제 로그아웃 엔드포인트가 브라우저 클라이언트와 함께 작동하면 다른 모든 HTTP Request (POST, PUT, DELETE 등)도 마찬가지로 작동합니다. 따라서 이 플랫폼은 좀 더 현실적인 기능을 갖춘 애플리케이션을 위한 좋은 플랫폼이 될 것입니다. <br/>
+
 
 
 
