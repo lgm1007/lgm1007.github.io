@@ -371,9 +371,84 @@ $.ajaxSetup({
 });
 ```
 #### 준비 완료!
-이러한 변경 사항이 적용되면 앱을 실행하고 새 로그아웃 버튼을 사용해 볼 준비가 되었습니다. 앱을 시작하고 홈 페이지를 새 브라우저 창에 로드합니다. "로그인" 링크를 클릭하여 GitHub으로 이동합니다. (이미 로그인한 경우에는 리디렉션이 표시되지 않을 수 있습니다.) 현재 세션을 취소하고 앱을 인증되지 않은 상태로 되돌리려면 "로그아웃" 버튼을 클릭하십시오. 궁금한 경우 브라우저가 로컬 서버와 교환하는 요청에서 새 쿠키 및 헤더를 볼 수 있습니다. <br/>
+이러한 변경 사항이 적용되면 앱을 실행하고 새 [로그아웃](https://spring.io/guides/tutorials/spring-boot-oauth2/#_social_login_logout) 버튼을 사용해 볼 준비가 되었습니다. 앱을 시작하고 홈 페이지를 새 브라우저 창에 로드합니다. "로그인" 링크를 클릭하여 GitHub으로 이동합니다. (이미 로그인한 경우에는 리디렉션이 표시되지 않을 수 있습니다.) 현재 세션을 취소하고 앱을 인증되지 않은 상태로 되돌리려면 "로그아웃" 버튼을 클릭하십시오. 궁금한 경우 브라우저가 로컬 서버와 교환하는 요청에서 새 쿠키 및 헤더를 볼 수 있습니다. <br/>
 
 이제 로그아웃 엔드포인트가 브라우저 클라이언트와 함께 작동하면 다른 모든 HTTP Request (POST, PUT, DELETE 등)도 마찬가지로 작동합니다. 따라서 이 플랫폼은 좀 더 현실적인 기능을 갖춘 애플리케이션을 위한 좋은 플랫폼이 될 것입니다. <br/>
+
+### GitHub로 로그인
+이미 구축한 로그아웃 앱을 수정하여 스티커 페이지를 추가하여 최종 사용자가 여러 자격 증명 집합 중에서 선택할 수 있도록 합니다. <br/>
+
+최종 사용자를 위한 두 번째 옵션으로 Google을 추가합니다. <br/>
+
+##### 최초 설치
+로그인에 Google의 OAuth 2.0 인증 시스템을 사용하려면 Google API 콘솔에서 프로젝트를 설정하여 OAuth 2.0 자격 증명을 얻어야 합니다. <br/>
+
+---
+
+인증을 위한 [Google의 OAuth 2.0 구현](https://developers.google.com/identity/openid-connect/openid-connect?hl=ko)은 [OpenID Connect 1.0](https://openid.net/developers/how-connect-works/) 사양을 준수하며 [OpenID 인증](https://openid.net/certification/)을 받았습니다.
+
+---
+<br/>
+"Outh 2.0 설정" 섹션에서 시작하는 OpenID 연결 페이지에 대한 지침을 따릅니다. "OAuth 2.0 자격 증명 가져오기" 지침을 완료한 후 클라이언트 ID와 클라이언트 암호로 구성된 자격 증명을 가진 새 OAuth 클라이언트를 만들어야 합니다. <br/>
+
+#### 리디렉션 URI 설정
+
+이전에 GitHub에 대해 했던 것처럼 리디렉션 URI를 제공해야 합니다. <br/>
+
+리디렉션 URI 설정 하위 섹션에서 인증된 리디렉션 URI 필드가 `http://localhost:8080/login/oauth2/code/google` 로 설정되어 있는지 확인합니다. <br/>
+
+#### 클라이언트 등록 추가
+
+그런 다음 Google을 가리키도록 클라이언트를 구성해야 합니다. Spring Security는 여러 클라이언트를 염두에 두고 구축되었으므로 GitHub용으로 작성한 자격 증명과 함께 Google 자격 증명을 추가할 수 있습니다: <br/>
+application.yml
+```yaml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: github-client-id
+            clientSecret: github-client-secret
+          google:
+            client-id: google-client-id
+            client-secret: google-client-secret
+```
+보시다시피 Google은 Spring Security에서 즉시 지원을 제공하는 또 다른 공급업체입니다. <br/>
+
+#### 로그인 링크 추가
+
+클라이언트에서 변경 사항은 다른 링크를 추가하면 됩니다: <br/>
+index.html
+```html
+<div class="container unauthenticated">
+  <div>
+    With GitHub: <a href="/oauth2/authorization/github">click here</a>
+  </div>
+  <div>
+    With Google: <a href="/oauth2/authorization/google">click here</a>
+  </div>
+</div>
+```
+
+---
+
+URL의 최종 경로는 `application.yml`의 클라이언트 등록 ID와 일치해야 합니다. <br/>
+
+Spring Security에는 `/oauth2/authorization/{registrationId}` 대신 `/login`을 가리키면 도달할 수 있는 기본 제공자 선택 페이지가 함께 제공됩니다.
+
+---
+
+#### 로컬 사용자 데이터베이스 추가 방법
+
+인증이 외부 공급자에게 위임된 경우에도 대부분의 응용프로그램은 사용자에 대한 데이터를 로컬로 보관해야 합니다. 여기에서는 코드를 보여주지 않지만 두 단계로 쉽게 수행할 수 있습니다. <br/>
+
+1. 데이터베이스의 백엔드를 선택하고 사용자 요구에 적합하고 외부 인증에서 전체 또는 부분적으로 채울 수 있는 사용자 지정 `User` 객체에 대한 일부 리포지토리(예: Spring Data 사용)를 설정합니다.
+2. `OAuth2UserService`를 implement 하고 권한 부여 서버와 데이터베이스를 호출합니다. 해당 implement는 권한 부여 서버를 호출하는 작업을 많이 수행하는 기본 구현으로 위임할 수 있습니다. implement는 사용자 지정 `User` 객체를 상속하고 `OAuth2User`를 implement하는 것을 반환해야 합니다.
+
+
+힌트: `User` 객체에 필드를 추가하여 외부 공급자의 고유 식별자(사용자 이름이 아니라 외부 공급자의 계정에 고유한 식별자)에 연결합니다. <br/>
+
 
 
 
