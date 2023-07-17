@@ -449,7 +449,149 @@ Spring Security에는 `/oauth2/authorization/{registrationId}` 대신 `/login`�
 
 힌트: `User` 객체에 필드를 추가하여 외부 공급자의 고유 식별자(사용자 이름이 아니라 외부 공급자의 계정에 고유한 식별자)에 연결합니다. <br/>
 
+### 인증되지 않은 사용자에 대한 오류 페이지 추가
 
+인증할 수 없는 사용자에게 피드백을 제공하기 위해 이전에 구축한 두 개의 브라우저 앱을 수정합니다. 동시에 사용자가 특정 GitHub 조직에 속해 있는 경우에만 허용하는 규칙을 포함하도록 인증 로직을 확장합니다. <br/>
+"조직 (organization)"은 GitHub 도메인별 개념이지만 다른 공급자를 위해 유사한 규칙이 고안될 수 있습니다. 예를 들어 Google을 사용하면 특정 도메인의 사용자만 인증할 수 있습니다. <br/>
+
+#### GitHub로 전환
+
+구축한 두 개의 예제는 GitHub를 OAuth 2.0 공급자로 사용합니다. <br/>
+
+application.yml
+```yaml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: bd1c0a783ccdd1c9b9e4
+            client-secret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+          # ...
+```
+
+#### 클라이언트에서 인증 실패 감지
+클라이언트에서 인증할 수 없는 사용자에게 피드백을 제공할 수 있습니다. 이를 용이하게 하기 위해 정보 메시지를 추가할 `div` 태그를 추가할 수 있습니다. <br/>
+
+index.html
+```html
+<div class="container text-danger error"></div>
+```
+
+그런 다음 `/error` 엔드포인트에 호출을 추가하여 다음과 같은 결과를 `<div>`에 입력합니다: <br/>
+
+index.html
+```javascript
+$.get("/error", function(data) {
+    if (data) {
+        $(".error").html(data);
+    } else {
+        $(".error").html('');
+    }
+});
+```
+
+오류 함수는 백엔드에서 표시할 오류가 있는지 확인합니다. <br/>
+
+#### 오류 메시지 추가
+
+오류 메시지 검색을 지원하려면 인증이 실패할 때 오류 메시지를 캡처해야 합니다. 이를 위해 다음과 같이 `AuthenticationFailureHandler`를 구성할 수 있습니다: <br/>
+```java
+protected void configure(HttpSecurity http) throws Exception {
+	// @formatter:off
+	http
+	    // ... existing configuration
+	    .oauth2Login(o -> o
+            .failureHandler((request, response, exception) -> {
+			    request.getSession().setAttribute("error.message", exception.getMessage());
+			    handler.onAuthenticationFailure(request, response, exception);
+            })
+        );
+}
+```
+
+인증이 실패할 때마다 오류 메시지가 세션에 저장됩니다. <br/>
+그런 다음 다음과 같은 단순한 `/error` 컨트롤러를 추가할 수 있습니다: <br/>
+
+SocialApplication.java
+```java
+@GetMapping("/error")
+public String error(HttpServletRequest request) {
+	String message = (String) request.getSession().getAttribute("error.message");
+	request.getSession().removeAttribute("error.message");
+	return message;
+}
+```
+
+
+---
+
+이렇게 하면 앱의 기본 /error 페이지가 대체되며, 이는 당사의 경우에는 괜찮지만 사용자의 요구에 맞게 정교하지 않을 수 있습니다.
+
+---
+
+#### 서버에서 401 생성
+
+사용자가 GitHub로 로그인할 수 없거나 로그인을 원하지 않는 경우 Spring Security에서 401 응답이 이미 전송되므로 인증에 실패한 경우(예: 토큰 부여 거부) 앱이 이미 작동하고 있습니다. <br/>
+
+이를 개선하기 위해 인증 규칙을 확장하여 올바른 조직에 없는 사용자를 거부할 수 있습니다. <br/>
+GitHub API를 사용하여 사용자에 대해 자세히 알아볼 수 있으므로 인증 프로세스의 오른쪽 부분에 연결하기만 하면 됩니다. <br/>
+
+다행히도 스프링 부트는 이러한 간단한 사용 사례에 대해 다음과 같은 쉬운 확장 지점을 제공했습니다: <br/>
+`OAuth2UserService` 유형의 `@Bean`을 선언하면 사용자 주체를 식별하는 데 사용됩니다. 이 후크를 사용하여 사용자가 올바른 조직에 있다고 주장하고, 그렇지 않은 경우 예외를 던질 수 있습니다: <br/>
+
+SocialApplication.java
+```java
+@Bean
+public OAuth2UserService<OAuth2UserRequest, OAuth2User> oauth2UserService(WebClient rest) {
+    DefaultOAuth2UserService delegate = new DefaultOAuth2UserService();
+    return request -> {
+        OAuth2User user = delegate.loadUser(request);
+        if (!"github".equals(request.getClientRegistration().getRegistrationId())) {
+        	return user;
+        }
+
+        OAuth2AuthorizedClient client = new OAuth2AuthorizedClient
+                (request.getClientRegistration(), user.getName(), request.getAccessToken());
+        String url = user.getAttribute("organizations_url");
+        List<Map<String, Object>> orgs = rest
+                .get().uri(url)
+                .attributes(oauth2AuthorizedClient(client))
+                .retrieve()
+                .bodyToMono(List.class)
+                .block();
+
+        if (orgs.stream().anyMatch(org -> "spring-projects".equals(org.get("login")))) {
+            return user;
+        }
+
+        throw new OAuth2AuthenticationException(new OAuth2Error("invalid_token", "Not in Spring Team", ""));
+    };
+}
+```
+
+이 코드는 인증된 사용자를 대신하여 GitHub API에 액세스하기 위한 `WebClient` 인스턴스에 종속됩니다. <br/>
+이렇게 하면 "Spring-projects"(Spring 오픈 소스 프로젝트를 저장하는 데 사용되는 조직)와 일치하는 조직을 찾습니다. Spring Engineering 팀에 속하지 않고 성공적으로 인증하려면 자신의 값을 해당 값으로 대체할 수 있습니다. <br/>
+일치하는 항목이 없으면 `OAuth2AuthenticationException`을 던집니다. Spring Security에서 수신하여 401 응답으로 전환됩니다. <br/>
+
+`WebClient`는 bean으로도 만들어야 하지만 `spring-boot-starter-oauth2-client`를 사용했기 때문에 구성 요소가 모두 자동으로 적합하기 때문에 괜찮습니다: <br/>
+
+```java
+@Bean
+public WebClient rest(ClientRegistrationRepository clients, OAuth2AuthorizedClientRepository authz) {
+    ServletOAuth2AuthorizedClientExchangeFilterFunction oauth2 =
+            new ServletOAuth2AuthorizedClientExchangeFilterFunction(clients, authz);
+    return WebClient.builder()
+            .filter(oauth2).build();
+}
+```
+
+---
+
+확실히 위의 코드는 다른 인증 규칙으로 일반화될 수 있으며, 일부는 GitHub에 적용되고 일부는 다른 OAuth 2.0 공급자에 적용됩니다. 필요한 것은 WebClient와 공급자 API에 대한 약간의 지식뿐입니다.
+
+---
 
 
 
