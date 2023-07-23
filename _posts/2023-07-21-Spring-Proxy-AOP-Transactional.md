@@ -197,6 +197,45 @@ public class Application {
 
 실행 결과를 보면 `MyService` 클래스의 `doSomething` 메서드가 호출되는 데 걸리는 시간을 로그로 출력하는 것을 확인할 수 있습니다. <br/>
 이로써 Spring AOP가 동적으로 프록시를 생성하여 비즈니스 로직에 횡단 관심사를 추가하는 것을 확인할 수 있습니다. <br/>
+<br/>
+
+#### 동적 프록시
+동적 프록시를 생성하는 방법은 크게 두 가지가 있습니다. <br/>
+1. **JDK Proxy**
+   * Java 표준 라이브러리인 `java.lang.reflect.Proxy` 클래스를 사용하여 인터페이스 기반의 프록시 생성 방식입니다.
+2. **CGLIB Proxy**
+   * CGLIB 라이브러리를 사용하여 클래스 기반의 프록시를 생성하는 방식입니다.
+   * JDK Proxy와는 달리 인터페이스를 구현하지 않은 클래스에 대해서도 프록시를 생성할 수 있습니다.
+
+이 중 **JDK Proxy**가 프록시 객체를 생성하는 방식은 다음과 같습니다. <br/>
+
+1. 타겟이 되는 객체의 인터페이스를 검증해 프록시 팩토리 (Proxy Factory)에 의해 대상의 인터페이스를 상속한 프록시 객체를 생성합니다.
+2. 프록시 객체에 `InvocationHandler`를 포함시켜 하나의 객체로 반환합니다.
+
+이러한 프록시 객체 생성 과정에서 핵심적인 부분은 **인터페이스를 기반**으로 프록시 객체를 생성한다는 점입니다. 따라서 대상 객체는 반드시 **인터페이스를 구현**해야 하고, 생성된 프록시 Bean을 사용하기 위해서는 반드시 인터페이스 타입으로 지정해줘야 합니다. <br/>
+
+위와 같은 JDK Proxy 방식에 대해 인지하지 못한다면 다음과 같은 실수를 할 수 있습니다. <br/>
+
+```java
+@Controller
+public class UserController {
+	@Autowired
+	private MemeberService memeberService;    // Runtime Error 
+}
+```
+```java
+@Service
+public class MemberService implements UserService {
+	@Override
+	public void doSomething() {
+       System.out.println("Doing something in MemberService.");
+    }
+}
+```
+
+위 예제에서 `MemberService`는 `UserService` 인터페이스를 구현하고 있기 때문에 JDK Proxy 방식으로 프록시 빈을 생성합니다. <br/>
+하지만 `@Autowired`로 프록시 Bean을 사용하려는 부분에서 `UserService` 인터페이스 타입이 아닌 `MemberService` 타입으로 작성하여 프록시 객체를 생성할 수 없어 Runtime Error 가 발생합니다. <br/>
+
 
 ### @Transactional
 
