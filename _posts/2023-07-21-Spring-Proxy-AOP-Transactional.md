@@ -239,4 +239,104 @@ public class MemberService implements UserService {
 
 ### @Transactional
 
+우선, `@Transactional`의 동작 원리에 대해 알아보도록 합니다. <br/>
 
+`@Transactional`은 AOP를 사용하여 구현됩니다. AOP를 활용하여 트랜잭션을 시작하고 종료하며, 예외가 발생하면 롤백하는 기능을 제공합니다. <br/>
+
+`@Transactional` 동작 원리를 설명하면 다음과 같습니다. <br/>
+
+1. **AOP와 Proxy**
+   * `@Transactional` 어노테이션을 사용하면 Spring은 AOP를 통해 프록시를 생성합니다. 해당 프록시는 `@Transactional` 어노테이션이 적용된 메서드를 감싸고, 트랜잭션과 관련된 처리를 수행합니다.
+   * 즉, 원래 비즈니스 로직 메서드가 호출되기 전에 트랜잭션을 시작하고, 메서드가 정상적으로 종료되면 트랜잭션을 커밋하며 예외가 발생하면 트랜잭션을 롤백합니다.
+2. **트랜잭션 경계**
+   * `@Transactional` 어노테이션이 적용된 메서드가 호출되면, 해당 메서드는 트랜잭션의 경계로 간주합니다.
+   * 트랜잭션 경계 내에서는 트랜잭션을 시작하고 종료하며, `@Transactional` 어노테이션이 적용되지 않은 메서드를 호출할 때에도 동일한 트랜잭션 내에서 실행됩니다.
+3. **트랜잭션 속성 설정**
+   * `@Transactional` 어노테이션은 `propagation`, `isolation`, `readOnly`, `timeout`, `rollbackFor`, `noRollbackFor` 등의 속성을 설정하여 트랜잭션 동작을 세밀하게 제어할 수 있습니다. 
+<br/>
+
+다음은 `@Transactional` 어노테이션을 사용할 때 주의해야 할 점들입니다. <br/>
+
+1. **메서드의 가시성**
+   * `@Transactional` 어노테이션은 `public` 메서드에 적용되어야 합니다. `private` 메서드에는 적용할 수 없습니다.
+2. **예외 처리**
+   * `@Transactional` 어노테이션을 사용하는 메서드 내에서 예외가 발생하면 트랜잭션은 롤백됩니다. 그러나 롤백될 예외를 명시적으로 지정하거나, 롤백을 하지 않을 예외를 지정하는 것도 가능합니다. 이를 위해 `rollbackFor`과 `noRollbackFor` 속성을 사용할 수 있습니다.
+3. **자기호출** (메서드 내부에서 메서드를 호출하는 경우)
+   * `@Transactional` 어노테이션은 외부 호출로 인한 트랜잭션 경계를 인식하지만, 동일한 클래스 내의 메서드에서 다른 메서드를 호출하는 경우에는 `@Transactional` 어노테이션이 동작하지 않습니다. 이 때는 AOP가 동작하지 않으므로, 트랜잭션이 예상대로 동작하지 않을 수 있습니다.
+   * 따라서 `@Transactional` 어노테이션은 각각의 메서드에 직접 적용해야 합니다.
+   * 아래는 자기호출 문제가 발생하는 예제입니다.
+   * ```java
+     public class MyService {
+
+        @Transactional
+        public void doSomething() {
+            // 비즈니스 로직
+            doSomethingInternal();
+        }
+     
+        public void doSomethingInternal() {
+            // 메서드 내부에서 자기호출
+            System.out.println("Doing something internally.");
+        }
+     }
+     
+     public class Main {
+        public static void main(String[] args) {
+            ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+            MyService myService = context.getBean(MyService.class);
+     
+            // @Transactional이 적용된 메서드를 호출하면 트랜잭션이 동작하지만,
+            // doSomethingInternal() 메서드는 같은 클래스 내에서 호출되므로 AOP 프록시가 동작하지 않음
+            myService.doSomething();
+
+            context.close();
+        }
+     }
+     ```
+4. **새로운 클래스에 정의된 메서드에서의 `@Transactional` 적용**
+   * Spring의 AOP는 프록시를 통해 동작하므로 같은 클래스 내에 있는 메서드 간 호출에서는 AOP가 동작하지 않습니다.
+   * 따라서 `@Transactional` 어노테이션은 각각의 메서드에 직접 적용해야 합니다.
+   * 아래는 해당 문제에 대한 예제입니다.
+   * ```java
+     @Service
+     public class UserService {
+	    private final EmailService emailService;
+     
+        @Autowired
+        public UserService(EmailService emailService) {
+            this.emailService = emailService;
+        }
+
+        @Transactional
+        public void createUser(String username) {
+            // 사용자 생성 로직
+     
+            // 환영 이메일 전송
+            emailService.sendWelcomeEmail(username);
+     
+            // 일부러 예외 발생
+            throw new RuntimeException("Something went wrong!");
+        }
+     
+        public void deleteUser(String username) {
+            // 사용자 삭제 로직
+        }
+     }
+     ```
+   * ```java
+     @Service
+     public class EmailService {
+
+        public void sendWelcomeEmail(String username) {
+            // 환영 이메일 전송 로직
+        }
+     }
+     ```
+   * 위 예제에서 `@Transactional` 어노테이션이 `createUser` 메서드에서 동작하지 않습니다. `@Transactional` 어노테이션은 `EmailService`의 `sendWelcomeEmail` 메서드에 적용되지 않고, 트랜잭션이 시작되지 않습니다.
+   * 이러한 경우에는 `createUser`와 `sendWelcomeEmail`에 각각 `@Transactional` 어노테이션을 붙여야 합니다.
+5. **Proxy 객체를 직접 참조할 때**
+   * `@Transactional` 어노테이션은 AOP에 의해 프록시로 감싸진 객체에만 동작합니다. 따라서 프록시 객체를 직접 참조할 경우 AOP가 동작하지 않을 수 있습니다.
+   * 이러한 경우에는 AOP를 우회하는 방법을 사용하거나, `@Transactional` 어노테이션을 사용하지 않고 직접 트랜잭션을 관리해야 합니다. 
+<br/>
+
+`@Transactional` 어노테이션은 편리하게 트랜잭션 관리를 할 수 있도록 해주지만, 올바른 사용법과 주의할 점을 알고 사용해야 합니다. 트랜잭션 경계를 설정하는 것과 롤백 전략을 제대로 파악하여 사용하는 것이 중요합니다. <br/>
