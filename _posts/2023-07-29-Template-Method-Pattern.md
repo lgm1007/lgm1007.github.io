@@ -2,7 +2,7 @@
 layout:	post
 title:  템플릿 메서드 패턴 이해
 date:   2023-07-29 11:15:00 +0900
-image:  post-5.jpg
+image:  post-9.jpg
 author: GyuMyeong
 tags:   Language
 comments: true
