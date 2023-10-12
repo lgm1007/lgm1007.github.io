@@ -8,9 +8,9 @@ description: Zolan is modern minimal theme for Jekyll
 #-------------------------------
 # Author Settings
 author:
-  name: Gyumyeong Lee
+  name: Gyumyung Lee
   image: hero.jpg
-  say-hello: Hello, I’m <strong>Gyumyeong Lee</strong>
+  say-hello: Hello, I’m <strong>Gyumyung Lee</strong>
   bio: Backend Programmer, <strong>Java Spring boot</strong>, <strong>Kotlin</strong>, <strong>Python flask</strong>. and I consider it important to <strong>record</strong>. Such as <a href="https://github.com/lgm1007/TIL" target="blank">TIL</a> and Blog.
 
 

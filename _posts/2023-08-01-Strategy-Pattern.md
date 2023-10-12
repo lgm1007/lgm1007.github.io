@@ -3,7 +3,7 @@ layout:	post
 title:  전략 패턴 패턴 이해
 date:   2023-08-01 19:57:00 +0900
 image:  post-5.jpg
-author: GyuMyeong
+author: GyuMyung
 tags:   Language
 comments: true
 ---

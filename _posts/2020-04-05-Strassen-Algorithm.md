@@ -3,7 +3,7 @@ layout:	post
 title:  Strassen Algorithm
 date:   2020-04-05 19:02:00 +0900
 image:  post-2.jpg
-author: GyuMyeong
+author: GyuMyung
 tags:   Algorithm
 comments: true
 ---

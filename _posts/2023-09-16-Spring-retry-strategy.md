@@ -3,7 +3,7 @@ layout:	post
 title:  Spring Boot 에서의 재시도 수행 전략
 date:   2023-09-16 12:06:00 +0900
 image:  post-10.png
-author: GyuMyeong
+author: GyuMyung
 tags:   Language
 comments: true
 ---

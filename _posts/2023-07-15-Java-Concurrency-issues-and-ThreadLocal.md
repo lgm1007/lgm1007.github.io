@@ -3,7 +3,7 @@ layout:	post
 title:  Java 동시성 이슈와 ThreadLocal
 date:   2023-07-15 11:27:00 +0900
 image:  post-7.jpg
-author: GyuMyeong
+author: GyuMyung
 tags:   Language
 comments: true
 ---
