@@ -1,0 +1,139 @@
+[
+  
+    {
+      "title"    : "웹에 날개를 달아주는 웹 성능 최적화 기법 Chapter2",
+      "category" : "",
+      "tags"     : "book",
+      "url"      : "/2023/11/02/%EC%9B%B9%EC%97%90-%EB%82%A0%EA%B0%9C%EB%A5%BC-%EB%8B%AC%EC%95%84%EC%A3%BC%EB%8A%94-%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B8%B0%EB%B2%95-Chapter2/",
+      "date"     : "2 Nov, 2023"
+    } ,
+  
+    {
+      "title"    : "웹에 날개를 달아주는 웹 성능 최적화 기법 Chapter1",
+      "category" : "",
+      "tags"     : "book",
+      "url"      : "/2023/10/26/%EC%9B%B9%EC%97%90-%EB%82%A0%EA%B0%9C%EB%A5%BC-%EB%8B%AC%EC%95%84%EC%A3%BC%EB%8A%94-%EC%9B%B9-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B8%B0%EB%B2%95-Chapter1/",
+      "date"     : "26 Oct, 2023"
+    } ,
+  
+    {
+      "title"    : "Kafka 도입에 대하여",
+      "category" : "",
+      "tags"     : "technology",
+      "url"      : "/2023/10/19/introduce-Kafka/",
+      "date"     : "19 Oct, 2023"
+    } ,
+  
+    {
+      "title"    : "DB 조회 성능 향상을 위한 방법",
+      "category" : "",
+      "tags"     : "database",
+      "url"      : "/2023/10/12/DB-select-performance-consideration/",
+      "date"     : "12 Oct, 2023"
+    } ,
+  
+    {
+      "title"    : "Spring Boot 에서의 재시도 수행 전략",
+      "category" : "",
+      "tags"     : "language",
+      "url"      : "/2023/09/16/Spring-retry-strategy/",
+      "date"     : "16 Sep, 2023"
+    } ,
+  
+    {
+      "title"    : "템플릿 콜백 패턴 이해",
+      "category" : "",
+      "tags"     : "language",
+      "url"      : "/2023/08/06/Template-Callback-Pattern/",
+      "date"     : "6 Aug, 2023"
+    } ,
+  
+    {
+      "title"    : "전략 패턴 패턴 이해",
+      "category" : "",
+      "tags"     : "language",
+      "url"      : "/2023/08/01/Strategy-Pattern/",
+      "date"     : "1 Aug, 2023"
+    } ,
+  
+    {
+      "title"    : "템플릿 메서드 패턴 이해",
+      "category" : "",
+      "tags"     : "language",
+      "url"      : "/2023/07/29/Template-Method-Pattern/",
+      "date"     : "29 Jul, 2023"
+    } ,
+  
+    {
+      "title"    : "Transactional과 AOP, 그리고 프록시 패턴",
+      "category" : "",
+      "tags"     : "language",
+      "url"      : "/2023/07/21/Spring-Proxy-AOP-Transactional/",
+      "date"     : "21 Jul, 2023"
+    } ,
+  
+    {
+      "title"    : "Java 동시성 이슈와 ThreadLocal",
+      "category" : "",
+      "tags"     : "language",
+      "url"      : "/2023/07/15/Java-Concurrency-issues-and-ThreadLocal/",
+      "date"     : "15 Jul, 2023"
+    } ,
+  
+    {
+      "title"    : "Spring Boot and OAuth2",
+      "category" : "",
+      "tags"     : "reference",
+      "url"      : "/2023/07/07/Spring-Boot-and-OAuth2/",
+      "date"     : "7 Jul, 2023"
+    } ,
+  
+    {
+      "title"    : "git push (non-fast-forward) error",
+      "category" : "",
+      "tags"     : "troubleshooting",
+      "url"      : "/2020/04/21/git-push-non-fast-forward-error/",
+      "date"     : "21 Apr, 2020"
+    } ,
+  
+    {
+      "title"    : "Greedy Algorithm &amp; 응용문제",
+      "category" : "",
+      "tags"     : "algorithm",
+      "url"      : "/2020/04/15/Greedy-Algorithm-and-Problem/",
+      "date"     : "15 Apr, 2020"
+    } ,
+  
+    {
+      "title"    : "Strassen Algorithm",
+      "category" : "",
+      "tags"     : "algorithm",
+      "url"      : "/2020/04/05/Strassen-Algorithm/",
+      "date"     : "5 Apr, 2020"
+    } ,
+  
+    {
+      "title"    : "JavaVersion_Character",
+      "category" : "",
+      "tags"     : "language",
+      "url"      : "/2020/03/28/JavaVersion_Character/",
+      "date"     : "28 Mar, 2020"
+    } ,
+  
+    {
+      "title"    : "Greatest common measure depth problem",
+      "category" : "",
+      "tags"     : "algorithm",
+      "url"      : "/2020/03/27/GCD-application-problem/",
+      "date"     : "27 Mar, 2020"
+    } ,
+  
+    {
+      "title"    : "Amazon increase income 1.5 Million",
+      "category" : "",
+      "tags"     : "ux and design",
+      "url"      : "/2017/05/26/amazon-increase-income-1.5-million-copy-2/",
+      "date"     : "26 May, 2017"
+    } 
+  
+]
