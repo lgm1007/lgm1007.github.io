@@ -4,7 +4,7 @@ title:  Greatest common measure depth problem
 date:   2020-03-27 12:02:15 +0900
 image:  post-3.jpg
 author: GyuMyung
-tags:   Algorithm
+tags:   algorithm
 comments: true
 ---
 

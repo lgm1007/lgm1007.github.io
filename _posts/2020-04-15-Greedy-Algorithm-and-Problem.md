@@ -4,7 +4,7 @@ title:  Greedy Algorithm & 응용문제
 date:   2020-04-15 12:31:00 +0900
 image:  01.jpg
 author: GyuMyung
-tags:   Algorithm
+tags:   algorithm
 comments: true
 ---
 

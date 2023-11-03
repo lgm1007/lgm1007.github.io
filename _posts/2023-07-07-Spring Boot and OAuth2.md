@@ -4,7 +4,7 @@ title:  Spring Boot and OAuth2
 date:   2023-07-07 19:49:55 +0900
 image:  post-6.jpg
 author: GyuMyung
-tags:   Reference
+tags:   reference
 comments: true
 ---
 ## Spring Boot and OAuth2

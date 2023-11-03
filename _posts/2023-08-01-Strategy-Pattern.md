@@ -4,7 +4,7 @@ title:  전략 패턴 패턴 이해
 date:   2023-08-01 19:57:00 +0900
 image:  post-5.jpg
 author: GyuMyung
-tags:   Language
+tags:   language
 comments: true
 ---
 ## 전략 패턴의 이해

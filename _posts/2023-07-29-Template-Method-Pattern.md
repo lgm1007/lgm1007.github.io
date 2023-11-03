@@ -4,7 +4,7 @@ title:  템플릿 메서드 패턴 이해
 date:   2023-07-29 11:15:00 +0900
 image:  post-9.jpg
 author: GyuMyung
-tags:   Language
+tags:   language
 comments: true
 ---
 ## 템플릿 메서드 패턴 이해

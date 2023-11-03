@@ -4,7 +4,7 @@ title:  Java 동시성 이슈와 ThreadLocal
 date:   2023-07-15 11:27:00 +0900
 image:  post-7.jpg
 author: GyuMyung
-tags:   Language
+tags:   language
 comments: true
 ---
 ## Java 동시성 이슈와 쓰레드 로컬 (ThreadLocal)

@@ -4,7 +4,7 @@ title:  Kafka 도입에 대하여
 date:   2023-10-19 21:46:00 +0900
 image:  post-5.jpg
 author: GyuMyung
-tags:   Technology
+tags:   technology
 comments: true
 ---
 

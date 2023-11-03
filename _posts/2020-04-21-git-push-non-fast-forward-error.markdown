@@ -4,7 +4,7 @@ title:  git push (non-fast-forward) error
 date:   2020-04-21 10:05:55 +0900
 image:  post-4.jpg
 author: GyuMyung
-tags:   Troubleshooting
+tags:   troubleshooting
 comments: true
 ---
 ### git push origin master 후 non-fast-forward 문제
