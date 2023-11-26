@@ -1,0 +1,23 @@
+---
+layout: default
+title: Tags
+---
+<!-- tag -->
+<div class="arhive-head">
+    <div class="container">
+        <h1 id="tag_title" class="archive-title">Tag: </h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% if site.posts.size > 0 %}
+            {% for post in site.posts %}
+                {% include article-content.html %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+<!-- /tag -->
+
+<script src="{{ site.baseurl }}/js/tag.js"></script>
