@@ -34,6 +34,7 @@ public static class PosterDto {
     // 그 외 필드 ...
 }
 ```
+<br/>
 
 그리고 아래는 위 Dto 객체를 생성하여 사용하려는 메서드의 한 부분이다.
 
