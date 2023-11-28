@@ -2,7 +2,7 @@
 layout: post
 title:  Spring Boot and OAuth2
 date:   2023-07-07 19:49:55 +0900
-image:  post-6.jpg
+image:  06.jpg
 author: GyuMyung
 tags:   reference
 comments: true

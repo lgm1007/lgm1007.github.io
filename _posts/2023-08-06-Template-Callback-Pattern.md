@@ -2,9 +2,9 @@
 layout:	post
 title:  템플릿 콜백 패턴 이해
 date:   2023-08-06 14:54:00 +0900
-image:  post-16.jpg
+image:  post-14.jpg
 author: GyuMyung
-tags:   language
+tags:   design pattern
 comments: true
 ---
 ## 템플릿 콜백 패턴의 이해

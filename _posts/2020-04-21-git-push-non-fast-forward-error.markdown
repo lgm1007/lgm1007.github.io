@@ -2,7 +2,7 @@
 layout: post
 title:  git push (non-fast-forward) error
 date:   2020-04-21 10:05:55 +0900
-image:  post-19.jpg
+image:  post-7.jpg
 author: GyuMyung
 tags:   troubleshooting
 comments: true
