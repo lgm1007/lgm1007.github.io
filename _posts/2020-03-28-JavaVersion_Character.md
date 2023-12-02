@@ -2,7 +2,7 @@
 layout:	post
 title:  JavaVersion_Character
 date:   2020-03-28 14:37:00 +0900
-image:  post-10.jpg
+image:  language-1.jpg
 author: GyuMyung
 tags:   language
 comments: true

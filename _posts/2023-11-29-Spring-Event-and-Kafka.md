@@ -2,7 +2,7 @@
 layout:	post
 title: 사례로 보는 Spring Event & Kafka
 date: 2023-11-29 21:38:49 +0900
-image: post-23.jpg
+image: technology-1.jpg
 author: GyuMyung
 tags: technology
 comments: true

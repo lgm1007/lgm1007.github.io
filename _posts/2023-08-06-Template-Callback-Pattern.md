@@ -2,7 +2,7 @@
 layout:	post
 title:  템플릿 콜백 패턴 이해
 date:   2023-08-06 14:54:00 +0900
-image:  post-14.jpg
+image:  design-pattern-2.jpg
 author: GyuMyung
 tags:   design pattern
 comments: true

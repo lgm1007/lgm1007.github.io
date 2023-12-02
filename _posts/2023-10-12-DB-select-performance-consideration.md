@@ -2,7 +2,7 @@
 layout:	post
 title:  DB 조회 성능 향상을 위한 방법
 date:   2023-10-12 19:30:00 +0900
-image:  post-22.jpg
+image:  database-1.jpg
 author: GyuMyung
 tags:   database
 comments: true
