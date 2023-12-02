@@ -12,18 +12,18 @@ function getParameterByName(name, url) {
 }
 
 let tagValue = getParameterByName('tag');
-let articleWrappers = document.getElementsByClassName('article__wrapper');
+let tagArticles = document.getElementsByClassName('tag_article');
 
 // 태그 페이지 제목 내용 처리
 document.getElementById('tag_title').innerText = 'Tag: ' + tagValue.toUpperCase();
 
-for (const articleWrapper of articleWrappers) {
-	let articleTagBox = articleWrapper.querySelector('.article-tags__box');
+for (const tagArticle of tagArticles) {
+	let articleTagBox = tagArticle.querySelector('.article-tags__box');
 	let articleTag = articleTagBox.querySelector('.article__tag');
 
 	// 현재 파라미터로 받아온 태그와 같지 않은 태그인 포스트는 보이지 않게 처리
 	if (articleTag.innerHTML != tagValue) {
-		articleWrapper.style.display = 'none';
+		tagArticle.style.display = 'none';
 	}
 }
 
