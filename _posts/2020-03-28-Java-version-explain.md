@@ -1,6 +1,6 @@
 ---
 layout:	post
-title:  JavaVersion_Character
+title:  자바 버전 별 차이점
 date:   2020-03-28 14:37:00 +0900
 image:  language-1.jpg
 author: GyuMyung
