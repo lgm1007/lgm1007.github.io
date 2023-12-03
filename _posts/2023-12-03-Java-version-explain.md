@@ -244,26 +244,26 @@ public T orElseThrow() {
    * `NumberFormat.Style.SHORT`, `NumberFormat.Style.LONG`에 따라 출력 형태가 다르다.
      * US locale에서는 첫 단위에서 각각 K와 thousand, 백만 단위에서는 M과 million, 억 단위에는 B와 billion이 사용된다.
    * 한글에서는 `SHORT`와 `LONG` 구별 없이 천, 만, 억이다.
-```java
-long num = 123456789;
-Locale locale = Locale.KOREAN;
-NumberFormat likesShort = NumberFormat.getCompactNumberInstance(locale, NumberFormat.Style.SHORT);
-likesShort.setMaximumFractionDigits(2);
-Assertions.assertEquals("123.46M", likesShort.format(num));
+   * ```java
+     long num = 123456789;
+     Locale locale = Locale.KOREAN;
+     NumberFormat likesShort = NumberFormat.getCompactNumberInstance(locale, NumberFormat.Style.SHORT);
+     likesShort.setMaximumFractionDigits(2);
+     Assertions.assertEquals("123.46M", likesShort.format(num));
 
-NumberFormat likesLong = NumberFormat.getCompactNumberInstance(locale, NumberFormat.Style.LONG);
-likesLong.setMaximumFractionDigits(2);
-Assertions.assertEquals("123.46 million", likesLong.format(num));
-```
+     NumberFormat likesLong = NumberFormat.getCompactNumberInstance(locale, NumberFormat.Style.LONG);
+     likesLong.setMaximumFractionDigits(2);
+     Assertions.assertEquals("123.46 million", likesLong.format(num));
+     ```
 3. **Teeing Collector 추가**
    * 두 개의 Collector들을 Wrapping 하고 그 결과를 병렬로 수집하는데 사용되는 Collector
-```java
-Stream<Integer> intStream = Stream.of(1, 2, 3, 4, 5, 6, 7);
-double avg = intStream.collect(
-        Collectors.teeing(Collections.counting(),           // Collector 1
-                          Collections.summingInt(i -> i),  // Collector 2
-                          (cnt, sum) -> sum*1.0 / cnt));   // 병합
-```
+   * ```java
+     Stream<Integer> intStream = Stream.of(1, 2, 3, 4, 5, 6, 7);
+     double avg = intStream.collect(
+             Collectors.teeing(Collections.counting(),           // Collector 1
+                               Collections.summingInt(i -> i),  // Collector 2
+                               (cnt, sum) -> sum*1.0 / cnt));   // 병합
+     ```
 
 ### Java 14
 1. **스위치 문법 확장**
@@ -300,21 +300,21 @@ double avg = intStream.collect(
 2. **Helpful NullPointerExceptions**
    * 기존에는 `NullPointerException`이 발생하면 특정 라인에서 발생했다는 정보 외에 어떤 객체에서 발생했는지 표현되지 않았다.
    * 이제는 상세한 정보가 제공되므로 어디에서 오류가 발생했는지 쉽게 알 수 있다.
-```
-java.lang.NullPointerException: Cannot invoke "String.length()" because str is null
-```
+   * ```
+     java.lang.NullPointerException: Cannot invoke "String.length()" because str is null
+     ```
 
 ### Java 15
 * **Text Block**
   * 멀티라인 문자열을 만들 수 있게 되었다.
   * `"""` 으로 문자열을 둘러쌓아 표현
-```java
-String str = """
-select *
-from member
-where member_id = 1
-""";
-```
+  * ```java
+    String str = """
+    select *
+    from member
+    where member_id = 1
+    """;
+    ```
 
 ### Java 16
 1. **record 클래스**
