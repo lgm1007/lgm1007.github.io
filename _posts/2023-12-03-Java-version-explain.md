@@ -103,21 +103,21 @@ list.stream()
 1. **모듈 시스템 등장** (jigsaw)
 2. **불변 컬렉션 생성**
    * `of()` 메서드를 지원하여 불변 컬렉션을 편리하게 생성 가능하다.
-```java
-// Java 9 이전
-void createNumbers() {
-    List<Integer> numbers = new ArrayList<>();
-    numbers.add(1);
-    numbers.add(2);
-    numbers.add(3);
-    numbers = Collections.unmodifiableList(numbers);
-}
+   * ```java
+     // Java 9 이전
+     void createNumbers() {
+         List<Integer> numbers = new ArrayList<>();
+         numbers.add(1);
+         numbers.add(2);
+         numbers.add(3);
+         numbers = Collections.unmodifiableList(numbers);
+     }
 
-// Java 9 이후
-void createNumbers() {
-    List<Integer> numbers = List.of(1, 2, 3);
-}
-```
+     // Java 9 이후
+     void createNumbers() {
+         List<Integer> numbers = List.of(1, 2, 3);
+     }
+     ```
 3. **Optional API 추가**
    * `or()` : 값이 없을 경우 Optional 객체를 반환
    * ```java
