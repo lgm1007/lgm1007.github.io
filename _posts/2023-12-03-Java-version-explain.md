@@ -413,3 +413,14 @@ public T orElseThrow() {
 3. **AOT & JIT 컴파일러 제거**
    * AOT(Ahead-Of-Time), JIT(Just-In-Time) 컴파일러가 제거되었다.
 
+### Java 18
+1. **UTF-8을 Java Standard API의 기본 charset으로 설정**
+2. **정적 파일을 serving하는 기능만 있는 심플한 웹 서버 제공**
+3. **리플렉션 기능 리팩토링**
+4. **Internet-Address Resolution SPI**
+5. **try 문에서의 finally deprecate**
+
+### Java 19
+1. **멀티스레드 프로그래밍을 단순화하는 Structured Concurrency API** (incubating)
+2. **Linux/RISC-V Port**
+
