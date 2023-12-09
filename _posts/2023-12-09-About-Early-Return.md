@@ -4,12 +4,12 @@ title: Early Return을 알아보자
 date: 2023-12-09 09:40:58 +0900
 image: programming-style-1.jpg
 author: GyuMyung
-tags: programming style
+tags: programming-style
 comments: true
 ---
 
 # Early Return을 알아보자
-
+K
 ### Early Return을 사용하면 좋은 경우
 
 먼저 아래와 같은 계산을 하는 코드가 있다고 생각해보자. <br/>
