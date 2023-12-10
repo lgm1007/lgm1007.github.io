@@ -51,7 +51,7 @@ public class DataProcessor {
                 throw new IllegalArgumentException("데이터가 존재하지 않습니다.");
             }
             // Bouncer: 데이터가 영문자인지 확인
-            if (Pattern.matches("^[a-zA-Z]*$", data)) {
+            if (!Pattern.matches("^[a-zA-Z]*$", data)) {
                 throw new NoAlphabetDataException("데이터가 영문자가 아닙니다.");
             }
             
