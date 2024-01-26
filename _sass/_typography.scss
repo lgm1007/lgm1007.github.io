@@ -7,6 +7,13 @@ body {
 }
 
 @font-face {
+  font-family: 'Consolas';
+  src: url("../plugins/fonts/Consolas.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'BwNistaInt-xBd';
   src: url("../plugins/fonts/BwNistaInt-xBd.woff") format("woff");
   font-style: normal;
