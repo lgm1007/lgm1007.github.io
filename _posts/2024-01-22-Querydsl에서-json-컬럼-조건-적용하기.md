@@ -39,3 +39,14 @@ queryFactory
 ```
 * `user` 테이블에서 `properties` 컬럼 내 `location` 키를 가진 값이 "seoul"이면 참인 조건을 사용한다.
 
+#### Mysql JSON_EXTRACT 함수 사용 예제
+```java
+JPAQueryFactory queryFacatory;
+queryFactory
+        .selectFrom(user)
+        .where(Expressions.stringTemplate(
+                "JSON_EXTRACT({0}, '$.location')", user.properties).contains("seoul")
+        )
+    // ...
+```
+* 동작은 위 코드와 동일하게 `user` 테이블의 `properties` 컬럼 내 `location` 키를 가진 값이 "seoul"인 조건을 사용한다.
