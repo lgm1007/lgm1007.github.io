@@ -51,6 +51,7 @@ class Member implements Serializable {
 * Optional 변수에 `null`을 할당하게 되면 Optional 인스턴스 자체가 `null`인지 검사해야 하는 문제가 발생한다.
 * 또한 반환 값으로 `null`을 사용하지 않기 위해 등장한 것이 Optional인데, 이는 Optional 사용 의도와 맞지 않는 방법이다.
 * 따라서 값이 없는 경우라면 Optional의 `empty()` 메서드로 빈 Optional 인스턴스를 초기화해준다.
+
 ```java
 // 피해야 할 예제
 Optional<Member> findById(Long id) {
@@ -74,6 +75,7 @@ Optional<Member> findById(Long id) {
 #### 2. `orElseGet()`으로 기본 값을 반환하라
 * Optional의 `orElseGet()` 메서드를 사용하면 매개변수에 함수형 인터페이스를 전달하여 Optional 내 변수 값이 null인 경우에 매개변수에 전달된 함수형 인터페이스를 실행시켜 대체값을 반환할 수 있다.
 * `isPresent()`와 `get()` 메서드를 사용하여 값을 가져오는 것보다 `orElseGet()` 메서드를 사용하는 것을 권장한다.
+
 ```java
 // 피해야 할 예제
 Optional<String> optionalStr = Optional.ofNullable(null);
@@ -93,6 +95,7 @@ String getStr = optionalStr.orElseGet(() -> findDefaultText());
 #### 3. 단순히 값을 얻으려는 목적으로만 Optional을 사용하지 마라
 * Optional 클래스를 사용하는 것은 위에서 언급한 것처럼 시간적, 공간적 비용이 증가한다.
 * 값을 얻으려할 때 굳이 이러한 비용을 낭비하는 것보단 단순 조건문으로 직접 반환하는 것이 적절한 방법이다.
+
 ```java
 // 피해야 할 예제
 private String findMemberName(Long id) {
@@ -110,6 +113,7 @@ private String findMemberName(Long id){
 #### 4. 생성자, Setter, 파라미터 등으로 Optional을 넘기지 마라
 * 넘겨온 매개변수를 위해 Optional 인스턴스 자체를 `null` 체크해야 하는 등 코드가 복잡해질 수 있다.
 * 또한 생성자나 Setter에 Optional 타입으로 받았다는 의미는 필드 또한 Optional 타입이라는 의미가 되는데, 이 경우 직렬화를 하지 못하는 문제를 야기할 수 있다.
+
 ```java
 // 피해야 할 예제
 public class Member {
@@ -123,6 +127,7 @@ public class Member {
 
 #### 5. Optional을 빈 컬렉션이나 배열을 반환하는 데 사용하지 마라
 * 컬렉션이나 배열로 복수의 결과를 반환하는 데 '결과 없음'을 명확하게 나타내는 데 바람직한 방법은 빈 컬렉션 또는 배열을 반환하는 방법이다.
+
 ```java
 // 피해야 할 예제
 public Optional<List<Member>> getMemberList() {
