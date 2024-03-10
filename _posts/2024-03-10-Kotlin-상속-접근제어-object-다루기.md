@@ -314,7 +314,8 @@ Derived 클래스를 인스턴스화한다는 말은 Derived에 있는 `number`�
 |public|protected|default|private|
 |---|---|---|---|
 |모든 곳에서 접근 가능|같은 패키지 또는 하위 클래스에서만 접근 가능|같은 패키지에서만 접근 가능|선언된 클래스 내에서만 접근 가능|
-<br/>
+
+
 이러한 접근 제어가 코틀린에서는 조금 바뀐 점이 있는데, 다음은 코틀린에서의 접근 제어 및 설명이다. <br/>
 
 |public|protected|internal|private|
