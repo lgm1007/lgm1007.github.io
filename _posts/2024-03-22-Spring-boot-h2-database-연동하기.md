@@ -51,18 +51,20 @@ spring:
   datasource:
     driver-class-name: org.h2.Driver
     # url: 'jdbc:h2:mem:testdb;DATABASE_TO_UPPER=FALSE' # in-memory 모드
-    url: 'jdbc:h2:~/testdb;DATABASE_TO_UPPER=FALSE'     # Embedded 모드 # DATABASE_TO_UPPER=FALSE 옵션을 붙이지 않으면 모든 테이블, 컬럼 명이 대문자로 출력됨
+    url: 'jdbc:h2:~/testdb;DATABASE_TO_UPPER=FALSE'     # Embedded 모드 
+     # DATABASE_TO_UPPER=FALSE 옵션을 붙이지 않으면 모든 테이블, 컬럼 명이 대문자로 출력됨
+     # db 이름은 자유롭게 작성 가능
     username: username  # H2 DB 접속 ID (사용자 지정)
     password: password  # H2 DB 접속 PW (사용자 지정)
   h2:
-    console:          # H2 DB를 웹에서 관리하는 기능
-      enabled: true   # H2 console 사용 여부
-      path: /h2-console # H2 console 접속 주소
+    console:             # H2 DB를 웹에서 관리하는 기능
+      enabled: true      # H2 console 사용 여부
+      path: /h2-console  # H2 console 접속 주소
   jpa:
     # jpa 연동하고 싶다면 jpa 연동 설정 추가
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-     # ddl-auto: create  # jdbc:h2:mem:testdb 로 in-memory DB로 실행할 때 사용하는 초기화 전략
+     # ddl-auto: create  # jdbc:h2:mem:testdb같이 in-memory DB로 실행할 때 사용하는 초기화 전략
       ddl-auto: update
     properties:
       hibernate:
