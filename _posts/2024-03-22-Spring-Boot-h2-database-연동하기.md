@@ -78,3 +78,33 @@ localhost:8080/h2-console
 
 접속해보면 다음과 같은 DB 연결 창이 뜨고, `url`, `username`, `password` 값을 설정해 준 값으로 입력 후 Connect 하게 되면 DB 관리 페이지로 접속할 수 있다. <br/>
 ![h2-connect](https://github.com/lgm1007/lgm1007.github.io/assets/57981691/23398340-1a06-4d86-9c92-e1003c233073)
+
+---
+_만약 Spring Security를 적용하고 있고, /h2-console 경로로 접속했는데 연결을 거부했다고 하면서 H2 console에 접속이 안된다면 Security 설정에서 다음 항목들을 추가해야 한다._ <br/>
+```java
+@Configuration
+@EnableWebSecurity
+@RequiredArgsConstructor
+public class SpringSecurityConfig {
+   @Bean
+   public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity
+                // ...
+                .headers(headersConfig -> headersConfig.frameOptions(       // X-Frame-Options 비활성화
+                                HeadersConfigurer.FrameOptionsConfig::disable
+                        )
+                )
+                // ...
+                .authorizeHttpRequests(authorizeRequests ->
+                        authorizeRequests
+                                .requestMatchers(PathRequest.toH2Console()).permitAll() // H2 console 접근 허용
+                                // ...
+                )
+                // ...
+       
+       return httpSecurity.build();
+    }
+}
+```
+
+
