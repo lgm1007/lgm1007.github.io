@@ -90,14 +90,16 @@ public class SpringSecurityConfig {
    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 // ...
-                .headers(headersConfig -> headersConfig.frameOptions(       // X-Frame-Options 비활성화
+                // X-Frame-Options 비활성화
+                .headers(headersConfig -> headersConfig.frameOptions(
                                 HeadersConfigurer.FrameOptionsConfig::disable
                         )
                 )
                 // ...
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers(PathRequest.toH2Console()).permitAll() // H2 console 접근 허용
+                                // H2 console 접근 허용
+                                .requestMatchers(PathRequest.toH2Console()).permitAll()
                                 // ...
                 )
                 // ...
