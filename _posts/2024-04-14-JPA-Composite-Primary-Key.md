@@ -1,7 +1,7 @@
 ---
 layout:	post
 title: JPA 복합 키 사용하기
-date: 2024-04-14 12:00:01 +0900
+date: 2024-04-14 00:00:01 +0900
 image: language-8.jpg
 author: GyuMyung
 tags: language
