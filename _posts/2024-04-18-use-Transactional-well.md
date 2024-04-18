@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: @Transactional 잘 사용하기
+title: Transactional 잘 적용하기
 date: 2024-04-18 22:13:59 +0900
 image: language-9.jpg
 author: GyuMyung
@@ -8,7 +8,7 @@ tags: language
 comments: true
 ---
 
-# @Transactional 잘 사용하기
+# @Transactional 잘 적용하기
 ### 개요
 실무 업무를 하던 중 예기치 못하게 DB에서 특정 ID 값을 가진 데이터를 찾을 수 없다는 이슈가 발생했다. 처음에는 데이터를 생성해주는 로직에서의 문제인 줄 알았지만, 동일한 로직을 사용하는 다른 곳에서는 정상적으로 동작하는 것을 확인하고 아닌 것을 확인했다. 팀원들과 모여서 문제의 로직을 따라가보며 확인해보니 `@Transactional`에 대한 정확한 이해 없이 잘못 선언해주고 있던 게 원인이었다. <br/><br/>
 
