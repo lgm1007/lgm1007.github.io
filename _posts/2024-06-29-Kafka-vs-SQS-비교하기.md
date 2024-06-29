@@ -2,7 +2,7 @@
 layout:	post
 title: Kafka vs SQS 비교하기
 date: 2024-06-29 09:46:08 +0900
-image: technology-5.jpg
+image: technology-6.jpg
 author: GyuMyung
 tags: technology
 comments: true
