@@ -1,7 +1,7 @@
 ---
 layout:	post
 title: ForkJoinPool과 클래스 로더
-date: 2024-08-07 20:06:03 +0900
+date: 2024-08-06
 image: technology-8.jpg
 author: GyuMyung
 tags: technology
