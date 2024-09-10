@@ -32,6 +32,7 @@ Docker hub에서 redis 이미지를 받아온다. <br/>
 Spring boot에 redis의 의존성을 추가해준다. `spring-boot-starter-data-redis` 라이브러리를 추가해준다. <br/>
 
 * maven 설정
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -40,6 +41,7 @@ Spring boot에 redis의 의존성을 추가해준다. `spring-boot-starter-data-
 ```
 
 * gradle 설정
+
 ```gradle
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
