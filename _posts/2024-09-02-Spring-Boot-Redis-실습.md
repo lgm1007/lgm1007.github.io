@@ -17,8 +17,7 @@ comments: true
 실습 소스코드 Git Repository: [redis-practice git repository](https://github.com/lgm1007/redis-practice)
 
 ### Docker redis 컨테이너 실행
-> 우선 실습하기 앞서 Docker 설치가 선행되어야 한다.
-
+우선 실습하기 앞서 **Docker** 설치가 선행되어야 한다. <br/>
 Docker hub에서 redis 이미지를 받아온다. <br/>
 ```
 > docker pull redis
