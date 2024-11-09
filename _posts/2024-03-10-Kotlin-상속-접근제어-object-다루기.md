@@ -2,6 +2,7 @@
 layout:	post
 title: Kotlin - 5.상속, 접근제어, object 다루기
 date: 2024-03-10 13:13:33 +0900
+sitemap: 
 image: language-kotlin.png
 author: GyuMyung
 tags: language

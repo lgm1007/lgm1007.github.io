@@ -2,6 +2,7 @@
 layout:	post
 title: Github Actions로 브랜치에서 push하면 특정 브랜치에 자동 merge 하기
 date: 2024-07-05 21:48:02 +0900
+sitemap: 
 image: technology-7.jpg
 author: GyuMyung
 tags: technology

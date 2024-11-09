@@ -2,6 +2,7 @@
 layout:	post
 title: Spring Boot에서 Redis 실습하기
 date: 2024-09-02 13:03:31 +0900
+sitemap: 
 image: technology-10.jpg
 author: GyuMyung
 tags: technology

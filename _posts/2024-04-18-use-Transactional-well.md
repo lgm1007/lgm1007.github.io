@@ -2,6 +2,7 @@
 layout:	post
 title: Transactional 잘 적용하기
 date: 2024-04-18 22:13:59 +0900
+sitemap: 
 image: language-9.jpg
 author: GyuMyung
 tags: language

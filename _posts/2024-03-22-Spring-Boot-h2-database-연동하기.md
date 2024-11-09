@@ -2,6 +2,7 @@
 layout:	post
 title: Spring Boot에 H2 database 연결하여 개발 환경 구축하기
 date: 2024-03-22 10:00:15 +0900
+sitemap: 
 image: technology-3.jpg
 author: GyuMyung
 tags: technology

@@ -2,6 +2,7 @@
 layout:	post
 title: 인터페이스가 Even하게 익지 않았어요 (ServiceImpl 구조에 대한 사견)
 date: 2024-10-14 19:49:57 +0900
+sitemap: 
 image: not_even_interface.jpg
 author: GyuMyung
 tags: architect
