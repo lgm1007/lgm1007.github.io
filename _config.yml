@@ -7,7 +7,6 @@ markdown: kramdown
 permalink: pretty
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll/tagging
   - jekyll-seo-tag
 
