@@ -1,8 +1,8 @@
 #-------------------------------
 # General Site Settings
-title: Gmlee
+title: 규띵의 명한 기술블로그
 logo: logo.svg # You can add own logo.
-description: Zolan is modern minimal theme for Jekyll
+description: 이거 명하거든요...
 
 
 #-------------------------------
@@ -10,8 +10,8 @@ description: Zolan is modern minimal theme for Jekyll
 author:
   name: Gyumyung Lee
   image: hero.jpg
-  say-hello: Hello, I’m <strong>Gyumyung Lee</strong>
-  bio: Backend Programmer, <strong>Java Spring Boot</strong>, <strong>Kotlin</strong>, <strong>Python Flask</strong>. and I consider it important to <strong>record</strong>. Such as <a href="https://github.com/lgm1007/TIL" target="blank">TIL</a> and Blog.
+  say-hello: Hello, I’m <strong>Gyumyung Lee</strong>👋
+  bio: Backend Programmer, <strong>Spring Boot</strong>, <strong>Java</strong>, <strong>Kotlin</strong>. and I consider it important to <strong>record</strong>. Such as <a href="https://github.com/lgm1007/TIL" target="blank">TIL</a> and Blog.
 
 
 #-------------------------------
