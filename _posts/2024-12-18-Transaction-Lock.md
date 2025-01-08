@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: Spring JPA 락
+title: 트랜잭션 락
 date: 2024-12-18 13:40:31 +0900
 sitemap: 
 image: technology-13.jpg
@@ -9,8 +9,8 @@ tags: technology
 comments: true
 ---
 
-# Spring JPA 락
-## 1.  비관적 락 (Pessimistic Lock)
+# 트랜잭션 락
+## 1. 비관적 락 (Pessimistic Lock)
 ### 설명
 데이터 충돌 가능성이 **높다고 가정**하고 트랜잭션이 데이터에 접근할 때마다 락을 걸어 다른 트랜잭션의 접근을 제한하는 방식으로, 즉 **비관적인 관점**에서 데이터 충돌을 사전에 방지하는 방식이다.
 
