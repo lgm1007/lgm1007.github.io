@@ -4,7 +4,7 @@ title: Bouncer 패턴과 Extract method 기법
 date: 2023-12-10 12:54:17 +0900
 image: programming-style-2.jpg
 author: GyuMyung
-tags: programming-style
+tags: programming
 comments: true
 ---
 
