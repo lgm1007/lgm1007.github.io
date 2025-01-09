@@ -30,7 +30,7 @@ tags: #daily_note
 - [ ] #todo TBU
 
 
-[[{% raw %}{{yesterday}}{% endraw %} | < yesterday]] | [[{{% raw %}{tomorrow}}{% endraw %} | tomorrow >]]
+[[{% raw %}{{yesterday}}{% endraw %} | < yesterday]] | [[{% raw %}{{tomorrow}}{% endraw %} | tomorrow >]]
 
 ---
 
