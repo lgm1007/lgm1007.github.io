@@ -19,7 +19,7 @@ comments: true
 
 폴더 template를 만들고 그 안에 `daily_note_template` 라는 이름의 파일을 만들어 다음과 같이 작성해줄 것이다. 아래 템플릿 파일 내용은 임시로 작성한 것이기 때문에 개인의 필요에 맞게 수정해서 작성해도 된다.
 
-`````markdown
+`````text
 ---
 created: {{date}} {{time}} 
 ---
