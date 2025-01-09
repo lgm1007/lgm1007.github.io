@@ -21,16 +21,16 @@ comments: true
 
 `````text
 ---
-created: {{ "{{date}}" }} {{ "{{time}}" }} 
+created: &#123;&#123;date&#125;&#125; &#123;&#123;time&#125;&#125; 
 ---
 
 tags: #daily_note
 
-# {{ "{{date}}" }}
+# &#123;&#123;date&#125;&#125;
 - [ ] #todo TBU
 
 
-[[{{ "{{yesterday}}" }} | < yesterday]] | [[{{ "{{tomorrow}}" }} | tomorrow >]]
+[[&#123;&#123;yesterday&#125;&#125; | < yesterday]] | [[&#123;&#123;tomorrow&#125;&#125; | tomorrow >]]
 
 ---
 
