@@ -20,17 +20,19 @@ comments: true
 폴더 template를 만들고 그 안에 `daily_note_template` 라는 이름의 파일을 만들어 다음과 같이 작성해줄 것이다. 아래 템플릿 파일 내용은 임시로 작성한 것이기 때문에 개인의 필요에 맞게 수정해서 작성해도 된다.
 
 `````text
+{% capture open_brace %}{{{% endcapture %}
+{% capture close_brace %}}}{% endcapture %}
 ---
-created: &#123;&#123;date&#125;&#125; &#123;&#123;time&#125;&#125; 
+created: {{ open_brace }}date{{ close_brace }} {{ open_brace }}time{{ close_brace }} 
 ---
 
 tags: #daily_note
 
-# &#123;&#123;date&#125;&#125;
+# {{ open_brace }}date{{ close_brace }}
 - [ ] #todo TBU
 
 
-[[&#123;&#123;yesterday&#125;&#125; | < yesterday]] | [[&#123;&#123;tomorrow&#125;&#125; | tomorrow >]]
+[[{{ open_brace }}yesterday{{ close_brace }} | < yesterday]] | [[{{ open_brace }}tomorrow{{ close_brace }} | tomorrow >]]
 
 ---
 
