@@ -3,7 +3,7 @@ layout:	post
 title: 옵시디언 데일리 투두리스트로 일감 관리하기
 date: 2025-01-09 09:00:12 +0900
 sitemap: 
-image: worktool-1.jpg
+image: worktool-1.png
 author: GyuMyung
 tags: worktool
 comments: true
