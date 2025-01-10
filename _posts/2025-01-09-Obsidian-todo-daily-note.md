@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 옵시디언 데일리 TODO 리스트로 일감 관리하기
+title: 옵시디언 데일리 투두리스트로 일감 관리하기
 date: 2025-01-09 09:00:12 +0900
 sitemap: 
 image: worktool-1.jpg
@@ -9,7 +9,7 @@ tags: worktool
 comments: true
 ---
 
-# 옵시디언 데일리 TODO 리스트로 일감 관리하기
+# 옵시디언 데일리 투두리스트로 일감 관리하기
 ### 1. 데일리 노트 (Daily notes) 설정하기
 옵시디언에서 기본적으로 제공하는 코어 플러그인 (Core plugins)에 데일리 노트가 있다. 옵시디언 설정에 들어가 코어 플러그인에서 데일리 노트를 활성화한다.
 
