@@ -98,7 +98,7 @@ public class SnakeToCamelNamingStrategy extends PropertyNamingStrategies.NamingB
            }
            
            ret.append(upperCase ? 
-                 Character.toUpperCase(c) : c
+                 Character.toUpperCase(c) : c);
            upperCase = false; // 대문자 처리 후에는 다시 소문자 처리  
         }
         return ret.toString();  
