@@ -118,3 +118,10 @@ public class userDto {
 }
 ```
 
+```json
+{
+    "firstName": "GM",
+    "lastName": "Lee"
+}
+```
+
