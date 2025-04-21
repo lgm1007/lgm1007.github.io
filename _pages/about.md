@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-image: post-6.jpg
+image: AboutMe.png
 ---
 
 안녕하세요. 개발자 이규명입니다.<br/><br/>
