@@ -13,4 +13,4 @@ Hi, I'm a developer Gyumyung Lee.<br/><br/>
 It's is a blog where I write about what I thought about at the time and what I studied.<br/>
 If there is any wrong information, please send it to methewraymond@gmail.com email and then I check it.
 
-**Follow Me** | [lgm1007 GitHub](https://github.com/lgm1007)
+**Follow Me** On [lgm1007 GitHub](https://github.com/lgm1007)
