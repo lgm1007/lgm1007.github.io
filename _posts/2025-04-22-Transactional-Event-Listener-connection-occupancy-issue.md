@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: @TransactionalEventListener 로 동기 이벤트 처리 중 Connection 점유 이슈
+title: TransactionalEventListener 로 동기 이벤트 처리 중 Connection 점유 이슈
 date: 2025-04-22 11:24:11 +0900
 sitemap: 
 image: troubleshooting-4.jpg
