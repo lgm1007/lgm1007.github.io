@@ -54,7 +54,7 @@ public class Properties implements Serializable {
 public class ExampleEntityUpdater {
     private final ExampleEntityRepository entityRepository;
     
-	@Transactional
+    @Transactional
     public void updateExampleEntityPropertiesChecked(final int entitySeq, final boolean checked) {
         ExampleEntity entity = entityRepository.findById(entitySeq).orElseThrow(() -> new Exception("해당하는 ExampleEntity를 찾을 수 없습니다."));
         Properties properties = entity.getProperties();
