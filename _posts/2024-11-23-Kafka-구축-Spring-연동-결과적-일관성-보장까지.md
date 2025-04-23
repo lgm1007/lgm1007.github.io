@@ -382,7 +382,7 @@ class KafkaConfig {
 interface MessageProducer {
     fun sendProductOrderMessage(message: ProductMessage)
 
-	fun sendAfterPaymentMessage(message: PaymentDataMessage)
+    fun sendAfterPaymentMessage(message: PaymentDataMessage)
 }
 ```
 ```kotlin

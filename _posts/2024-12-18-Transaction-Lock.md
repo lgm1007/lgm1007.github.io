@@ -58,11 +58,11 @@ Spring JPA에서 `@Version` 어노테이션을 사용해 구현한다.
 ```kotlin
 @Entity
 class Lecture(
-	val title: String,
-	@Version
-	var version: Int? = null
+    val title: String,
+    @Version
+    var version: Int? = null
 ) {
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long = 0
 }
