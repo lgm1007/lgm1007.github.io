@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 카프카 서버 구축부터 Spring Boot 연동, 결과적 일관성 보장까지
+title: 카프카를 연동한 이유, 그건 일관성을 보장하고 싶었기 때문이야
 date: 2024-11-23 12:07:37 +0900
 sitemap: 
 image: technology-12.jpg

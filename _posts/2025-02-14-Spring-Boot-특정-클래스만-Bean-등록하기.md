@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: Spring Boot 특정 클래스만 Bean 등록하기 (feat. @SpringBootTest classes 속성)
+title: Bean 등록의 끝, 나는 그 클래스만 선택해야 했다 (feat. @SpringBootTest classes 속성)
 date: 2025-02-14 13:46:09 +0900
 sitemap: 
 image: technology-15.jpg

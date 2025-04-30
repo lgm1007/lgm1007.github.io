@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 테스트 컨테이너로 통합 테스트 환경 구축하기
+title: 그가 테스트 컨테이너를 소환했을 때, 모든 통합 테스트가 가능해졌다
 date: 2025-03-31 21:08:07 +0900
 sitemap: 
 image: technology-16.jpg

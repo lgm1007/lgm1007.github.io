@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 트랜잭션 락
+title: 트랜잭션 락을 걸면, 그녀는 내게 답하지 않는다
 date: 2024-12-18 13:40:31 +0900
 sitemap: 
 image: technology-13.jpg

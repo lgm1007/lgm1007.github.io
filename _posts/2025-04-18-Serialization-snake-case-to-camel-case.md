@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: Java JSON 직렬화 SnakeCase to CamelCase
+title: 그는 SnakeCase를 넘어, CamelCase의 세계로 나아갔다
 date: 2025-04-18 16:00:05 +0900
 sitemap: 
 image: program-03.jpg
