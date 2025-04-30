@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 인덱스 톺아보기
+title: 전생했더니 인덱스였던 건에 대하여
 date: 2024-11-13 20:32:31 +0900
 sitemap: 
 image: technology-11.jpg
