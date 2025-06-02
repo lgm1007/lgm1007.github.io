@@ -1,7 +1,7 @@
 ---
 layout:	post
 title: Presigned URL 그것은 새로운 파일 전송의 시작이었다.
-date: 2026-06-02 15:05:10 +0900
+date: 2025-06-02 15:05:10 +0900
 sitemap:
 image: technology-17.jpg
 author: GyuMyung
