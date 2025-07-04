@@ -11,7 +11,7 @@ comments: true
 
 ### NextRise 2025 Seoul
 
-![nextrise](https://github.com/user-attachments/assets/4e17b05c-17c2-4538-b4f5-1ca46af57cbf)
+![nextrise](https://i.ibb.co/xSM8ZRcF/Kakao-Talk-Photo-2025-07-03-09-15-44-002.jpg)
 
 회사에서 단체 워크샵으로 코엑스에서 진행한 NextRise 2025 Seoul 박람회에 방문했다. NextRise는 벤처 및 스타트업 기업가, 엑셀러레이터, 벤처 투자사, 산업계 리더들이 네트워크를 형성하고, 인사이트를 공유하며 혁신을 선보이는 스타트업 박람회라고 소개하고 있다.
 참가한 다양한 스타트업에서 그들의 기술과 제품을 구경하며 요즘 스타트업 산업의 트렌드를 엿볼 수 있는 기회라고 생각했다.
@@ -34,26 +34,26 @@ NextRise에서의 주요 주제로는 다음과 같았다.
 올해 나름 이직 활동을 하며 공고가 올라오는 기업들을 여럿 찾아보며 자주 보였던 분야가 많이 보였다. 그 중 특히 AI, Health Care, Fintech 분야들을 주 사업으로 하는 스타트업이 주로 보였고, Climate Tech와 같은 환경 문제를 해결하고자 하는 기업들도 간혹 봤었는데, NextRise에 참가하는 스타트업들도 이러한 분야가 주요 주제인 것을 보고 '역시 이러한 분야들이 트렌드구나' 하고 느꼈다.
 참가한 스타트업 중에서는 실제로 이직 준비 중 지원했던 곳이나 면접을 봤던 곳들도 보여 내심 반갑기도 했다. 그 중 워낙 유명한 스타트업들은 부스 규모와 방문 인원 자체도 남달랐다.
 
-![booth1](https://github.com/user-attachments/assets/88ed1c97-1610-47e8-8777-d4ba8f8e60c1)
+![booth1](https://i.ibb.co/DHGKgfr2/Kakao-Talk-Photo-2025-07-03-09-15-45-007.jpg)
 
-![booth2](https://github.com/user-attachments/assets/9e529680-b0cd-404e-b5ac-8f3dd75f3965)
+![booth2](https://i.ibb.co/d4KtYycJ/Kakao-Talk-Photo-2025-07-03-09-15-45-006.jpg)
 
-![booth3](https://github.com/user-attachments/assets/231326f0-e0bf-43e4-8c3d-19549265fc8b)
+![booth3](https://i.ibb.co/8L0hkc4X/Kakao-Talk-Photo-2025-07-03-09-15-45-005.jpg)
 
-![booth4](https://github.com/user-attachments/assets/20186239-9c9d-4ed4-9ca8-d7c1f222e3a9)
+![booth4](https://i.ibb.co/v4QwKCQ3/Kakao-Talk-Photo-2025-07-03-09-15-44-004.jpg)
 
 스타트업 부스들은 사진처럼 열어두고 그들의 기술이나 제품을 소개해주며, 설문조사 또는 회원가입을 하면 경품을 주는 식으로 홍보하고 있었다. 스타트업 분야 별로 색상이 달라 관심있는 분야는 부스 색상을 보고 찾아가면 됐다. 물론 나는 모든 분야를 둘러보았다.
 
 다양한 분야들을 둘러보며, '해당 분야에서 일한다면 보람이 있겠다' 싶은 분야는 Climate Tech, 즉 환경 및 기후 관련 기술 분야였다. 조금이라도 환경에 도움이 되는 일을 한다면 수 많은 사람들은 물론 생명들까지도 영향을 줄 수 있는 분야라고 생각했기 때문이다. 그리고 재밌을 것 같은 분야는 우주와 관련된 스타트업들도 간혹 보였는데, 운석의 궤도 분석이나 행성 관측과 같은 기술들을 보며 일이지만 탐구하는 느낌이 들 것 같은 분야라고 생각해 흥미있게 봤다.
 
-![notion-booth](https://github.com/user-attachments/assets/1773d9f4-1cf2-4333-b7aa-f20b05516f6d)
+![notion-booth](https://i.ibb.co/fYVf20sN/Kakao-Talk-Photo-2025-07-03-09-15-44-003.jpg)
 
-![google-cloud-booth](https://github.com/user-attachments/assets/4b469184-cc92-43b0-a3ec-d93323c03b54)
+![google-cloud-booth](https://i.ibb.co/DftmnDh9/Kakao-Talk-Photo-2025-07-03-09-15-44-001.jpg)
 
 역시 규모가 있거나 사용자들이 많은 기업은 부스 자체가 다르다.
 특히 노션은 사내 문서로도 사용하기도 하고, 개인적으로도 사용하는 툴로 많이 사용하고 있어 반가운 마음이었다. 구글 클라우드는 강력한 경쟁사인 AWS가 있어 사용해보진 않았지만 강력한 AWS 대체사라고 생각한다.
 
-![namecard](https://github.com/user-attachments/assets/236f3a31-b7d3-4d36-9065-00dd6ec9facb)
+![namecard](https://i.ibb.co/m5LRhm8N/Kakao-Talk-Photo-2025-07-04-09-44-46.jpg)
 
 다음날 사무실에 돌아와 받은 명함들
 더 받을 수 있었는데, 후반쯤 되니 명함보다 경품 타는거에 집중되서 못 받은 명함들이 꽤 된다. 그래도 다양한 스타트업에 종사하시는 분들의 명함을 수집할 수 있었다.
