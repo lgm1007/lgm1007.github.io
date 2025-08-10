@@ -15,7 +15,7 @@ comments: true
 여기서 소개하는 라이브러리는 Kotlin 진영의 `Kotlin DataFrame` 이라는 라이브러리이다.
 Kotlin DataFrame은 JetBrains 사에서 만든 데이터 분석 및 가공 라이브러리이다. Kotlin을 만든 JetBrains 사에서 만든 라이브러리인 만큼 Kotlin 공식으로 밀고 있는 라이브러리라서 계속 관리되어지고 있다. 또한 Kotlin 언어의 특성을 살려 타입 안정성과 확장성이 좋다는 특징도 가지고 있다.
 
-[공식 Kotlin DataFrame GitHub Repository](https://github.com/Kotlin/dataframe)
+[공식 Kotlin DataFrame GitHub Repository](https://github.com/Kotlin/dataframe)<br/>
 [공식 Kotlin DataFrame 사이트](https://kotlin.github.io/dataframe/home.html)
 
 단, Pandas만큼 범용적인 데이터 분석 및 가공 기능에 100% 전부 다 호환되지는 않는다는 점을 유의하자.
