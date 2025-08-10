@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 테스트 데이터, EasyRandom 으로 컷
+title: 테스트 데이터, EasyRandom 을 사용한다면
 date: 2025-08-06 09:21:50 +0900
 sitemap: 
 image: technology-18.jpg
