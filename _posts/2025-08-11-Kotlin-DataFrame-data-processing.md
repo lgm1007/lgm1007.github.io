@@ -75,6 +75,7 @@ fun classifyPersonByJob(persons: List<Person>): List<PersonGroupByJob> {
 | --- | ------------ | --------- |
 | 의사  | 홍길동, 심청, 최콩쥐 | 30000     |
 | 개발자 | 김첨지, 박돌쇠     | 15000     |
+
 이렇게 DataFrame 컬럼이 만들어지면 그 후에는 해당 값을 담아줄 객체에 담아주는 식으로 변환해주면 된다.
 
 #### 다중 키 데이터 분류
