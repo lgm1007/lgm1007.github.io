@@ -13,7 +13,7 @@ comments: true
 TransactionalEvent 처리를 동기로 하는 경우 이벤트를 발행하는 쪽의 트랜잭션이 Connection을 계속 점유한다는 이슈를 알게 되어, 이에 대해 정리해보려 한다.
 
 ### 발생 원인은?
-Connection은 트랜잭션 동기화 자원이 모두 정리될 때까지 보유한다. 따라서 TransactionalEvent가 동기 방식으로 실행되면, `@TransactionalEventListener`의 기본 phase 옵션인 `AFTER_COMMIT`에 따라 트랜잭션이 성공적으로 커밋되면 해당 이벤트가 실행되고, 이벤트가 실행되는 동안에도 DB 커넥션을 점유하게 된다.
+Connection은 트랜잭션 동기화 자원이 모두 정리될 때까지 보유한다. 따라서 TransactionalEvent가 동기 방식으로 실행되면, `@TransactionalEventListener`의 기본 phase 옵션인 `AFTER_COMMIT`에 따라 트랜잭션이 성공적으로 커밋되면 해당 이벤트가 실행되고, 이벤트가 실행되는 동안에도 DB 커넥션을 점유하게 된다.
 (여기서의 트랜잭션은 `@Transactional` 컨텍스트 안에서의 트랜잭션)
 
 ### 이 이슈로 발생할 수 있는 문제
