@@ -3,9 +3,9 @@ layout:	post
 title: AWS ElastiCache로 Redis 대체하기
 date: 2025-08-27 16:11:27 +0900
 sitemap: 
-image: technology-22.png
+image: infrastructure-3.png
 author: GyuMyung
-tags: technology
+tags: infrastructure
 comments: true
 ---
 

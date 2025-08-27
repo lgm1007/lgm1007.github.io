@@ -3,9 +3,9 @@ layout:	post
 title: AWS Certificate Manager에서 인증서 발급하고 HTTPS 요청하기
 date: 2025-08-22 16:41:37 +0900
 sitemap: 
-image: technology-21.png
+image: infrastructure-2.png
 author: GyuMyung
-tags: technology
+tags: infrastructure
 comments: true
 ---
 

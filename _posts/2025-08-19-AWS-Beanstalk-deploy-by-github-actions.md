@@ -3,9 +3,9 @@ layout:	post
 title: Github Actions 와 AWS Elastic Beanstalk 으로 지속적인 배포
 date: 2025-08-19 11:42:37 +0900
 sitemap: 
-image: technology-20.png
+image: infrastructure-1.png
 author: GyuMyung
-tags: technology
+tags: infrastructure
 comments: true
 ---
 
