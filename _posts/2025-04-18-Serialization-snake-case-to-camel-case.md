@@ -3,7 +3,7 @@ layout:	post
 title: 직렬화 케이스 SnakeCase 👉 CamelCase 변환 이슈
 date: 2025-04-18 16:00:05 +0900
 sitemap: 
-image: program-03.jpg
+image: programming-style-3.jpg
 author: GyuMyung
 tags: programming
 comments: true
