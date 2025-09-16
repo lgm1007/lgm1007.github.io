@@ -3,9 +3,9 @@ layout:	post
 title: 코틀린에서의 데이터 가공, Kotlin DataFrame과 함께
 date: 2025-08-11 08:30:15 +0900
 sitemap: 
-image: technology-19.jpg
+image: programming-7.jpg
 author: GyuMyung
-tags: technology
+tags: programming
 comments: true
 ---
 
