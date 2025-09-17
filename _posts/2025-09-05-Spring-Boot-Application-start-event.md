@@ -17,12 +17,12 @@ Spring Boot 애플리케이션을 개발할 때 간혹 애플리케이션이 시
 ```kotlin
 @Component
 class StartupRunner(
-	private val exampleService: ExampleService
+    private val exampleService: ExampleService
 ) : CommandLineRunner {
-	override fun run(vararg args: String?) {
-		// 애플리케이션 실행 직후 실행됨
-		exampleService.doSomething()
-	}
+    override fun run(vararg args: String?) {
+        // 애플리케이션 실행 직후 실행됨
+        exampleService.doSomething()
+    }
 }
 ```
 
@@ -37,13 +37,13 @@ class StartupRunner(
 ```kotlin
 @Component
 class StartupListener(
-	private val exampleService: ExampleService
+    private val exampleService: ExampleService
 ) {
-	@EventListener(ApplicationReadyEvent::class)
-	fun onApplicationReady() {
-		// 애플리케이션 준비 완료된 시점에 실행됨
-		exampleService.doSomething()
-	}
+    @EventListener(ApplicationReadyEvent::class)
+    fun onApplicationReady() {
+        // 애플리케이션 준비 완료된 시점에 실행됨
+        exampleService.doSomething()
+    }
 }
 ```
 
@@ -57,11 +57,11 @@ class StartupListener(
 ```kotlin
 @Component
 class ExampleInitializer(
-	private val exampleService: ExampleService
+    private val exampleService: ExampleService
 ) : InitializingBean {
-	override fun afterPropertiesSet() {
-		exampleService.doSomething()
-	}
+    override fun afterPropertiesSet() {
+        exampleService.doSomething()
+    }
 }
 ```
 
