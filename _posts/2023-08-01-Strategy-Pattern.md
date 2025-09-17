@@ -32,7 +32,7 @@ comments: true
 전략 인터페이스
 ```java
 public interface PaymentStrategy {
-	void pay(int amount);
+    void pay(int amount);
 }
 ```
 <br/>
@@ -40,18 +40,16 @@ public interface PaymentStrategy {
 전략 클래스
 ```java
 public class CreditCardPayment implements PaymentStrategy {
-	
-	@Override
+    @Override
     public void pay(int amount) {
-		System.out.println("신용카드로 %d원 결제합니다.".formatted(amount));
+        System.out.println("신용카드로 %d원 결제합니다.".formatted(amount));
     }
 }
 
-public class PayPalPayment implements PaymentStrategy {	
-
-	@Override
+public class PayPalPayment implements PaymentStrategy {
+    @Override
     public void pay(int amount) {
-		System.out.println("페이팔로 %d원 결제합니다.".formatted(amount));
+        System.out.println("페이팔로 %d원 결제합니다.".formatted(amount));
     }
 }
 ```
@@ -60,14 +58,14 @@ public class PayPalPayment implements PaymentStrategy {
 컨텍스트
 ```java
 public class ShoppingCart {
-	private PaymentStrategy paymentStrategy;
-	
-	public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
-		this.paymentStrategy = paymentStrategy;
+    private PaymentStrategy paymentStrategy;
+    
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
     }
-	
-	public void checkout(int amount) {
-		paymentStrategy.pay(amount);
+    
+    public void checkout(int amount) {
+        paymentStrategy.pay(amount);
     }
 }
 ```
@@ -88,14 +86,14 @@ cart.checkout(20000);   // 페이팔로 20000원 결제합니다.
 
 ```java
 public class ShoppingCart {
-	public void checkout(int amount, String paymentMethod) {
-		if (paymentMethod.equals("CreditCard")) {
-			System.out.println("신용카드로 %d원 결제합니다.".formatted(amount));
-		} else if (paymentMethod.equals("PayPal")) {
-			System.out.println("페이팔로 %d원 결제합니다.".formatted(amount));
-		} else {
-			System.out.println("지원하지 않는 결제 방법입니다.");
-		}
+    public void checkout(int amount, String paymentMethod) {
+        if (paymentMethod.equals("CreditCard")) {
+            System.out.println("신용카드로 %d원 결제합니다.".formatted(amount));
+        } else if (paymentMethod.equals("PayPal")) {
+            System.out.println("페이팔로 %d원 결제합니다.".formatted(amount));
+        } else {
+            System.out.println("지원하지 않는 결제 방법입니다.");
+        }
     }
 }
 ```
