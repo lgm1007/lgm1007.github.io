@@ -26,15 +26,15 @@ Kotlin DataFrame은 JetBrains 사에서 만든 데이터 분석 및 가공 라�
 
 ```kotlin
 data class Person(
-	val name: String,
-	val job: String,
-	val salary: Int
+    val name: String,
+    val job: String,
+    val salary: Int
 )
 
 data class PersonGroupByJob(
-	val job: String,
-	val names: String,
-	val sumSalary: Int
+    val job: String,
+    val names: String,
+    val sumSalary: Int
 )
 ```
 
@@ -42,25 +42,25 @@ data class PersonGroupByJob(
 
 ```kotlin
 fun classifyPersonByJob(persons: List<Person>): List<PersonGroupByJob> {
-	return persons.toDataFrame().groupBy("job") // job 기준으로 분류
-		.aggregate { rows -> 
-			rows.map{
-				it["name"] as String
-			}
-			.distinct()
-			.sorted()
-			.joinToString(",") into "names"
+    return persons.toDataFrame().groupBy("job") // job 기준으로 분류
+        .aggregate { rows -> 
+            rows.map{
+                it["name"] as String
+            }
+            .distinct()
+            .sorted()
+            .joinToString(",") into "names"
 
-			sum("salary") into "sumSalary"
-		}
-		.rows()
-		.map { row -> 
-			PersonGroupByJob(
-				job = row["job"] as String,
-				names = row["names"] as String,
-				sumSalary = row["sumSalary"] as Int
-			)
-		}
+            sum("salary") into "sumSalary"
+        }
+        .rows()
+        .map { row -> 
+            PersonGroupByJob(
+                job = row["job"] as String,
+                names = row["names"] as String,
+                sumSalary = row["sumSalary"] as Int
+            )
+        }
 }
 ```
 
@@ -83,17 +83,17 @@ fun classifyPersonByJob(persons: List<Person>): List<PersonGroupByJob> {
 
 ```kotlin
 data class Person(
-	val name: String,
-	val job: String,
-	val hireType: String,
-	val salary: Int
+    val name: String,
+    val job: String,
+    val hireType: String,
+    val salary: Int
 )
 
 data class PersonGroupBy(
-	val job: String,
-	val hireType: String,
-	val names: String,
-	val sumSalary: Int
+    val job: String,
+    val hireType: String,
+    val names: String,
+    val sumSalary: Int
 )
 ```
 
@@ -101,26 +101,26 @@ data class PersonGroupBy(
 
 ```kotlin
 fun classifyPersonGroupByJobAndHireType(persons: List<Person>): List<PersonGroupBy> {
-	return persons.toDataFrame().groupBy("job", "hireType")
-		.aggregate { rows ->
-			rows.map{
-				it["name"] as String
-			}
-			.distinct()
-			.sorted()
-			.joinToString(",") into "names"
+    return persons.toDataFrame().groupBy("job", "hireType")
+        .aggregate { rows ->
+            rows.map{
+                it["name"] as String
+            }
+            .distinct()
+            .sorted()
+            .joinToString(",") into "names"
 
-			sum("salary") into "sumSalary"
-		}
-		.rows()
-		.map { row -> 
-			PersonGroupBy(
-				job = row["job"] as String,
-				hireType = row["hireType"] as String,
-				names = row["names"] as String,
-				sumSalary = row["sumSalary"] as Int
-			)
-		}
+            sum("salary") into "sumSalary"
+        }
+        .rows()
+        .map { row -> 
+            PersonGroupBy(
+                job = row["job"] as String,
+                hireType = row["hireType"] as String,
+                names = row["names"] as String,
+                sumSalary = row["sumSalary"] as Int
+            )
+        }
 }
 ```
 
@@ -132,19 +132,19 @@ DataFrame 타입 데이터에 다른 DataFrame 타입 데이터를 합칠 수도
 
 ```kotlin
 val metaPerson = dataFrameOf(
-	"name", "age", "address"
+    "name", "age", "address"
 )(
-	"홍길동", 30, "서울특별시 OO구 XX동",
-	"심청", 20, "부산광역시 OO구 XX동"
+    "홍길동", 30, "서울특별시 OO구 XX동",
+    "심청", 20, "부산광역시 OO구 XX동"
 )
 
 data class PersonJoin(
-	val name: String,
-	val age: Int?,
-	val address: String?,
-	val job: String,
-	val hireType: String,
-	val salary: Int
+    val name: String,
+    val age: Int?,
+    val address: String?,
+    val job: String,
+    val hireType: String,
+    val salary: Int
 )
 ```
 
@@ -152,19 +152,19 @@ data class PersonJoin(
 
 ```kotlin
 fun leftJoinPerson(persons: List<Person>): List<PersonJoin> {
-	// 왼쪽(persons.toDataFrame()) 기준으로 보존, metaPerson은 붙여주되 없으면 null
-	persons.toDataFrame().leftJoin(metaPerson, by = "name")
-		.rows()
-		.map { row -> 
-			PersonJoin(
-				name = row["name"] as String,
-				age = row["age"] as Int?,
-				address = row["address"] as String?,
-				job = row["job"] as String,
-				hireType = row["hireType"] as String,
-				salary = row["salary"] as Int
-			)
-		}
+    // 왼쪽(persons.toDataFrame()) 기준으로 보존, metaPerson은 붙여주되 없으면 null
+    persons.toDataFrame().leftJoin(metaPerson, by = "name")
+        .rows()
+        .map { row -> 
+            PersonJoin(
+                name = row["name"] as String,
+                age = row["age"] as Int?,
+                address = row["address"] as String?,
+                job = row["job"] as String,
+                hireType = row["hireType"] as String,
+                salary = row["salary"] as Int
+            )
+        }
 }
 ```
 
