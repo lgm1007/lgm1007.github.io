@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 화상통화 서비스 구현하기 (2) - 구현
+title: 화상통화 서비스 구현하기 (2) - AWS Chime SDK 활용하기
 date: 2025-09-22 19:00:15 +0900
 sitemap: 
 image: AWS-chime-sdk.png
@@ -8,7 +8,7 @@ author: GyuMyung
 tags: technology
 comments: true
 ---
-화상통화 서비스 중 화상통화방 참여 기능을 한번 구현해보자.
+AWS Chime SDK를 활용해 화상통화 서비스 중 화상통화방 참여 기능을 한번 구현해보자.
 
 ### 기술 스택
 예제에서 활용한 기술 스택 기준
