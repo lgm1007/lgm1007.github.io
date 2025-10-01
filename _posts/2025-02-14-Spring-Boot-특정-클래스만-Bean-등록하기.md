@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: Bean 등록의 끝, 나는 그 클래스만 선택해야 했다 (feat. @SpringBootTest classes 속성)
+title: Spring Boot 테스트 코드에서 특정 클래스만 Bean 등록하기
 date: 2025-02-14 13:46:09 +0900
 sitemap: 
 image: technology-15.jpg
@@ -9,7 +9,7 @@ tags: technology
 comments: true
 ---
 
-# Spring Boot 특정 클래스만 Bean 등록하기
+# Spring Boot 테스트 코드에서 특정 클래스만 Bean 등록하기
 ## feat. `@SpringBootTest`의 `classes` 속성
 ### 개요
 회사에서 통합테스트 환경을 구축하는 과정에서 통합테스트 작성 시 선언해줘야 하는 어노테이션의 재사용성을 위해 하나의 커스텀 어노테이션을 생성하여 관리하고자 했다. 여기서 회사 프로젝트의 특성 상 테스트 환경에서는 특정 Bean만 등록해줘야해서 `@SpringBootTest` 어노테이션의 `classes` 속성을 사용해주고 있었다.

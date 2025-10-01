@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: Presigned URL 그것은 새로운 파일 전송의 시작이었다.
+title: S3의 Presigned URL 사용기
 date: 2025-06-02 15:05:10 +0900
 sitemap:
 image: technology-17.jpg

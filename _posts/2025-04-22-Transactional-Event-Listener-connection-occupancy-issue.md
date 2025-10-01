@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: TransactionalEventListener가 만든 동기 이벤트는 모든 연결을 점유하고, 그 속에서 나는 갇혀버렸다
+title: TransactionalEventListener가 만든 동기 이벤트는 모든 연결을 점유한다
 date: 2025-04-22 11:24:11 +0900
 sitemap: 
 image: troubleshooting-4.jpg

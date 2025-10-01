@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: 공유락을 걸었던 그, 하지만 나는 그때 베타락을 걸었다
+title: 데이터베이스 락의 종류와 특징은? 
 date: 2025-01-08 16:41:09 +0900
 sitemap: 
 image: technology-14.jpg

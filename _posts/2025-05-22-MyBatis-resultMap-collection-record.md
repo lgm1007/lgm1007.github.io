@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: MyBatis가 내 Record를 외면했다. — 매핑 좀 하자니까!
+title: MyBatis는 Record를 외면했다. — 매핑 좀 하자니까!
 date: 2025-05-22 17:31:10 +0900
 sitemap: 
 image: troubleshooting-5.jpg
