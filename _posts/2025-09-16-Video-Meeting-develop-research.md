@@ -87,7 +87,7 @@ Spring Boot
    ▼
 React (프론트엔드)
    │
-   │ AWS Chime JS SDK 호출 (Chime meeting 세션 생성)
+   │ AWS Chime JS SDK 호출 (Chime meeting 세션 생성)
    ▼
 화상통화 시작
 ```
