@@ -88,10 +88,10 @@ $container-offset: 20px;
         letter-spacing: 1px;
         text-transform: uppercase;
         border-bottom: 1px solid transparent;
-        color: $gray;
+        color: var(--article-title);
         &:hover {
-          color: $dark;
-          border-color: $brand-color;
+          color: var(--article-title-hover);
+          border-color: var(--link);
         }
       }
     }
