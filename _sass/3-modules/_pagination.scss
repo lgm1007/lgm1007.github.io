@@ -25,15 +25,15 @@
     text-transform: uppercase;
     transition: all .35s;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .15);
-    background: $white;
+    background: var(--bg);
   }
 
   .next-link,
   .previous-link {
-    color: $dark;
+    color: var(--article-title);
 
     &:hover {
-      color: $black;
+      color: var(--article-title-hover);
     }
   }
 
@@ -47,7 +47,7 @@
     a, span {
       padding: 0 5px;
       font-size: 15px;
-      color: $dark;
+      color: var(--article-title);
     }
 
     .active-link {

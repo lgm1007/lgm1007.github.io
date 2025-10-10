@@ -1,0 +1,59 @@
+/* 기본(다크) 테마 토큰 */
+:root {
+  --bg: #212121;
+  --surface: #3d444d;
+  --text: #e6edf3;
+  --article-title: #e6edf3;
+  --article-title-hover: #ffffff;
+  --article-background: #181818;
+  --muted: #9fb0c0;
+  --link: #6ab0ff;
+  --link-hover: #9bd0ff;
+  --link-active: #bee0ff;
+  --border: #1e2630;
+  --highlighter-rouge: #424242;
+  --code-bg: #181818;
+  --code-text: #fff;
+  --code-method-text: #f22e52;
+  --code-class-text: #d9307f;
+  --code-string-text: #3ca674;
+  --code-variable-text: #439fd9;
+  --code-comment-text: #969696;
+}
+
+/* 라이트 테마는 클래스 한 방으로 토큰만 바꿈 */
+html.theme-light {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --text: #111827;
+  --article-title: #393e46;
+  --article-title-hover: #000;
+  --article-background: #fffffa;
+  --muted: #4b5563;
+  --link: #f6b141;
+  --link-hover: #f49d10;
+  --link-active: rgb(193, 122, 7);
+  --border: #e5e7eb;
+  --highlighter-rouge: #e5e5e5;
+  --code-bg: #f8f8f8;
+  --code-text: #393e46;
+  --code-method-text: #900;
+  --code-class-text: #458;
+  --code-string-text: #d14;
+  --code-variable-text: #099;
+  --code-comment-text: #998;
+}
+
+/* 사이트 공통 요소에 토큰 적용 */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+hr, .divider { border-color: var(--border); }
+pre, code, pre code {
+  background: var(--code-bg);
+  color: var(--code-text);
+}
+/* 필요 시 카드/헤더/푸터 등에 surface/border 활용 */

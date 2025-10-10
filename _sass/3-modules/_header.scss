@@ -79,9 +79,9 @@
         font-weight: 700;
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        color: $dark;
+        color: var(--article-title);
         &:hover {
-          color: $black;
+          color: var(--article-title-hover);
         }
       }
     }
@@ -133,10 +133,10 @@
   font-size: 21px;
   
   .nav__icon {
-    color: $dark;
+    color: var(--article-title);
     cursor: pointer;
     &:hover {
-      color: $black;
+      color: var(--article-title-hover);
     }
   }
   

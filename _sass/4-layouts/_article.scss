@@ -31,7 +31,7 @@
     margin-left: -10%;
     z-index: 1;
     border-radius: 3px;
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--article-background);
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 
     .article__tag {
@@ -46,9 +46,9 @@
       font-size: 30px;
       
       a {
-        color: $dark;
+        color: var(--article-title);
         &:hover {
-          color: $black;
+          color: var(--article-title-hover);
         }
       }
     }

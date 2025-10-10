@@ -6,8 +6,8 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text);
+  background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   input, textarea {
@@ -108,13 +108,13 @@ img,
 
 a {
     text-decoration: none;
-    color: $link-color;
+    color: var(--link);
     transition: $global-transition;
     &:hover {
-      color: darken($link-color, 10%);
+      color: var(--link-hover);
     }
     &:active {
-      color: darken($link-color, 20%);
+      color: var(--link-active);
     }
 }
 
