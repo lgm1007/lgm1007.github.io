@@ -11,9 +11,9 @@
 
   .copyright {
     a {
-      color: $dark;
+      color: var(--text);
       &:hover {
-        color: $brand-color;
+        color: var(--link);
       }
     }
   }
