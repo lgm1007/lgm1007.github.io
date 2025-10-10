@@ -93,7 +93,7 @@
   }
 
   th, td {
-    border: 1px solid #393e46;
+    border: 1px solid var(--article-title);
     padding-inline: 15px;
   }
 
@@ -130,7 +130,7 @@
         font-size: 18px;
         color: $gray;
         &:hover {
-          color: $dark;
+          color: var(--article-title);
         }
       }
     }
@@ -186,9 +186,9 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: $dark;
+        color: var(--article-title);
         &:hover {
-          color: $black;
+          color: var(--article-title-hover);
         }
       }
     }
