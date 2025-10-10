@@ -61,9 +61,9 @@ Redis를 사용하고 있다면 의존성 및 Redis 관련 기본 빈 Config 구
 ```kotlin
 @Bean
 fun redisMessageListenerContainer(): RedisMessageListenerContainer {
-	val container = RedisMessageListenerContainer()
-	container.setConnectionFactory(redisConnectionFactory())
-	return container
+    val container = RedisMessageListenerContainer()
+    container.setConnectionFactory(redisConnectionFactory())
+    return container
 }
 ```
 
@@ -73,21 +73,21 @@ fun redisMessageListenerContainer(): RedisMessageListenerContainer {
 ```kotlin
 @Component
 class RedisExpirationListener(
-	listenerContainer: RedisMessageListenerContainer
+    listenerContainer: RedisMessageListenerContainer
 ) : MessageListener {
-	init {
-		// 직접 키 만료 이벤트를 listener에 등록
-		listenerContainer.addMessageListener(this, PatternTopic.of("__keyevent@*__:expired"))
-	}
-	
-	override fun onMessage(message: Message, pattern: ByteArray?) {
-		val expiredKey = message.body.decodeToString()
-		
-		// 특정 내용의 키에서만 처리하고 싶은 로직일 경우
-		if (expiredKey.startsWith("order:payment:")) {
-			// 이벤트 로직 생략 ...
-		}
-	}
+    init {
+        // 직접 키 만료 이벤트를 listener에 등록
+        listenerContainer.addMessageListener(this, PatternTopic.of("__keyevent@*__:expired"))
+    }
+    
+    override fun onMessage(message: Message, pattern: ByteArray?) {
+        val expiredKey = message.body.decodeToString()
+        
+        // 특정 내용의 키에서만 처리하고 싶은 로직일 경우
+        if (expiredKey.startsWith("order:payment:")) {
+            // 이벤트 로직 생략 ...
+        }
+    }
 }
 ```
 
@@ -99,16 +99,16 @@ class RedisExpirationListener(
 ```kotlin
 @Component
 class RedisExpirationEventListener {
-	@EventListener
-	fun handleRedisKeyExpired(event: org.springframework.data.redis.core.RedisKeyExpiredEvent<*>) {
-		val expiredKeyBytes = event.id
-		val expiredKey = expiredKeyBytes?.toString(Charsets.UTF_8) ?: return
-		
-		// 특정 내용의 키에서만 처리하고 싶은 로직일 경우
-		if (expiredKey.startWith("order:payment:")) {
-			// 이벤트 로직 생략 ...
-		}
-	}
+    @EventListener
+    fun handleRedisKeyExpired(event: org.springframework.data.redis.core.RedisKeyExpiredEvent<*>) {
+        val expiredKeyBytes = event.id
+        val expiredKey = expiredKeyBytes?.toString(Charsets.UTF_8) ?: return
+        
+        // 특정 내용의 키에서만 처리하고 싶은 로직일 경우
+        if (expiredKey.startWith("order:payment:")) {
+            // 이벤트 로직 생략 ...
+        }
+    }
 }
 ```
 
