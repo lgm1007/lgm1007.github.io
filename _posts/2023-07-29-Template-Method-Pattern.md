@@ -33,29 +33,29 @@ comments: true
 핵심 기능을 정의하는 추상 클래스
 ```java
 public abstract class BeverageMaker {
-	
-	// 템플릿 메서드 - 핵심 기능
+    
+    // 템플릿 메서드 - 핵심 기능
     public final void makeBeverage() {
-		boilWater();
-		brew();
-		pourInCup();
-		addCondiments();
+        boilWater();
+        brew();
+        pourInCup();
+        addCondiments();
     }
-	
-	// 공통 기능
+    
+    // 공통 기능
     private void boilWater() {
-		System.out.println("물을 끓입니다.");
+        System.out.println("물을 끓입니다.");
     }
-	
-	// 추상 메서드 - 각 음료 별 다른 기능
+    
+    // 추상 메서드 - 각 음료 별 다른 기능
     protected abstract void brew();
-	
-	// 공통 기능
+    
+    // 공통 기능
     private void pourInCup() {
-		System.out.println("컵에 따릅니다.");
+        System.out.println("컵에 따릅니다.");
     }
-	
-	// 추상 메서드 - 각 음료 별 다른 기능
+    
+    // 추상 메서드 - 각 음료 별 다른 기능
     protected abstract void addCondiments();
 }
 ```
@@ -64,28 +64,28 @@ public abstract class BeverageMaker {
 서브클래스로 각 음료에 대한 구체적인 기능 구현
 ```java
 public class CoffeeMaker extends BeverageMaker {
-	
-	@Override
-	protected void brew(){
-		System.out.println("커피를 우려냅니다.");
+    
+    @Override
+    protected void brew(){
+        System.out.println("커피를 우려냅니다.");
     }
-	
-	@Override
+    
+    @Override
     protected void addCondiments() {
-		System.out.println("설탕과 우유를 첨가합니다.");
+        System.out.println("설탕과 우유를 첨가합니다.");
     }
 }
 
 public class TeaMaker extends BeverageMaker {
-	
-	@Override
+    
+    @Override
     protected void brew() {
-		System.out.println("차를 우려냅니다.");
+        System.out.println("차를 우려냅니다.");
     }
-	
-	@Override
+    
+    @Override
     protected void addCondiments() {
-		System.out.println("레몬을 추가합니다.");
+        System.out.println("레몬을 추가합니다.");
     }
 }
 ```
@@ -94,14 +94,14 @@ public class TeaMaker extends BeverageMaker {
 메인 클래스에서 템플릿 메서드를 사용해 음료 제조
 ```java
 public class Main {
-	public static void main(String[] args) {
-		BeverageMaker coffeeMaker = new CoffeeMaker();
-		coffeeMaker.makeBeverage();
+    public static void main(String[] args) {
+        BeverageMaker coffeeMaker = new CoffeeMaker();
+        coffeeMaker.makeBeverage();
 
-		System.out.println();
+        System.out.println();
 
-		BeverageMaker teaMaker = new TeaMaker();
-		teaMaker.makeBeverage();
+        BeverageMaker teaMaker = new TeaMaker();
+        teaMaker.makeBeverage();
     }
 }
 ```
@@ -131,25 +131,25 @@ public class Main {
 핵심 기능을 정의하는 추상 클래스
 ```java
 public abstract class BattleSimulation {
-	
-	// 템플릿 메서드 - 전투 시뮬레이션
+    
+    // 템플릿 메서드 - 전투 시뮬레이션
     public final void simulateBattle() {
-		prepareUnits();
-		startBattle();
-		endBattle();
+        prepareUnits();
+        startBattle();
+        endBattle();
     }
-	
-	// 추상 클래스 - 각 유닛 별 다른 기능
+    
+    // 추상 클래스 - 각 유닛 별 다른 기능
     protected abstract void prepareUnits();
-	
-	// 핵심 기능 - 전투 시작
+    
+    // 핵심 기능 - 전투 시작
     private void startBattle() {
-		System.out.println("전투가 시작됩니다.");
+        System.out.println("전투가 시작됩니다.");
     }
-	
-	// 핵심 기능 - 전투 종료
+    
+    // 핵심 기능 - 전투 종료
     private void endBattle() {
-		System.out.println("전투가 종료되었습니다.");
+        System.out.println("전투가 종료되었습니다.");
     }
 }
 ```
@@ -158,18 +158,18 @@ public abstract class BattleSimulation {
 서브클래스로 각 유닛에 대한 구체적인 기능 구현
 ```java
 public class InfantryBattle extends BattleSimulation {
-	
-	@Override
+    
+    @Override
     protected void prepareUnits() {
-		System.out.println("보병들이 전투 준비가 되었습니다.");
+        System.out.println("보병들이 전투 준비가 되었습니다.");
     }
 }
 
 public class TankBattle extends BattleSimulation {
-	
-	@Override
+    
+    @Override
     protected void prepareUnits() {
-		System.out.println("탱크가 전투 준비가 되었습니다.");
+        System.out.println("탱크가 전투 준비가 되었습니다.");
     }
 }
 ```
@@ -178,14 +178,14 @@ public class TankBattle extends BattleSimulation {
 메인 클래스에서 템플릿 메서드를 사용하여 전투 시뮬레이션
 ```java
 public class Main {
-	public static void main(String[] args) {
-		BattleSimulation infantryBattle = new InfantryBattle();
-		infantryBattle.simulateBattle();
+    public static void main(String[] args) {
+        BattleSimulation infantryBattle = new InfantryBattle();
+        infantryBattle.simulateBattle();
 
-		System.out.println();
+        System.out.println();
 
-		BattleSimulation tankBattle = new TankBattle();
-		tankBattle.simulateBattle();
+        BattleSimulation tankBattle = new TankBattle();
+        tankBattle.simulateBattle();
     }
 }
 ```

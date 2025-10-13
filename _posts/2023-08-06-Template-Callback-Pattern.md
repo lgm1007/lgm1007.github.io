@@ -21,11 +21,11 @@ comments: true
 컨텍스트
 ```java
 public class ShoppingCart {
-	
-	// 템플릿 메서드 - 결제 처리 흐름 정의
+    
+    // 템플릿 메서드 - 결제 처리 흐름 정의
     public void checkout(int amount, PaymentCallback paymentCallback) {
-		System.out.println("물건 총 가격: %d원".formatted(amount));
-		paymentCallback.pay(amount);
+        System.out.println("물건 총 가격: %d원".formatted(amount));
+        paymentCallback.pay(amount);
     }
 }
 ```
@@ -34,7 +34,7 @@ public class ShoppingCart {
 콜백 인터페이스
 ```java
 public interface PaymentCallback {
-	void pay(int amount);
+    void pay(int amount);
 }
 ```
 <br/>
@@ -42,18 +42,18 @@ public interface PaymentCallback {
 콜백 구현
 ```java
 public class CreditCardPayment implements PaymentCallback {
-	
-	@Override
+    
+    @Override
     public void pay(int amount) {
-		System.out.println("신용카드로 %d원 결제합니다.".formatted(amount));
+        System.out.println("신용카드로 %d원 결제합니다.".formatted(amount));
     }
 }
 
 public class PayPalPayment implements PaymentCallback {
-	
-	@Override
+    
+    @Override
     public void pay(int amount) {
-		System.out.println("페이팔로 %d원 결제합니다.".formatted(amount));
+        System.out.println("페이팔로 %d원 결제합니다.".formatted(amount));
     }
 }
 ```
@@ -62,13 +62,13 @@ public class PayPalPayment implements PaymentCallback {
 실행
 ```java
 public class Main {
-	public static void main(String[] args) {
-		ShoppingCart cart = new ShoppingCart();
-		
-		// 신용카드로 결제하는 콜백 전달
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+        
+        // 신용카드로 결제하는 콜백 전달
         cart.checkout(10000, new CreditCardPayment());
-		
-		// 페이팔로 결제하는 콜백 전달
+        
+        // 페이팔로 결제하는 콜백 전달
         cart.checkout(20000, new PayPalPayment());
     }
 }
