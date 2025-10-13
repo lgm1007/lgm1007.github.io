@@ -3,9 +3,9 @@ layout:	post
 title: QueryDsl에서 json 컬럼에 조건 적용하기
 date: 2024-01-22 21:16:02 +0900
 sitemap: 
-image: language-6.jpg
+image: technology-23.jpg
 author: GyuMyung
-tags: language
+tags: technology
 comments: true
 ---
 
