@@ -2,9 +2,9 @@
 layout:	post
 title:  Spring Boot 에서의 재시도 수행 전략
 date:   2023-09-16 12:06:00 +0900
-image:  language-2.png
+image:  programming-8.png
 author: GyuMyung
-tags:   language
+tags:   programming
 comments: true
 ---
 ## Spring Boot 에서의 재시도 수행 전략
