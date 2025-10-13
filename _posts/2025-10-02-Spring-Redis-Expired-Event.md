@@ -3,7 +3,7 @@ layout:	post
 title: Spring Redis TTL 만료 시 이벤트 처리하기
 date: 2025-10-02 20:50:17 +0900
 sitemap: 
-image: technology-19.jpg
+image: technology-17.jpg
 author: GyuMyung
 tags: technology
 comments: true

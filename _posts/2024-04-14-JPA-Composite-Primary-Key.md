@@ -3,7 +3,7 @@ layout:	post
 title: JPA 복합 키 사용하기
 date: 2024-04-14 00:00:01 +0900
 sitemap: 
-image: technology-22.jpg
+image: technology-19.jpg
 author: GyuMyung
 tags: technology
 comments: true

@@ -3,9 +3,9 @@ layout:	post
 title: Spring Boot 테스트 코드에서 특정 클래스만 Bean 등록하기
 date: 2025-02-14 13:46:09 +0900
 sitemap: 
-image: technology-15.jpg
+image: programming-10.jpg
 author: GyuMyung
-tags: technology
+tags: programming
 comments: true
 ---
 

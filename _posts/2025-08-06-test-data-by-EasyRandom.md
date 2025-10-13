@@ -3,9 +3,9 @@ layout:	post
 title: EasyRandom으로 테스트 데이터 만들기
 date: 2025-08-06 09:21:50 +0900
 sitemap: 
-image: technology-18.jpg
+image: programming-11.jpg
 author: GyuMyung
-tags: technology
+tags: programming
 comments: true
 ---
 

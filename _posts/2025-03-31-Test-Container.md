@@ -3,7 +3,7 @@ layout:	post
 title: 테스트 컨테이너를 도입하게 된 건에 대하여
 date: 2025-03-31 21:08:07 +0900
 sitemap: 
-image: technology-16.jpg
+image: technology-15.jpg
 author: GyuMyung
 tags: technology
 comments: true
