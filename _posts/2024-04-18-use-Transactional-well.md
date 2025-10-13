@@ -3,9 +3,9 @@ layout:	post
 title: 우리는 같은 트랜잭션이었지만, 전파 레벨이 달랐을 뿐이야
 date: 2024-04-18 22:13:59 +0900
 sitemap: 
-image: language-9.jpg
+image: technology-20.jpg
 author: GyuMyung
-tags: language
+tags: technology
 comments: true
 ---
 

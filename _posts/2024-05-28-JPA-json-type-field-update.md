@@ -3,9 +3,9 @@ layout:	post
 title: JPA 값 타입 필드 업데이트를 원활히 하는 방법
 date: 2024-05-28 21:00:00 +0900
 sitemap: 
-image: language-10.jpg
+image: technology-21.jpg
 author: GyuMyung
-tags: language
+tags: technology
 comments: true
 ---
 
