@@ -3,9 +3,9 @@ layout:	post
 title: 직렬화 케이스 SnakeCase 👉 CamelCase 변환 이슈
 date: 2025-04-18 16:00:05 +0900
 sitemap: 
-image: programming-3.jpg
+image: troubleshooting-8.jpg
 author: GyuMyung
-tags: programming
+tags: troubleshooting
 comments: true
 ---
 
