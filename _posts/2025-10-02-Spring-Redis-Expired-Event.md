@@ -91,7 +91,7 @@ class RedisExpirationListener(
 }
 ```
 
-위 예제 코드에서는 `__keyevent@*__:expired`, 즉 DB는 Wild Card로 모든 DB를 대상으로 키가 만료되면 재정의한 `onMessage()` 메서드가 실행된다. 그리고 만료된 키 중 `order:payment:` 라고 시작하는 키에 대해서만 이벤트를 처리하기 위해 `if (expiredKey.startsWith("order:payment:"))` 분기문을 사용했다.
+위 예제 코드에서는 `__keyevent@*__:expired`, 즉 DB는 Wild Card로 모든 DB를 대상으로 키가 만료되면 재정의한 `onMessage()` 메서드가 실행된다. 그리고 만료된 키 중 `order:payment:` 라고 시작하는 키에 대해서만 이벤트를 처리하기 위해 `if (expiredKey.startsWith("order:payment:"))` 분기문을 사용했다.
 
 #### 3) RedisKeyExpiredEvent 이벤트 리스너 (가장 간편)
 이 방법이 어쩌면 가장 간단하면서 깔끔한 해결법이라고 생각한다. Spring Redis에서 제공하는 `RedisKeyExpiredEvent`를 핸들링하는 이벤트 리스너를 사용하는 방법이다.
