@@ -1,7 +1,6 @@
 $(document).ready(function() {
     var toggleBtn = document.getElementById('theme-toggle');
     if (!toggleBtn) return;
-    console.log('toggleBtn: ', toggleBtn);
 
     // 테마별 색상 적용
     function applyTheme(theme) {
@@ -24,7 +23,6 @@ $(document).ready(function() {
 
     // 토글 버튼 이벤트
     toggleBtn.addEventListener('click', function() {
-        console.log('toggleBtn Click Event');
         var isLight = document.documentElement.classList.contains('theme-light');
         var switchTheme = isLight ? 'dark' : 'light';
         applyTheme(switchTheme);
