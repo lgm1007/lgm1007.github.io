@@ -151,4 +151,24 @@
       display: inline-block;
     }
   }
+
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4rem .75rem;
+    margin-left: 1.25rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: .6rem;
+    cursor: pointer;
+    font-size: .9rem;
+  }
+  .theme-toggle:hover {
+    filter: brightness(1.1);
+  }
+  .theme-toggle .icon {
+    line-height:1;
+  }
 }

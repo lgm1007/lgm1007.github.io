@@ -1,0 +1,19 @@
+<!-- 깜빡임 방지를 위해 default.html body 전에 선언 -->
+<script>
+    (function() {
+        // 다크 우선: 저장값이 없으면 'dark'
+        try {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || 'dark'; // 저장된 테마가 없다면 다크 모드를 기본으로 설정
+            if (theme === 'light') {
+                document.documentElement.classList.add('theme-light');
+            } else {
+                document.documentElement.classList.remove('theme-light'); // 명시적
+            }
+        } catch (e) {}
+    })();
+
+    // (function() {
+    //
+    // })();
+</script>
