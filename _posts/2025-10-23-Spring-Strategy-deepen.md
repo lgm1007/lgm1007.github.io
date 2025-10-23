@@ -1,6 +1,6 @@
 ---
 layout:	post
-title: Spring의 Strategy 패턴 심화 - 특정 인터페이스 구현체 주입
+title: Spring의 전략 패턴 심화 - 특정 인터페이스 구현체 주입
 date: 2025-10-23 19:57:17 +0900
 sitemap: 
 image: design-pattern-4.jpg
@@ -11,7 +11,7 @@ comments: true
 전략 패턴에 대한 내용은 [해당 포스팅](https://lgm1007.github.io/2023/08/01/Strategy-Pattern/)에서 확인할 수 있다.
 
 ### 요구사항
-`Pay` 라는 인터페이스를 구현하는 구현체들 중 특정 조건 별로 구현체를 얻어오는 Strategy 패턴 문제를 해결해보자.
+`Pay` 라는 인터페이스를 구현하는 구현체들 중 특정 조건 별로 구현체를 얻어오는 전략 패턴 문제를 해결해보자.
 
 ### 내용
 `Pay` 인터페이스 정의 및 `Pay` 인터페이스 구현체는 다음과 같다.
