@@ -2,6 +2,7 @@
 layout:	post
 title:  Transactional과 AOP, 그리고 프록시 패턴
 date:   2023-07-21 21:29:00 +0900
+sitemap: 
 image:  technology-18.jpg
 author: GyuMyung
 tags:   technology

@@ -2,6 +2,7 @@
 layout:	post
 title:  자바 버전 별 특징
 date:   2023-12-03 19:32:39 +0900
+sitemap: 
 image:  language-1.jpg
 author: GyuMyung
 tags:   language

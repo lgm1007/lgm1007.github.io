@@ -2,6 +2,7 @@
 layout:	post
 title:  Kafka 도입에 대하여
 date:   2023-10-19 21:46:00 +0900
+sitemap: 
 image:  technology-2.jpg
 author: GyuMyung
 tags:   technology

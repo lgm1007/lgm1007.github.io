@@ -2,6 +2,7 @@
 layout:	post
 title:  템플릿 메서드 패턴 이해
 date:   2023-07-29 11:15:00 +0900
+sitemap: 
 image:  design-pattern-3.png
 author: GyuMyung
 tags:   design-pattern
