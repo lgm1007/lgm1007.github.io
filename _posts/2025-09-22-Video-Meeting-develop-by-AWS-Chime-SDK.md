@@ -3,7 +3,7 @@ layout:	post
 title: 화상통화 서비스 구현하기 (2) - AWS Chime SDK 활용하기
 date: 2025-09-22 19:00:15 +0900
 sitemap: 
-image: AWS-chime-sdk.png
+image: technology-chime-sdk.png
 author: GyuMyung
 tags: technology
 comments: true
