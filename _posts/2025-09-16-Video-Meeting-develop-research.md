@@ -3,7 +3,7 @@ layout:	post
 title: 화상통화 서비스 구현하기 (1) - 리서치
 date: 2025-09-16 14:58:15 +0900
 sitemap: 
-image: technology-chime-sdk.png
+image: technology-19.png
 author: GyuMyung
 tags: technology
 comments: true
