@@ -3,7 +3,7 @@ layout:	post
 title: Spring Boot STOMP 기반 웹소켓 구독 및 연결 해제 이벤트 처리
 date: 2025-09-12 16:45:27 +0900
 sitemap: 
-image: programming-6.jpg
+image: programming-6.png
 author: GyuMyung
 tags: programming
 comments: true
