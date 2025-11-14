@@ -3,7 +3,7 @@ layout:	post
 title: S3의 Presigned URL 사용기
 date: 2025-06-02 15:05:10 +0900
 sitemap:
-image: technology-16.jpg
+image: technology-16.png
 author: GyuMyung
 tags: technology
 comments: true
