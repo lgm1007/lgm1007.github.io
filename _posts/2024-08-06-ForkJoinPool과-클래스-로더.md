@@ -3,7 +3,7 @@ layout:	post
 title: ForkJoinPool과 클래스 로더
 date: 2024-08-06 20:06:01 +0900
 sitemap: 
-image: technology-8.jpg
+image: technology-8.png
 author: GyuMyung
 tags: technology
 comments: true
@@ -17,7 +17,7 @@ comments: true
 java.lang.RuntimeException: java.io.FileNotFoundException: class path resource [클래스패스 리소스 경로] cannot be opened because it does not exist
 ```
 
-흠? 분명 클래스패스 경로 설정도 정상적으로 되어 있고, 해당 경로에 파일도 잘 패키징 되었는데 `does not exist` 라니 이상했다. <br/>
+분명 클래스패스 경로 설정도 정상적으로 되어 있고, 해당 경로에 파일도 잘 패키징 되었는데 `FileNotFoundException` 라니 이상했다. <br/>
 처음에는 경로 작성 방법에 문제가 있나 싶었는데, 에러가 발생한 부분을 호출하기 전에도 클래스패스 경로에서 리소스를 접근하는 로직이 있는데 해당 부분은 정상적으로 통과하는 것이었다. 즉 경로를 잘못 작성한 문제는 아니었다. <br/>
 문제가 되는 시점에 해당 로직을 호출하는 곳을 확인했더니 특이점이 있었다. 바로 `parallelStream` 내부에서 호출되고 있었다는 점이다. <br/>
 
