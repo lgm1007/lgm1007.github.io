@@ -115,12 +115,57 @@ mockMvc.perform(
             ),
             PayloadDocumentation.responseFields(
                 PayloadDocumentation.fieldWithPath("result").type(JsonField.STRING).descrption("응답 결과"),
-                PayloadDocumentation.fieldWithPath("code").type(JsonField.STRING).descrption("응답 코드")
+                PayloadDocumentation.fieldWithPath("code").type(JsonField.STRING).descrption("응답 코드")
             )
         )
     )
 ```
 
-`com.epages.restdocs.apispec.MockMvcRestDocumentationWrapper`의 `document()` 메서드는 다양한 형태로 오버로딩되어 있기 때문에 상황에 맞게 작성하면 된다.
+위는 Swagger 문서를 간단한 형태로 만드는 예제이다. 하지만 위와 같은 예제처럼 작성하면 `Tag` 값이 API Url의 앞 단어로 자동 생성된다. (위 예제라면 `api`) 만약 `Tag` 값을 직접 입력하고 싶다면 아래 예제처럼 작성하면 된다.
+
+```kotlin
+// 생략 ...
+
+mockMvc.perform(
+    RestDocumentationRequestBuilders.post("/api/users")
+        .contentType(MediaType.APPLICATION_JSON)
+        .content(objectMapper.writeValueAsString(request))
+).andExpect(MockMvcResultMatchers.status().isOk)
+    .andDo(
+        // com.epages.restdocs.apispec.MockMvcRestDocumentationWrapper.document 사용
+        MockMvcRestDocumentationWrapper.document(
+            "Create-User", // RestDocs 스니펫 식별자
+            ResourceSnippetParameters.builder()
+                .tag("사용자") // Swagger 문서의 Tag 값
+                .summary("유저 생성") // 설명 요약
+                .description("유저를 생성하기 위한 요청") // API 설명
+                .requestFields( // API Body 값
+                    PayloadDocumentation.fieldWithPath("userId").type(JsonField.STRING).descrption("사용자 ID"),
+                    PayloadDocumentation.fieldWithPath("password").type(JsonField.STRING).descrption("사용자 패스워드")                    
+                )
+                .responseFields( // API Response 값
+                    PayloadDocumentation.fieldWithPath("result").type(JsonField.STRING).descrption("응답 결과"),
+                    PayloadDocumentation.fieldWithPath("code").type(JsonField.STRING).descrption("응답 코드")
+                ), // .build() 호출 X, builder() 자체가 파라미터로 필요한 추상 클래스를 상속함
+            preprocessRequest(
+                modifyUris().scheme("https").host("example-api.co.kr").removePort(),
+            ),
+            preprocessResponse(prettyPrint()),
+            Function.identity(),
+            // 아래는 RestDocs 작성 그대로
+            PayloadDocumentation.requestFields(
+                PayloadDocumentation.fieldWithPath("userId").type(JsonField.STRING).descrption("사용자 ID"),
+                PayloadDocumentation.fieldWithPath("password").type(JsonField.STRING).descrption("사용자 패스워드")
+                
+            ),
+            PayloadDocumentation.responseFields(
+                PayloadDocumentation.fieldWithPath("result").type(JsonField.STRING).descrption("응답 결과"),
+                PayloadDocumentation.fieldWithPath("code").type(JsonField.STRING).descrption("응답 코드")
+            )
+        )
+    )
+```
+
+이처럼 `com.epages.restdocs.apispec.MockMvcRestDocumentationWrapper`의 `document()` 메서드는 다양한 형태로 오버로딩되어 있기 때문에 상황에 맞게 작성하면 된다.
 
 이렇게 예제 코드처럼 테스트 코드를 작성하고 build를 실행하면 `build/api-spec` 경로와 `src/main/resources/static` 경로에 Swagger 문서인 openapi3.json 파일이 생성될 것이다.
