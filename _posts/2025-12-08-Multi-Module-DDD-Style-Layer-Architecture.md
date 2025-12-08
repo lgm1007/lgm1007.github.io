@@ -10,6 +10,8 @@ comments: true
 ---
 
 ## 4계층 구조 (4-Layered Architecture)
+[프로젝트 링크](https://github.com/health-nutrition-tracker-org/health-nutrition-tracker-BE)
+
 해당 프로젝트에서 DDD (Domain-Driven Design) 개발 방식을 최대한 따라가며 개발하고자 한다. DDD 원칙을 구현하기 위한 아키텍처로 보통 4계층 구조를 채택하는데, 해당 계층 구조는 주로 역할과 목적을 기반으로 구분한다.
 
 | 계층                   | 역할                             | 목적                     |
