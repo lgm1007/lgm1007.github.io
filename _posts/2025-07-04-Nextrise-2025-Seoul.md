@@ -34,7 +34,7 @@ NextRise에서의 주요 주제로는 다음과 같았다.
 올해 나름 이직 활동을 하며 공고가 올라오는 기업들을 여럿 찾아보며 자주 보였던 분야가 많이 보였다. 그 중 특히 AI, Health Care, Fintech 분야들을 주 사업으로 하는 스타트업이 주로 보였고, Climate Tech와 같은 환경 문제를 해결하고자 하는 기업들도 간혹 봤었는데, NextRise에 참가하는 스타트업들도 이러한 분야가 주요 주제인 것을 보고 '역시 이러한 분야들이 트렌드구나' 하고 느꼈다.
 참가한 스타트업 중에서는 실제로 이직 준비 중 지원했던 곳이나 면접을 봤던 곳들도 보여 내심 반갑기도 했다. 그 중 워낙 유명한 스타트업들은 부스 규모와 방문 인원 자체도 남달랐다.
 
-![booth1](https://i.ibb.co/DHGKgfr2/Kakao-Talk-Photo-2025-07-03-09-15-45-007.jpg)
+![booth1](https://i.ibb.co/rR8ctfvs/Kakao-Talk-Photo-2025-07-03-09-1.jpg)
 
 ![booth2](https://i.ibb.co/d4KtYycJ/Kakao-Talk-Photo-2025-07-03-09-15-45-006.jpg)
 
