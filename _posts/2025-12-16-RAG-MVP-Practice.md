@@ -90,6 +90,7 @@ ollama run llama3
 ```
 
 모델 설치 끝나면 설치 확인
+
 ![](https://i.imgur.com/bOmIvu0.png)
 
 설치 완료 확인되면 로컬 LLM 모델 준비 완료. `Ctrl + D` 로 종료.
