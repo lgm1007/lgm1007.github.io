@@ -42,7 +42,7 @@ pip install \
 - langchain: RAG 전체 파이프라인 프레임워크
 - langchain-community: FAISS, 로컬 로더 등 커뮤니티 통합 기능
 - langchain-openai: OpenAI LLM / 임베디드 연동
-- faiss-cpu: 로컬 벡터 DB (검색 시 핵심)
+- faiss-cpu: 로컬 벡터 DB 대용 (검색 시 핵심)
 - openai: OpenAI API 클라이언트
 - tiktoken: 토큰 계산 (chunk 분할, 비용 관리)
 
@@ -231,7 +231,7 @@ def build_prompt(context: str, question: str) -> str:
 """
 
 def main():
-    # 1) 임베딩/DB 로드
+    # 1) 임베딩 모델/벡터 DB 로드
     embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-m3")
     db = FAISS.load_local(DB_DIR, embeddings, allow_dangerous_deserialization=True)
 
