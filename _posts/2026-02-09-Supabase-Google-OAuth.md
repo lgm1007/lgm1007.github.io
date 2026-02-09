@@ -51,4 +51,4 @@ Supabase의 Auth 기능과 Google Cloud OAuth를 연결하여 Google 로그인 �
 
 ![](https://i.imgur.com/IMX4Lrp.png)
 
-> 💡 Google Cloud의 승인된 리디렉션 URI와 Supabase의 Callback URL이 일치해야 redirect_uri_mismatch 에러가 발생하지 않음
+##### 💡 Google Cloud의 승인된 리디렉션 URI와 Supabase의 Callback URL이 일치해야 redirect_uri_mismatch 에러가 발생하지 않음
