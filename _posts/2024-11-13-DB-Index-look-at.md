@@ -13,7 +13,7 @@ comments: true
 ### 인덱스란?
 인덱스란 테이블의 검색 속도를 향상시키기 위해 사용하는 자료구조로, 데이터와 데이터의 위치를 포함한 자료구조이다.
 
-![](https://blog.kakaocdn.net/dn/Al7wD/btrE3Y39iW6/bA2KK5zqVlPSWflA37956K/img.png)
+![index-example](https://blog.kakaocdn.net/dn/Al7wD/btrE3Y39iW6/bA2KK5zqVlPSWflA37956K/img.png)
 
 인덱스를 활용하면 데이터를 조회하는 SELECT 쿼리 동작 외에도 UPDATE나 DELETE 성능도 함께 향상된다. 데이터를 수정, 삭제하기 위해서는 해당 대상을 조회해야 하기 때문이다.
 
@@ -49,7 +49,7 @@ DBMS는 인덱스를 항상 최신 정렬된 상태로 유지해야 빠르게 �
 
 우선 그 전에 B-Tree 자료구조에 대해 알아보자면 N개의 자식을 가지는 트리 구조이며, 좌우 자식 간의 균형이 맞지 않은 경우 매우 비효율적이라 항상 균형을 맞춘다는 의미에서 균형 트리 (Balanced Tree) 라고 불린다. B-Tree는 최상위에 단 하나의 노드만이 존재하는데, 이를 루트 노트 (Root Node) 라고 한다. 그리고 중간 노드를 브랜치 노드 (Branch Node), 최하위 노드를 리프 노드 (Leaf Node) 라고 한다.
 
-![](https://hudi.blog/static/b-tree-search-008af18fe34f881eed12cc302d49daf2.gif)
+![b-tree-execution-process](https://hudi.blog/static/b-tree-search-008af18fe34f881eed12cc302d49daf2.gif)
 
 #### B-Tree 자료구조를 조금 더 알아보면
 B-Tree는 `Balanced-Tree`를 의미하며 하나의 노드에 하나의 데이터를 저장하는 다른 Tree와는 달리, 하나의 노드에 여러 개의 데이터를 저장하는 방식으로 Tree의 height를 줄여 탐색 시간을 더욱 줄이도록 고안된 트리이다. 이러한 B-Tree의 형태를 유지하기 위해 몇 가지 규칙이 있다.<br/><br/>
@@ -74,7 +74,7 @@ B-Tree의 경우 브랜치 노드들의 데이터에 key와 value를 담을 수 
 
 아래는 MySQL에서 사용하는 InnoDB 데이터베이스 엔진에서 사용된 B+Tree의 구조이다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd78iJ0%2FbtqKRYbLdM9%2FnIvz1M4gffMl4YHS77JSfK%2Fimg.png)
+![bplus-tree-structure](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd78iJ0%2FbtqKRYbLdM9%2FnIvz1M4gffMl4YHS77JSfK%2Fimg.png)
 
 InnoDB 엔진에서의 B+Tree 구조는 일반적인 구조보다 조금 더 복잡한 형태이다. InnoDB에서는 같은 레벨의 노드들끼리는 Linked List가 아닌 **Double Linked List**로 연결되었으며, 자식 노드들은 **Single Linked List**로 연결된 형태이다.
 
@@ -86,7 +86,7 @@ InnoDB 엔진에서의 B+Tree 구조는 일반적인 구조보다 조금 더 복
 
 인덱스는 페이지 단위로 저장이 되며, 인덱스 키를 바탕으로 **항상 정렬된 상태**를 유지하고 있다. 정렬된 인덱스 키를 따라서 리프 노드에 도달하면 **(인덱스 키, PK)** 쌍 형태로 저장되어 있다.
 
-![](https://github.com/user-attachments/assets/46ec2ddc-67f5-473b-93fe-f4ce5a0f3535)
+![index-structure](https://github.com/user-attachments/assets/46ec2ddc-67f5-473b-93fe-f4ce5a0f3535)
 
 위 그림은 B-Tree 인덱스 영역 (왼쪽 녹색 영역) 과 Primary 키 인덱스 = 클러스터 인덱스 영역 (오른쪽 주황색 영역) 으로 나뉘어져 있다. User의 name 컬럼에 인덱스가 적용되어 있는 경우, B-Tree 인덱스에서 인덱스 키가 name 값을 기준으로 정렬되어 있고 데이터를 따라 리프 노드에 도달하면 인덱스 키에 해당하는 레코드의 PK 값이 저장되어 있다.
 

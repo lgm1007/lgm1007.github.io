@@ -91,7 +91,7 @@ ollama run llama3
 
 모델 설치 끝나면 설치 확인
 
-![](https://i.imgur.com/bOmIvu0.png)
+![ollama-run-example](https://i.imgur.com/bOmIvu0.png)
 
 설치 완료 확인되면 로컬 LLM 모델 준비 완료. `Ctrl + D` 로 종료.
 
@@ -195,7 +195,7 @@ if __name__ == "__main__":
 프로젝트 루트 경로> python src/main/ingest.py
 ```
 
-![](https://i.imgur.com/aC2ePf5.png)
+![vector-db-directory](https://i.imgur.com/aC2ePf5.png)
 
 ### 2. 벡터 DB에서 검색한 내용 기반으로 답변 생성
 벡터 DB가 정상적으로 생성되면, 다음으로 LLM이 벡터 DB에서 사용자가 질문한 내용을 검색하고, 검색 내용을 기반으로 답변을 생성하도록 하는 단계를 진행한다.
@@ -280,4 +280,4 @@ if __name__ == "__main__":
 
 정상적으로 실행된다면, 사용자에게 질문을 입력받도록 뜨고, 질문을 입력하면 문서 내용을 기반으로 LLM이 답변하는 것을 확인할 수 있다.
 
-![](https://i.imgur.com/NUSeM4J.png)
+![rag-llm-question-answer](https://i.imgur.com/NUSeM4J.png)
