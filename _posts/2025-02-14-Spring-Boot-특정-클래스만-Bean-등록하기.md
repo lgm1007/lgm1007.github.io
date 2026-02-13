@@ -62,8 +62,10 @@ public @interface IntegrationTest {
 }
 ```
 
-위 시도의 결과는 Bean 등록 실패였다. (`@SpringBootTest`에 대해 잘 알고 있는 사람들이라면 여기서 실패 원인을 발견할 수 있을 것이다.)<br/>
-실패 원인이 `TestExecutionListener`를 사용하는 것이 아닌가? 해서 다음 방법으로 넘어갔다.<br/><br/>
+위 시도의 결과는 Bean 등록 실패였다. (`@SpringBootTest`에 대해 잘 알고 있는 사람들이라면 여기서 실패 원인을 발견할 수 있을 것이다.)
+
+실패 원인이 `TestExecutionListener`를 사용하는 것이 아닌가? 해서 다음 방법으로 넘어갔다.
+
 
 다음 시도 방법은 `ApplicationContextInitializer`를 사용하는 방법이다. `ApplicationContextInitializer`를 사용하면 Spring Context가 초기화되기 전에 Bean을 등록해줄 수 있다.
 
@@ -103,10 +105,12 @@ public @interface IntegrationTest {
 }
 ```
 
-위 시도의 결과는 또 Bean 등록 실패였다.<br/>
+위 시도의 결과는 또 Bean 등록 실패였다.
 
 ### 진짜 문제는?
-사실 위 `TestExecutionListener`과 `ApplicationContextInitializer`를 활용한 문제는 큰 문제가 없다. 문제는 바로 커스텀 어노테이션에서 선언해 준 `@SpringBootTest`에 있었다.<br/><br/>
+사실 위 `TestExecutionListener`과 `ApplicationContextInitializer`를 활용한 문제는 큰 문제가 없다. 문제는 바로 커스텀 어노테이션에서 선언해 준 `@SpringBootTest`에 있었다.
+
+
 `@SpringBootTest`를 일반적으로 선언해주면 프로덕트 소스 단에 있는 컴포넌트들을 모두 Bean으로 등록한다. 이 때 개인적으로 작성해줬던 `TestExecutionListener`이나 `ApplicationContextInitializer`에서 작성해 준 특정 Class를 Bean 등록해주는 동작이 서로 충돌하는 문제가 있던 것이다. 이를 해결하기 위해서는 `@SpringBootTest`가 어떠한 컴포넌트도 Bean으로 등록하지 못하게 해야 한다. 이를 위해 `classes` 속성에 아무 값도 넣어주지 않음으로써 해결했다.
 
 ```java

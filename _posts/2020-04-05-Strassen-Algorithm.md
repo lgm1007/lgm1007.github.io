@@ -10,7 +10,6 @@ comments: true
 ---
 
 ## 일반적인 행렬의 곱
-
 #### Naive matrix multiplication
 
 * 일반적인 행렬을 구하는 방식
