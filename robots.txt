@@ -1,3 +1,12 @@
 User-agent: *
 Allow: /
+
+# Block non-content paths
+Disallow: /vendor/
+Disallow: /.jekyll-cache/
+Disallow: /assets/
+Disallow: /_site/
+Disallow: /_scripts/
+
+# Sitemaps
 Sitemap: https://lgm1007.github.io/sitemap.xml
