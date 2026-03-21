@@ -219,8 +219,8 @@ interface MemberRepository : JpaRepository<Member, Long> {
 | 엔드포인트 | 설명 |
 |:----------|:-----|
 | `GET /api/members/search/findByDepartment?department=개발팀` | 부서별 검색 |
-| `GET /api/members/search/findByNameContaining?name=규명` | 이름 포함 검색 |
-| `GET /api/members/search/byEmail?email=gyumyung@example.com` | 이메일로 검색 |
+| `GET /api/members/search/findByNameContaining?name=길동` | 이름 포함 검색 |
+| `GET /api/members/search/byEmail?email=gildong@example.com` | 이메일로 검색 |
 
 `@Param` 어노테이션을 통해 쿼리 파라미터 이름을 지정할 수 있고, `@RestResource` 어노테이션의 `path` 속성으로 엔드포인트 경로를 직접 지정할 수도 있다.
 
@@ -345,7 +345,7 @@ GET /api/posts/1?projection=detail
 
 ```json
 {
-  "name": "이규명",
+  "name": "홍길동",
   "department": "개발팀",
   "_links": {
     "self": {
