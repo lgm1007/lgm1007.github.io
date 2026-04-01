@@ -4,21 +4,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
-  <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}'>
+  <meta name='description'
+    content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}'>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9194914695506719"
+    crossorigin="anonymous"></script>
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ " /feed.xml" |
+    relative_url }}">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet"
+    type="text/css">
   <!-- Ionicons -->
   <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
 
   <style>
-  {% capture include_to_scssify %}
-    {% include main.scss %}
-  {% endcapture %}
-  {{ include_to_scssify | scssify }}
+    {
+      % capture include_to_scssify %
+    }
+
+      {
+      % include main.scss %
+    }
+
+      {
+      % endcapture %
+    }
+
+      {
+        {
+        include_to_scssify | scssify
+      }
+    }
   </style>
 </head>
