@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Spring RedisTemplate 조회 중 역직렬화 이슈
 date: 2025-09-26 14:40:51 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: troubleshooting-6.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
+description: "Spring에서 RedisTemplate를 활용해 Redis 저장소에 데이터를 저장∙조회할 땐 RedisTemplate 설정에서 정의한 대로 Key:Value 값을 직렬화∙역직렬화한다. 와 같이 Value 값을 특정한 타입으로 정의한 경우에는 문제가 되지 않지만  ()"
 ---
 
 ### 배경

@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: RAG 실습하기
 date: 2025-12-16 15:33:07 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-21.png
 author: GyuMyung
 tags: technology
 comments: true
+description: "RAG(Retrieval-Augmented Generation)란 대규모 언어 모델(LLM)이 답변을 생성하기 전, 신뢰할 수 있는 지식 베이스를 검색하여 그 정보를 바탕으로 답변을 생성하는 기술이다. 즉 모델 자신의 기억에만 의존하지 않고 외부 데이터베이스를 찾아본 "
 ---
 
 **RAG**(Retrieval-Augmented Generation)란 대규모 언어 모델(LLM)이 답변을 생성하기 전, 신뢰할 수 있는 지식 베이스를 검색하여 그 정보를 바탕으로 답변을 생성하는 기술이다. 즉 모델 자신의 기억에만 의존하지 않고 외부 데이터베이스를 찾아본 후 그 내용을 기반으로 답변하는 기술이라고 볼 수 있다.

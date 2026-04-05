@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: 맥미니에 오픈클로(OpenClaw) 구성 + 디스코드(Discord) 봇 연동
 date: 2026-03-30 23:32:07 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-23.png
 author: GyuMyung
 tags: technology
 comments: true
+description: "실무에서 한동안 뜨거운 감자였던 오픈클로를 맥미니에 구성하는 업무를 맞게 되었다."
 ---
 
 ## 개요

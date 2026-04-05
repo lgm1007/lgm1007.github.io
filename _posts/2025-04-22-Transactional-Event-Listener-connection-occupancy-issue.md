@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: TransactionalEventListener가 만든 동기 이벤트는 모든 연결을 점유한다
 date: 2025-04-22 11:24:11 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: troubleshooting-4.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
+description: "TransactionalEvent 처리를 동기로 하는 경우 이벤트를 발행하는 쪽의 트랜잭션이 Connection을 계속 점유한다는 이슈를 알게 되어, 이에 대해 정리해보려 한다."
 ---
 
 ### 이슈 내용

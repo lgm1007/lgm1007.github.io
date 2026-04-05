@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Github Actions 와 AWS Elastic Beanstalk 으로 지속적인 배포
 date: 2025-08-19 11:42:37 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: infrastructure-1.png
 author: GyuMyung
 tags: infrastructure
 comments: true
+description: "AWS Beanstalk는 AWS에서 알아서 인프라 설정을 구성해주어, 쉽게 배포할 수 있게 도와주는 PaaS 서비스이다. 애플리케이션의 배포와 관리를 AWS에서 자동화하여 개발자의 부담을 크게 줄여준다.<br>"
 ---
 
 ## 0. AWS Beanstalk 란?

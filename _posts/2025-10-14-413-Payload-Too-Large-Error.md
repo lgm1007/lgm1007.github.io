@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: 413 Error - Spring Boot 프로젝트의 웹서버 별 파일 업로드 크기 제한 설정
 date: 2025-10-14 09:35:30 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: troubleshooting-7.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
+description: "기본적으로 웹 서버는 리소스 사용량을 고려하여 클라이언트가 서버에게 전송하는 최대 데이터 크기를 제한하고 있다. 서비스를 운영하다보면 파일을 업로드해야 하는 상황이 발생하는데, 이 때 전송하려는 최대 데이터 크기가 제한된 경우 업로드하고자 하는 파일의 용량도 전송 데이"
 ---
 
 ### 이슈 내용

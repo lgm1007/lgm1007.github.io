@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Bouncer 패턴과 Extract method 기법
 date: 2023-12-10 12:54:17 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-2.jpg
 author: GyuMyung
 tags: programming
 comments: true
+description: "이전 포스팅에서 다룬 Early Return 기법의 단점이었던 \"여러 줄의 코드에서 적용했을 때 함수의 복잡도가 높아진다.\" 라는 점을 보완하기 위한 방법 중 대표적인 방법인 Bouncer 패턴과 Extract method 기법에 대해 다루어본다. <br/>"
 ---
 
 # Bouncer 패턴과 Extract method 기법

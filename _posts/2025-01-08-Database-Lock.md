@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: 데이터베이스 락의 종류와 특징은? 
 date: 2025-01-08 16:41:09 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-14.jpg
 author: GyuMyung
 tags: technology
 comments: true
+description: "공유락은 데이터를 변경하지 않는 읽기 작업을 위한 락으로, 리소스를 읽을 수는 있지만 수정할 수 없게 하기 위한 락이다."
 ---
 
 # 데이터베이스 락

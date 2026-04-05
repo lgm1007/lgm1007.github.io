@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title:  자바 버전 별 특징
 date:   2023-12-03 19:32:39 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image:  language-1.jpg
 author: GyuMyung
 tags:   language
 comments: true
+description: "1. Type Inference (타입 추론)"
 ---
 
 # 자바 버전 별 차이점

@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Supabase + Google OAuth 로그인 기능 추가하기
 date: 2026-02-09 21:45:17 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-16.jpg
 author: GyuMyung
 tags: programming
 comments: true
+description: "Supabase의 Auth 기능과 Google Cloud OAuth를 연결하여 Google 로그인 기능을 추가하기"
 ---
 
 Supabase의 Auth 기능과 Google Cloud OAuth를 연결하여 Google 로그인 기능을 추가하기

@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Spring Boot STOMP 기반 웹소켓 구독 및 연결 해제 이벤트 처리
 date: 2025-09-12 16:45:27 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-6.png
 author: GyuMyung
 tags: programming
 comments: true
+description: "이번 포스팅에서는 Spring Boot 프로젝트에서 STOMP 기반 웹소켓으로 소켓 구독 해제 및 연결 해제 이벤트를 처리하는 방법에 대해 정리해보고자 한다."
 ---
 
 이번 포스팅에서는 Spring Boot 프로젝트에서 STOMP 기반 웹소켓으로 소켓 구독 해제 및 연결 해제 이벤트를 처리하는 방법에 대해 정리해보고자 한다.

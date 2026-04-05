@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: JPA 복합 키 사용하기
 date: 2024-04-14 00:00:01 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-14.jpg
 author: GyuMyung
 tags: programming
 comments: true
+description: "실무에서 새로운 프로젝트를 진행하면서 새로운 DB 테이블을 생성해야 하는 경우가 있었는데, 해당 테이블을 복합 키로 설계해 만들게 되었다. 그러면서 사용하고 있는 ORM인 JPA에서 복합 키를 표현하고 사용해야 하는 상황이 발생하게 되었다."
 ---
 
 # JPA 복합 키 사용하기

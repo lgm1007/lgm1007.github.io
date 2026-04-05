@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title:  Transactional과 AOP, 그리고 프록시 패턴
 date:   2023-07-21 21:29:00 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image:  technology-18.jpg
 author: GyuMyung
 tags:   technology
 comments: true
+description: "에는 Spring AOP의 프록시 패턴을 사용하여 동작한다. 을 알아가기 앞서 프록시 패턴과 Spring AOP에 대해 알아보도록 한다. <br/>"
 ---
 
 ## @Transactional과 AOP, 그리고 프록시 패턴

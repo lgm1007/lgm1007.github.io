@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title:  Greedy Algorithm & 응용문제
 date:   2020-04-15 12:31:00 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image:  algorithm-3.png
 author: GyuMyung
 tags:   algorithm
 comments: true
+description: "현재 상태에서 가장 좋은 선택만을 취하는 알고리즘"
 ---
 
 ## 그리디 알고리즘

@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Spring의 전략 패턴 심화 - 특정 인터페이스 구현체 주입
 date: 2025-10-23 19:57:17 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: design-pattern-4.jpg
 author: GyuMyung
 tags: design-pattern
 comments: true
+description: "전략 패턴에 대한 내용은 해당 포스팅에서 확인할 수 있다."
 ---
 전략 패턴에 대한 내용은 [해당 포스팅](https://lgm1007.github.io/2023/08/01/Strategy-Pattern/)에서 확인할 수 있다.
 

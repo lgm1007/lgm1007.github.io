@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: AWS Certificate Manager에서 인증서 발급하고 HTTPS 요청하기
 date: 2025-08-22 16:41:37 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: infrastructure-2.png
 author: GyuMyung
 tags: infrastructure
 comments: true
+description: "회사에서 새로운 도메인을 구매하고, https 요청을 할 수 있도록 처리해야 하는 상황이 있었다. 도메인 구매는 가비아에서 미리 구매했고, AWS Route 53에서 호스팅을 관리하고자 한다."
 ---
 
 회사에서 새로운 도메인을 구매하고, https 요청을 할 수 있도록 처리해야 하는 상황이 있었다. 도메인 구매는 가비아에서 미리 구매했고, AWS Route 53에서 호스팅을 관리하고자 한다.

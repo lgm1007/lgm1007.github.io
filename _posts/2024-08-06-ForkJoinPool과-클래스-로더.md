@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: ForkJoinPool과 클래스 로더
 date: 2024-08-06 20:06:01 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-8.png
 author: GyuMyung
 tags: technology
 comments: true
+description: "회사에서 설치형 솔루션 프로젝트를 진행하던 중이었다. 해당 프로젝트를 jar로 패키징하여 테스트 서버에 배포하고 기능 테스트를 진행하는데, 이러한 에러를 보게 되었다. <br/>"
 ---
 
 # ForkJoinPool과 클래스 로더

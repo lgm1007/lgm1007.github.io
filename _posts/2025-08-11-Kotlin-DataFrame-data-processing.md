@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: 코틀린에서의 데이터 가공, Kotlin DataFrame과 함께
 date: 2025-08-11 08:30:15 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-7.jpg
 author: GyuMyung
 tags: programming
 comments: true
+description: "보통 데이터를 조작하거나 분석할 때 많이 사용되는 툴로 Python 진영의  라이브러리를 주로 생각한다. 실무에서 메모리 상에서 이렇게 데이터를 다뤄야 하는 상황이 있을 때, 이 데이터 다루는 부분만 Python으로 구현해야하나 고민할 수도 있을 것 같다."
 ---
 
 ### Kotlin DataFrame

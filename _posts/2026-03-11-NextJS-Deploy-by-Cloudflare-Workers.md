@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: NextJS 서비스를 Cloudflare Workers로 배포하기
 date: 2026-03-11 10:11:17 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-17.png
 author: GyuMyung
 tags: programming
 comments: true
+description: "개발한 NextJS 서비스를 Cloudflare Workers로 배포하는 과정을 정리한 포스팅이다."
 ---
 
 개발한 NextJS 서비스를 Cloudflare Workers로 배포하는 과정을 정리한 포스팅이다.

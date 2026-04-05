@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title:  Kafka 도입에 대하여
 date:   2023-10-19 21:46:00 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image:  technology-2.jpg
 author: GyuMyung
 tags:   technology
 comments: true
+description: "Kafka는 Apache 소프트웨어 재단이 개발한 오픈 소스 분산 메시징 시스템으로, 주로 데이터 스트리밍, 이벤트 처리, 로그 수집 등 다양한 분야에서 사용된다."
 ---
 
 # Kafka 도입에 대하여

@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: S3의 Presigned URL 사용기
 date: 2025-06-02 15:05:10 +0900
 sitemap:
+  changefreq: weekly
 image: technology-16.png
 author: GyuMyung
 tags: technology
 comments: true
+description: "Pre-signed (미리 서명된) URL 이란 AWS 자원의 접근 권한을 제공하기 위해서 사용되는 이전에 미리 적절한 권한을 가진 자격증명으로 서명된 URL을 말한다."
 ---
 
 ## Pre-signed URL을 사용해보자

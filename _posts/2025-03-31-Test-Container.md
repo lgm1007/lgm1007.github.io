@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: 테스트 컨테이너를 도입하게 된 건에 대하여
 date: 2025-03-31 21:08:07 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-15.jpg
 author: GyuMyung
 tags: technology
 comments: true
+description: "이번에 회사 조직에서 통합 테스트를 위한 환경을 구축하는 과정에서 테스트 컨테이너를 도입하게 되면서, 그 과정을 정리하고자 한다."
 ---
 
 이번에 회사 조직에서 통합 테스트를 위한 환경을 구축하는 과정에서 테스트 컨테이너를 도입하게 되면서, 그 과정을 정리하고자 한다.

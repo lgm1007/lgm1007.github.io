@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title:  Strassen Algorithm
 date:   2020-04-05 19:02:00 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image:  algorithm-1.png
 author: GyuMyung
 tags:   algorithm
 comments: true
+description: "m  n 행렬과 n  k 행렬을 곱하면  가 되어 결과적으로 의 시간복잡도를  가진다."
 ---
 
 ## 일반적인 행렬의 곱

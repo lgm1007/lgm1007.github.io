@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: 사례로 보는 Spring Event & Kafka
 date: 2023-11-29 21:38:49 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-1.jpg
 author: GyuMyung
 tags: technology
 comments: true
+description: "문서 정리 작업을 수행하는 한 애플리케이션이 있다고 가정해보자. 정리할 문서들이 들어오고 정리 요청을 하게 되면 정리 작업이 수행된다."
 ---
 
 # Spring Event와 Kafka

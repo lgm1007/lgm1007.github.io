@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Kafka vs SQS 비교하기
 date: 2024-06-29 09:46:08 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-6.jpg
 author: GyuMyung
 tags: technology
 comments: true
+description: "실무에서 담당하고 있는 서비스에서의 메시지 큐 서비스로 Kafka와 NiFi로 호출하는 SQS 두 서비스를 혼합해 사용하고 있다. 물론 서비스 내에서도 파트가 나뉘어져 있어 한 파트는 Kafka, 한 파트에서는 SQS를 사용하고 있긴 하다. 하지만 한 서비스에서 서로 "
 ---
 
 # Kafka vs SQS 비교하기

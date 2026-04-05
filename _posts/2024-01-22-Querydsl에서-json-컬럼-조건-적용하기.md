@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: QueryDsl에서 json 컬럼에 조건 적용하기
 date: 2024-01-22 21:16:02 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-12.jpg
 author: GyuMyung
 tags: programming
 comments: true
+description: "JPA를 사용하면서 DB에 Collection이나 Object 형태로 값을 저장하는 json 컬럼을 종종 사용하곤 한다. 그러다 간혹 QueryDsl 에서 json 컬럼에 저장된 값의 내용에 따라 조건을 적용해 SQL문을 실행하고 싶은 경우가 있다."
 ---
 
 # QueryDsl에서 json 컬럼에 조건 적용하기

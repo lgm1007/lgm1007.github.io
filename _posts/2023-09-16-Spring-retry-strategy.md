@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title:  Spring Boot 에서의 재시도 수행 전략
 date:   2023-09-16 12:06:00 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image:  programming-8.png
 author: GyuMyung
 tags:   programming
 comments: true
+description: "Spring Boot 에서 예외 발생 시 메서드 재시도를 수행하는 전략은 애플리케이션에서 예외 처리를 개선하고 내결함성을 향상시키는 중요한 부분이다. <br/>"
 ---
 ## Spring Boot 에서의 재시도 수행 전략
 

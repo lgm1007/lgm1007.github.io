@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Optional을 조심히 사용해야 하는 이유
 date: 2024-02-07 21:13:01 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: language-3.jpg
 author: GyuMyung
 tags: language
 comments: true
+description: "어느 날, 같은 팀원분이 내가 Optional을 사용해서 작성한 코드를 보고 Optional을 사용할 때는 조심해서 사용해야 한다고 일러준 적이 있었다."
 ---
 
 # Optional을 조심히 사용해야 하는 이유

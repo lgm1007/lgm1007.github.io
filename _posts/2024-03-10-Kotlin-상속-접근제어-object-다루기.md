@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Kotlin - 5.상속, 접근제어, object 다루기
 date: 2024-03-10 13:13:33 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: language-kotlin.png
 author: GyuMyung
 tags: language
 comments: true
+description: "Animal이라는 추상클래스를 구현한 예제를 먼저 살펴보자. 자바로 먼저 살펴보면 다음과 같은 형태일 것이다. <br/>"
 ---
 # Kotlin 문법 배우기
 ### 코틀린에서 상속, 접근제어 및 object 다루기

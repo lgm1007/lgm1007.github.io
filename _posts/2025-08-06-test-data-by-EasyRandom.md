@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: EasyRandom으로 테스트 데이터 만들기
 date: 2025-08-06 09:21:50 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: programming-11.jpg
 author: GyuMyung
 tags: programming
 comments: true
+description: "테스트 코드를 작성할 때 흔히 겪는 불편함은 어떤 것들이 있을까?<br/><br/>"
 ---
 
 # EasyRandom으로 테스트용 데이터를 편하게 만들어보자

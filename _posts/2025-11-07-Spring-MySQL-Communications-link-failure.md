@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Spring Boot + MySQL SQLState 08S01 Communications link failure 에러
 date: 2025-11-07 11:47:07 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: troubleshooting-10.png
 author: GyuMyung
 tags: troubleshooting
 comments: true
+description: "- 쿼리가 오래 걸리거나, 결과가 크거나 네트워크가 느려 응답 스트림 수신이 오래 걸리는 경우"
 ---
 
 ### 이슈 내용

@@ -1,12 +1,14 @@
----
+﻿---
 layout:	post
 title: Github Actions로 브랜치에서 push하면 특정 브랜치에 자동 merge 하기
 date: 2024-07-05 21:48:02 +0900
-sitemap: 
+sitemap:
+  changefreq: weekly
 image: technology-7.jpg
 author: GyuMyung
 tags: technology
 comments: true
+description: "팀원들과 깃 브랜치 머지에 대해 이야기하다가 다음과 같은 주제에 대해 이야기를 한 적이 있다. <br/>"
 ---
 
 # Github Actions로 브랜치에서 push하면 특정 브랜치에 자동 merge 하기
