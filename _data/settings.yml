@@ -2,7 +2,7 @@
 # General Site Settings
 title: 규띵의 명한 기술블로그
 logo: logo.svg # You can add own logo.
-description: 이거 명하거든요...
+description: 백엔드 개발자 이규명의 기술 블로그입니다. Spring Boot, Java, Kotlin와 같은 백엔드 기술과 AI 활용 기술에 대한 경험과 학습 내용을 공유합니다.
 
 
 #-------------------------------
