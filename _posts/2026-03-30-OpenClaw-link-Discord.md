@@ -104,22 +104,76 @@ GUI에서 직접 오픈클로랑 채팅을 할 수도 있고, 채널 및 스킬 
 
 ![openclaw-discod-bot-response](https://i.imgur.com/v37Dt4R.png)
 
-## 이후 오픈클로 설정
+## (추가) 디스코드 오픈클로 봇 설정
+
+### 툴 권한 부여하기
 
 이후 오픈클로에게 다양한 프로그램 권한을 부여하고 명령을 내릴텐데, 오픈클로의 여러 설정들을 편집해야 하는 경우가 생길 것이다.  
 
 이럴 때는 `~/.openclaw` 경로 내에서 `openclaw.json` 설정 파일에서 다양한 설정들을 편집 & 재시작해줘야 한다.  
 
-예시로 디스코드 봇으로 깃허브 명령을 내리기 위해 `gh` 권한을 부여해야 하는데, 그 경우 `openclaw.json` 파일에서 `tools.elevated.enabled`를 true로 변경하고, `tools.elevated.allowFrom.discord` 설정에는 `["디스코드-메시지-발신자-유저-id-123"]` 와 같이 설정해야 한다.  
+예시로 디스코드 봇으로 깃허브 명령을 내리기 위해 `gh` 권한을 부여해야 하는데, 그 경우 `openclaw.json` 파일에서 `tools.elevated.enabled`를 true로 변경하고, `tools.elevated.allowFrom.discord` 설정에는 string array 형식으로 `["디스코드-메시지-발신자-유저-id-123"]` 와 같이 설정해야 한다.  
 
 ```json
 {
-  tools: {
-    elevated: {
-      enabled: true,
-      allowFrom: {
-        discord: ["sender-user-id-123"]
+  "tools": {
+    "elevated": {
+      "enabled": true,
+      "allowFrom": {
+        "discord": ["sender-discord-user-id-123"]
       },
+    },
+  },
+}
+```
+
+### 디스코드 서버의 모든 채널에서 오픈하기
+
+오픈클로 봇을 디스코드 서버의 모든 채널에서 오픈하려면 `openclaw.json` 설정 파일에서 `channels.discord.groupPolicy` 설정을 `open`으로 설정하면 된다.
+
+```json
+{
+  "channels": {
+    "discord": {
+      "groupPolicy": "open"
+    },
+  },
+}
+```
+
+### 디스코드 오픈클로 봇 실행 권한 전체 허용하기 (YOLO Mode)
+
+오픈클로 봇이 특정 명령을 실행할 때 일일이 허용할지 말지 확인하는 게 번거롭다면, 모든 실행에 대해 허용하는 방법도 있다. 마치 AI Agent의 YOLO Mode와 유사하다.
+
+단, 민감한 정보나 보안적으로 신경써야 하는 분야라 반드시 사람이 오픈클로가 수행하기 전에 확인해야 한다면 해당 설정은 하지 않는 것이 좋다.
+
+`openclaw.json` 설정 파일에서 `exec.ask` 설정을 `off`로 설정하면 된다.
+
+```json
+{
+  "exec": {
+    "host": "gateway",
+    "security": "allowlist",
+    "ask": "off"
+  },
+}
+```
+
+### 특정 디스코드 유저에게 디스코드 오픈클로 명령어 수행 권한 부여하기
+
+디스코드 내에서도 슬래쉬(`/`) 후 오픈클로 명령어를 실행할 수 있다. 단, 권한이 없는 사용자의 명령어는 오픈클로가 무시한다.
+
+특정 디스코드 사용자에게 오픈클로 명령어 수행 권한을 부여하기 위해서는 `openclaw.json` 설정에서 `commands.allowFrom.discord` 설정에 string array 형식으로 `["디스코드-유저-id-123"]` 와 같이 값을 입력하면 된다.
+
+```json
+{
+  "commands": {
+    "allowFrom": {
+      "discord": [
+        "discord-user-id-123",
+        "discord-user-id-456",
+        "discord-user-id-789"
+      ]
     },
   },
 }
