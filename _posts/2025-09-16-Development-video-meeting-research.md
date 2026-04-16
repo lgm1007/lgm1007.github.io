@@ -8,7 +8,6 @@ image: technology-19.png
 author: GyuMyung
 tags: technology
 comments: true
-description: "화상통화 서비스는 WebRTC 기술을 기반으로 동작한다.<br>"
 ---
 화상통화 서비스는 WebRTC 기술을 기반으로 동작한다.<br>
 화상통화 기능을 구현하기 위해서는 신호 교환 (Signaling), 세션 관리, TURN/STUN 서버 지원 부분이 필요하다.

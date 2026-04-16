@@ -8,7 +8,6 @@ image: conference-1.jpeg
 author: GyuMyung
 tags: conference
 comments: true
-description: "회사에서 단체 워크샵으로 코엑스에서 진행한 NextRise 2025 Seoul 박람회에 방문했다. NextRise는 벤처 및 스타트업 기업가, 엑셀러레이터, 벤처 투자사, 산업계 리더들이 네트워크를 형성하고, 인사이트를 공유하며 혁신을 선보이는 스타트업 박람회라고 소개"
 ---
 
 ### NextRise 2025 Seoul

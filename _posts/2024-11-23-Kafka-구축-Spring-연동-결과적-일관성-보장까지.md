@@ -8,7 +8,6 @@ image: technology-12.jpg
 author: GyuMyung
 tags: technology
 comments: true
-description: "카프카의 서버 구축부터 Spring Boot 와 카프카를 연동해보고, 더 나아가 카프카 메시지 발행의 결과적 일관성을 보장하는 방법까지 다뤄본다."
 ---
 
 ## 개요

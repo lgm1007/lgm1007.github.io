@@ -8,7 +8,6 @@ image: programming-5.jpg
 author: GyuMyung
 tags: programming
 comments: true
-description: "Spring Boot 애플리케이션을 개발할 때 간혹 애플리케이션이 시작되면서 특정 이벤트를 실행해야 하는 경우가 있다. Spring Boot에서 이러한 작업을 처리하는 2가지 방법을 소개하겠다."
 ---
 
 Spring Boot 애플리케이션을 개발할 때 간혹 애플리케이션이 시작되면서 특정 이벤트를 실행해야 하는 경우가 있다. Spring Boot에서 이러한 작업을 처리하는 2가지 방법을 소개하겠다.

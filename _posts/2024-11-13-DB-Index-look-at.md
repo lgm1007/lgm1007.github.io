@@ -8,7 +8,6 @@ image: technology-11.jpg
 author: GyuMyung
 tags: technology
 comments: true
-description: "인덱스란 테이블의 검색 속도를 향상시키기 위해 사용하는 자료구조로, 데이터와 데이터의 위치를 포함한 자료구조이다."
 ---
 
 ## 인덱스 톺아보기

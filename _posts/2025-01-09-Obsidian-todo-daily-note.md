@@ -8,7 +8,6 @@ image: worktool-1.png
 author: GyuMyung
 tags: worktool
 comments: true
-description: "옵시디언에서 기본적으로 제공하는 코어 플러그인 (Core plugins)에 데일리 노트가 있다. 옵시디언 설정에 들어가 코어 플러그인에서 데일리 노트를 활성화한다."
 ---
 
 # 옵시디언 데일리 투두리스트로 일감 관리하기

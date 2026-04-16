@@ -8,7 +8,6 @@ image: not_even_interface.jpg
 author: GyuMyung
 tags: architect
 comments: true
-description: "우리가 추상화를 사용하는 이유는 이를 의존하는 대상을 보호하기 위해 한다고 생각한다. 이 관점에서 볼 때 Service 인터페이스를 의존하는 Controller를 보호하는 느낌이 든다. 하지만 “Controller가 애플리케이션에서 보호해야 할 대상인가?” 라고 생각해"
 ---
 
 ## 사견) Service를 추상화하는 것은 좋은 구조는 아니라고 생각한다.

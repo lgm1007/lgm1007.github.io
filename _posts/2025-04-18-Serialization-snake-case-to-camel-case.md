@@ -8,7 +8,6 @@ image: troubleshooting-8.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
-description: "일반적으로 Java 또는 Kotlin 언어로 Spring 기반의 백엔드 작업을 하면, 객체의 필드를 카멜 케이스 (CamelCase)로 정의하는 것이 일반적이다. 그리고 만약 클라이언트 측에서 서버 측으로부터 전달받는 데이터를 스네이크 케이스 (SnakeCase)로 전"
 ---
 
 ### 일반적인 직렬화 케이스 변환 이슈 (CamelCase 👉 SnakeCase)

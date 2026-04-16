@@ -8,7 +8,6 @@ image:  design-pattern-3.png
 author: GyuMyung
 tags:   design-pattern
 comments: true
-description: "핵심 기능을 보조하기 위해 제공하는 기능"
 ---
 
 ## 템플릿 메서드 패턴 이해

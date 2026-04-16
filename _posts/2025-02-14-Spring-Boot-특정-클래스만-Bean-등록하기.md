@@ -8,7 +8,6 @@ image: programming-10.jpg
 author: GyuMyung
 tags: programming
 comments: true
-description: "회사에서 통합테스트 환경을 구축하는 과정에서 통합테스트 작성 시 선언해줘야 하는 어노테이션의 재사용성을 위해 하나의 커스텀 어노테이션을 생성하여 관리하고자 했다. 여기서 회사 프로젝트의 특성 상 테스트 환경에서는 특정 Bean만 등록해줘야해서  어노테이션의  속성을 사"
 ---
 
 # Spring Boot 테스트 코드에서 특정 클래스만 Bean 등록하기

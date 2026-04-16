@@ -8,7 +8,6 @@ image: technology-3.jpg
 author: GyuMyung
 tags: technology
 comments: true
-description: "개인 프로젝트를 개발하면서 이전에는 클라우드 서버에 Mysql과 같은 DBMS 환경을 구성한 후, 해당 서버에 연결해서 DB 환경을 구축하여 개발했다. 하지만 이렇게 구성하다보니 개발할 때마다 서버를 실행하고, 서버에 접속해서 DBMS를 ON하고 나서 개발하는 등 개발"
 ---
 
 # Spring Boot에 H2 database 연결하여 개발 환경 구축하기

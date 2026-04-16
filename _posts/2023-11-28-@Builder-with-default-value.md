@@ -8,7 +8,6 @@ image: troubleshooting-2.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
-description: "lombok에서 제공해주는  어노테이션은 생성자 인자를 메서드 체인으로 대입하여 생성자를 호출할 수 있게 빌더 클래스를 생성해준다."
 ---
 
 # lombok @Builder의 기본값 초기화 딜레마

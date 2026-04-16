@@ -8,7 +8,6 @@ image: technology-20.png
 author: GyuMyung
 tags: technology
 comments: true
-description: "Spring Boot 프로젝트를 운영하면서 API 명세서 문서를 RestDocs를 활용해 운영 중인데, OpenAPI Swagger 문서가 필요한 경우가 있다. 나의 경우에는 프론트엔드에서 OpenAPI Generator를 통해 API 스펙을 자동으로 만들어주기 위해서"
 ---
 
 Spring Boot 프로젝트를 운영하면서 API 명세서 문서를 RestDocs를 활용해 운영 중인데, OpenAPI Swagger 문서가 필요한 경우가 있다. 나의 경우에는 프론트엔드에서 OpenAPI Generator를 통해 API 스펙을 자동으로 만들어주기 위해서 Swagger 문서가 필요했다.

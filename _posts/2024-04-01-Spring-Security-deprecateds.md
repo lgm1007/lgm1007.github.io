@@ -8,7 +8,6 @@ image: troubleshooting-3.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
-description: "Spring Security 6.1.0 버전부터는 메서드 체이닝을 사용하는 방법은 지양하고 대신 람다식을 통해 함수형으로 사용하도록 변경되었다."
 ---
 
 # Spring Security 6.1.0 버전 이상에서의 메서드 체이닝 사용 지양 이슈

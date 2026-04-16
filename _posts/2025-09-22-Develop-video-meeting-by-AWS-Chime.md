@@ -8,7 +8,6 @@ image: technology-19.png
 author: GyuMyung
 tags: technology
 comments: true
-description: "AWS Chime SDK를 활용해 화상통화 서비스 중 화상통화방 참여 기능을 한번 구현해보자."
 ---
 AWS Chime SDK를 활용해 화상통화 서비스 중 화상통화방 참여 기능을 한번 구현해보자.
 

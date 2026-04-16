@@ -8,7 +8,6 @@ image:  design-pattern-2.jpg
 author: GyuMyung
 tags:   design-pattern
 comments: true
-description: "템플릿 콜백 패턴은 전략 패턴의 일종으로, 전략 패턴에서는 클라이언트가 전략 객체를 선택하고 호출하는 방식이지만, 템플릿 콜백 패턴에서는 특정 알고리즘(콜백)을 포함한 템플릿 메서드를 호출하고, 클라이언트가 필요한 콜백을 구현하여 전달하는 방식입니다. <br/>"
 ---
 ## 템플릿 콜백 패턴의 이해
 

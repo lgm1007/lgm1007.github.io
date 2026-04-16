@@ -8,7 +8,6 @@ image: programming-17.png
 author: GyuMyung
 tags: programming
 comments: true
-description: "개발한 NextJS 서비스를 Cloudflare Workers로 배포하는 과정을 정리한 포스팅이다."
 ---
 
 개발한 NextJS 서비스를 Cloudflare Workers로 배포하는 과정을 정리한 포스팅이다.

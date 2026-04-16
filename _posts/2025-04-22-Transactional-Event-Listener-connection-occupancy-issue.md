@@ -8,7 +8,6 @@ image: troubleshooting-4.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
-description: "TransactionalEvent 처리를 동기로 하는 경우 이벤트를 발행하는 쪽의 트랜잭션이 Connection을 계속 점유한다는 이슈를 알게 되어, 이에 대해 정리해보려 한다."
 ---
 
 ### 이슈 내용

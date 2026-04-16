@@ -8,7 +8,6 @@ image: technology-24.jpg
 author: GyuMyung
 tags: technology
 comments: true
-description: "실무에서 하네스 엔지니어링에 대해 고민하게 될 기회가 생겼다."
 ---
 
 ## 개요

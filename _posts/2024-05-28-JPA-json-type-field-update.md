@@ -8,7 +8,6 @@ image: programming-9.jpg
 author: GyuMyung
 tags: programming
 comments: true
-description: "실무에서 JPA를 사용하면서 엔티티의 json 필드의 특정 값을 업데이트하려고 하는데 정상적으로 동작하지 않았던 이슈를 소개하고, 이를 어떻게 해결했는지에 대해 다뤄보려 한다. <br/>"
 ---
 
 # JPA 값 타입 필드 업데이트를 원활히 하는 방법

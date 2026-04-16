@@ -8,7 +8,6 @@ image:  design-pattern-1.png
 author: GyuMyung
 tags:   design-pattern
 comments: true
-description: "비슷한 동작을 하지만 다르게 구현되어 있는 행위(전략)들을 공통의 인터페이스를 구현하는 각각의 클래스로 구현하고, 동적으로 바꿀 수 있도록 하는 패턴입니다. <br/>"
 ---
 ## 전략 패턴의 이해
 

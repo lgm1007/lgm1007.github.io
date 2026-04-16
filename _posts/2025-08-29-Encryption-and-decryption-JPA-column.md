@@ -8,7 +8,6 @@ image: programming-4.jpg
 author: GyuMyung
 tags: programming
 comments: true
-description: "패키지에는  라는 어노테이션이 있다. 해당 어노테이션을 활용하면 JPA에서 특정 컬럼에 대해 DB 테이블에 데이터를 저장할 때 내용을 암호화하고, DB에서 데이터를 조회해올 때는 내용을 복호화하여 조회해올 수 있다."
 ---
 
 `jakarta.persistance` 패키지에는 `@Convert` 라는 어노테이션이 있다. 해당 어노테이션을 활용하면 JPA에서 특정 컬럼에 대해 DB 테이블에 데이터를 저장할 때 내용을 암호화하고, DB에서 데이터를 조회해올 때는 내용을 복호화하여 조회해올 수 있다.

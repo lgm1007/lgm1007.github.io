@@ -8,7 +8,6 @@ image: infrastructure-3.png
 author: GyuMyung
 tags: infrastructure
 comments: true
-description: "캐싱 목적이나, 분산락, Pub/Sub 기능을 위해 Redis를 많이 사용하곤 한다. 그런데 다중 서버 환경에서 Redis를 사용해야 한다면 어떻게 설계해야 할까? 아마 EC2 같은 하나의 서버를 다중 서버 네트워크 망에서 개설하고, 해당 서버에서 Redis를 띄울 것"
 ---
 
 ## AWS ElastiCache

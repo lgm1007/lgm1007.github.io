@@ -8,7 +8,6 @@ image: technology-22.png
 author: GyuMyung
 tags: technology
 comments: true
-description: "Spring Data REST는 Spring Data 기반의 리포지토리를 자동으로 RESTful API로 노출시켜주는 프레임워크이다. 즉 별도의 Controller를 작성하지 않아도 엔티티에 대한 CRUD API를 자동으로 생성해주기 때문에, 빠르게 REST API를 "
 ---
 
 ## 개요

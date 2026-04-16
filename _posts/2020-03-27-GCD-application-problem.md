@@ -8,7 +8,6 @@ image:  algorithm-2.png
 author: GyuMyung
 tags:   algorithm
 comments: true
-description: "- 예를 들어 24, 15, 48 세 수의 최대공약수를 구한다고 가정한다면 먼저 최소값을 구해준다. (예제는 15)"
 ---
 
 # 최대공약수 응용 문제

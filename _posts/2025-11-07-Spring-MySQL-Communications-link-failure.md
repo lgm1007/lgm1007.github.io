@@ -8,7 +8,6 @@ image: troubleshooting-10.png
 author: GyuMyung
 tags: troubleshooting
 comments: true
-description: "- 쿼리가 오래 걸리거나, 결과가 크거나 네트워크가 느려 응답 스트림 수신이 오래 걸리는 경우"
 ---
 
 ### 이슈 내용

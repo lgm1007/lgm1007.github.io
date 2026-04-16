@@ -8,7 +8,6 @@ image: troubleshooting-9.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
-description: "Nginx 웹서버를 사용하는 환경에서 배포하고 있는 프론트엔드와 백엔드 서비스가 있다. 두 서비스에서의 Nginx 는 10m으로 설정되어 있다. 하지만 막상 10MB가 넘는 파일도 업로드가 될 때가 있다. 이러한 현상이 가능한 이유를 알아본다."
 ---
 
 ### 이슈 내용

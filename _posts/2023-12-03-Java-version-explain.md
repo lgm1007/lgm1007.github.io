@@ -8,7 +8,6 @@ image:  language-1.jpg
 author: GyuMyung
 tags:   language
 comments: true
-description: "1. Type Inference (타입 추론)"
 ---
 
 # 자바 버전 별 차이점

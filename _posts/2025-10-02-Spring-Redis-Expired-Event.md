@@ -8,7 +8,6 @@ image: technology-17.jpg
 author: GyuMyung
 tags: technology
 comments: true
-description: "일반적으로 Redis는 저장한 데이터의 TTL이 만료되어도 아무것도 알려주지 않는다. 하지만  (키 공간 알림) 설정을 키면  채널에서  이벤트를 발행한다."
 ---
 
 일반적으로 Redis는 저장한 데이터의 TTL이 만료되어도 아무것도 알려주지 않는다. 하지만 `Keyspace notifications` (키 공간 알림) 설정을 키면 `keyevent` 채널에서 `expired` 이벤트를 발행한다.

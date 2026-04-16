@@ -8,7 +8,6 @@ image: technology-23.png
 author: GyuMyung
 tags: technology
 comments: true
-description: "실무에서 한동안 뜨거운 감자였던 오픈클로를 맥미니에 구성하는 업무를 맞게 되었다."
 ---
 
 ## 개요

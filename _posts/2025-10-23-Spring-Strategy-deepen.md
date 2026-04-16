@@ -8,7 +8,6 @@ image: design-pattern-4.jpg
 author: GyuMyung
 tags: design-pattern
 comments: true
-description: "전략 패턴에 대한 내용은 해당 포스팅에서 확인할 수 있다."
 ---
 전략 패턴에 대한 내용은 [해당 포스팅](https://lgm1007.github.io/2023/08/01/Strategy-Pattern/)에서 확인할 수 있다.
 

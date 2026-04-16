@@ -8,7 +8,6 @@ image: troubleshooting-5.jpg
 author: GyuMyung
 tags: troubleshooting
 comments: true
-description: "MyBatis에는 조회 쿼리 결과가 여러 rows로 조회되는 데이터를 객체의 Collection 필드에 담을 수 있는 기능이 있다."
 ---
 
 ### 이슈 내용

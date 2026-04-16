@@ -8,7 +8,6 @@ image:  database-1.jpg
 author: GyuMyung
 tags:   database
 comments: true
-description: "데이터베이스에서 레코드 검색 시 인덱스를 활용하면 검색 속도를 향상시킬 수 있다."
 ---
 
 # DB 조회 성능 향상을 위한 방법

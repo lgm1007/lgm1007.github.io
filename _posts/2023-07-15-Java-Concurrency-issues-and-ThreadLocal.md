@@ -8,7 +8,6 @@ image:  language-2.jpg
 author: GyuMyung
 tags:   language
 comments: true
-description: "동시성 이슈 (Concurrency issues)는 다중 쓰레드 환경에서 발생하는 문제로, 여러 쓰레드가 공유된 자원에 동시에 접근할 때 예기치 않은 결과가 발생할 수 있다. 동시성 이슈는 아래 상황에서 발생할 수 있다."
 ---
 ## Java 동시성 이슈와 쓰레드 로컬 (ThreadLocal)
 

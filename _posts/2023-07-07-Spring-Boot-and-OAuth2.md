@@ -8,7 +8,6 @@ image:  reference-1.jpg
 author: GyuMyung
 tags:   reference
 comments: true
-description: "이 가이드는 OAuth 2.0과 Spring Boot을 사용하여 \"소셜 로그인\"으로 다양한 작업을 수행하는 샘플 앱을 구축하는 방법을 보여줍니다.<br/>"
 ---
 ## Spring Boot and OAuth2
 이 가이드는 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749)과 Spring Boot을 사용하여 "소셜 로그인"으로 다양한 작업을 수행하는 샘플 앱을 구축하는 방법을 보여줍니다.<br/>
