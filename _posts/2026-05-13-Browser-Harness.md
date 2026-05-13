@@ -4,7 +4,7 @@ title: 브라우저 하네스 macOS 환경설정
 date: 2026-05-13 21:12:07 +0900
 sitemap:
   changefreq: weekly
-image: technology-24.jpg
+image: technology-25.png
 author: GyuMyung
 tags: technology
 comments: true
