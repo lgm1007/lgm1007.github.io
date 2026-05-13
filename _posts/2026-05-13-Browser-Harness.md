@@ -16,7 +16,7 @@ comments: true
 
 `browser-harness`는 LLM(Claude 등 에이전트)이 Chrome DevTools Protocol(CDP)을 통해 실제 Chrome 브라우저를 직접 제어할 수 있도록 해 주는 경량 하네스 도구이다. 단일 WebSocket 연결로 에이전트가 직접 브라우저를 조작하며, 부족한 helper 함수를 실행 중에 스스로 작성·확장할 수 있는 "self-healing" 구조를 채택한다.
 
-이 문서는 macOS 환경에서 `browser-harness`를 설치하고 실제 브라우저 조작 테스트까지 수행하는 절차를 정리한다.
+본 포스팅에서는 macOS 환경에서 `browser-harness`를 설치하고 실제 브라우저 조작 테스트까지 수행하는 절차를 정리한다.
 
 - 공식 저장소: <https://github.com/browser-use/browser-harness>
 
@@ -109,7 +109,7 @@ browser-harness --setup
 
 ![Remote debugging allow](https://github.com/browser-use/browser-harness/blob/main/docs/setup-remote-debugging.png?raw=true)
 
-> 안내 창이 자동으로 뜨지 않을 경우, 주소창에 `chrome://inspect/#remote-debugging` 을 직접 입력하여 접속한 뒤 **Allow** 체크박스를 활성화한다.
+안내 창이 자동으로 뜨지 않을 경우, 주소창에 `chrome://inspect/#remote-debugging` 을 직접 입력하여 접속한 뒤 **Allow** 체크박스를 활성화한다.
 
 #### 연결 상태 점검
 
