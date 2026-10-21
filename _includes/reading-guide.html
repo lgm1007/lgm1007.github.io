@@ -1,0 +1,26 @@
+<section class="reading-guide container" aria-labelledby="reading-guide-title">
+  <div class="reading-guide__intro">
+    <h2 id="reading-guide-title">처음 오셨다면 이 글부터</h2>
+    <p>프로젝트에서 만난 문제와 구현 과정을 따라 읽을 수 있는 글을 골랐습니다.</p>
+  </div>
+  <div class="reading-guide__grid">
+    {% for item in site.data.reading.featured %}
+      {% assign featured_post = site.posts | where: 'slug', item.slug | first %}
+      {% if featured_post %}
+      <article class="reading-guide__card">
+        <p class="reading-guide__label">{{ item.label | escape }}</p>
+        <h3><a href="{{ featured_post.url | relative_url }}">{{ item.title | escape }}</a></h3>
+        <p>{{ item.description | escape }}</p>
+        <a class="reading-guide__link" href="{{ featured_post.url | relative_url }}" aria-label="{{ item.title | escape }} 글 읽기">글 읽기 <span aria-hidden="true">→</span></a>
+      </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <nav class="topic-links" aria-label="주제별 글 탐색">
+    {% for topic in site.data.reading.topics %}
+      {% assign topic_path = '/topics/' | append: topic.slug | append: '/' %}
+      <a href="{{ topic_path | relative_url }}">{{ topic.title | escape }}</a>
+    {% endfor %}
+  </nav>
+  <p class="reading-guide__archive"><a href="{{ '/blog.html' | relative_url }}">전체 글 목록 보기 →</a></p>
+</section>

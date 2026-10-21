@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="container content-hub">
+  <header class="content-hub__intro">
+    <p><a href="{{ '/blog.html' | relative_url }}">전체 글</a> / {{ page.title | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p>{{ page.description | escape }}</p>
+  </header>
+  {% assign topic_posts = site.posts | where_exp: 'post', 'post.tags contains page.topic' %}
+  <p>{{ topic_posts.size }}편 · 최신 글부터 표시합니다.</p>
+  <ul class="archive-list archive-list--descriptions">
+    {% for post in topic_posts %}
+    <li>
+      <div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        {% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+      </div>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+    </li>
+    {% endfor %}
+  </ul>
+  <nav class="topic-links" aria-label="다른 주제 탐색">
+    {% for topic in site.data.reading.topics %}
+      {% if topic.slug != page.topic %}
+        {% assign topic_path = '/topics/' | append: topic.slug | append: '/' %}
+        <a href="{{ topic_path | relative_url }}">{{ topic.title | escape }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</div>

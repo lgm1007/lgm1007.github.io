@@ -1,0 +1,94 @@
+{
+  "featured": [
+    {
+      "slug": "Kafka-구축-Spring-연동-결과적-일관성-보장까지",
+      "label": "메시지와 데이터의 일관성",
+      "title": "Kafka 연동부터 Transactional Outbox까지",
+      "description": "이커머스 실습 프로젝트를 따라가며 메시지 발행과 DB 트랜잭션이 어긋나는 문제, Outbox를 적용하는 과정을 읽습니다."
+    },
+    {
+      "slug": "use-Transactional-well",
+      "label": "트랜잭션 문제 분석",
+      "title": "같은 로직인데 데이터를 찾지 못한 이유",
+      "description": "실제 업무에서 만난 조회 문제를 출발점으로 트랜잭션 전파 수준과 데이터가 보이는 범위를 살펴봅니다."
+    },
+    {
+      "slug": "Create-OpenAPI-Swagger-by-RestDocs",
+      "label": "개발 과정 개선",
+      "title": "RestDocs 테스트를 OpenAPI 문서로 연결하기",
+      "description": "프론트엔드의 API 코드 생성에 필요한 OpenAPI 문서를 기존 RestDocs 테스트에서 만드는 설정과 예제를 다룹니다."
+    }
+  ],
+  "topics": [
+    {
+      "slug": "troubleshooting",
+      "title": "문제 해결",
+      "description": "오류 메시지와 발생 조건에서 출발해 원인과 해결 방법을 정리한 글입니다."
+    },
+    {
+      "slug": "technology",
+      "title": "백엔드 기술과 실습",
+      "description": "Spring, Kafka, Redis와 AI 도구의 동작 원리 및 적용 과정을 다룹니다."
+    },
+    {
+      "slug": "programming",
+      "title": "구현과 테스트",
+      "description": "애플리케이션 구현, 데이터 매핑, 테스트 및 배포 예제를 모았습니다."
+    },
+    {
+      "slug": "database",
+      "title": "데이터베이스",
+      "description": "쿼리와 잠금의 동작을 실행 조건과 함께 살펴봅니다."
+    },
+    {
+      "slug": "infrastructure",
+      "title": "인프라",
+      "description": "AWS 배포, 인증서와 캐시 서비스의 구성 과정을 정리합니다."
+    },
+    {
+      "slug": "architect",
+      "title": "아키텍처",
+      "description": "구조를 선택하는 이유와 프로젝트에 적용하는 방법을 다룹니다."
+    },
+    {
+      "slug": "design-pattern",
+      "title": "디자인 패턴",
+      "description": "변경되는 요구사항을 코드 구조로 다루는 패턴과 예제를 살펴봅니다."
+    },
+    {
+      "slug": "language",
+      "title": "Java와 Kotlin",
+      "description": "언어 문법과 런타임 특성을 코드 예제로 정리합니다."
+    },
+    {
+      "slug": "hanghae",
+      "title": "프로젝트 회고",
+      "description": "항해 플러스 과제에서 내린 결정, 구현 과정과 배운 점을 기록했습니다."
+    },
+    {
+      "slug": "book",
+      "title": "독서 노트",
+      "description": "디자인 패턴과 웹 성능에 관한 책을 읽으며 남긴 학습 기록입니다."
+    },
+    {
+      "slug": "reference",
+      "title": "인증과 참고 자료",
+      "description": "외부 문서를 바탕으로 개념을 검토하고 설정의 판단 기준을 정리한 글입니다."
+    },
+    {
+      "slug": "algorithm",
+      "title": "알고리즘",
+      "description": "알고리즘의 원리와 응용 문제 풀이를 정리합니다."
+    },
+    {
+      "slug": "worktool",
+      "title": "업무 도구",
+      "description": "기록과 일감 관리에 사용한 도구의 설정을 다룹니다."
+    },
+    {
+      "slug": "conference",
+      "title": "행사 기록",
+      "description": "개발과 산업 현장을 둘러보며 남긴 방문 기록입니다."
+    }
+  ]
+}

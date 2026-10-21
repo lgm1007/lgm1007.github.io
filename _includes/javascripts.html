@@ -15,4 +15,6 @@
 <script src="{{ site.baseurl }}/js/vendors/jquery.fitvids.js"></script>
 <script src="{{ site.baseurl }}/js/common.js"></script>
 <script src="{{ site.baseurl }}/js/theme-toggle.js"></script>
-<script src="{{ site.baseurl }}/js/tag.js"></script>
+{% if page.url == '/tag.html' %}
+<script src="{{ '/js/tag.js' | relative_url }}"></script>
+{% endif %}

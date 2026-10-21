@@ -6,7 +6,10 @@ layout: default
     <div class="row">
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
         <span class="post__date">
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%b %d, %Y'}}</time>
+          작성 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+          {% if page.last_modified_at %}
+            · 수정 <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%Y.%m.%d' }}</time>
+          {% endif %}
         </span>
 
         <h1 class="post-title">{{ page.title | escape }}</h1>
@@ -20,7 +23,7 @@ layout: default
           {% if page.tags.size >= 1 %}
           <div class="post__tags">
             {% for tag in page.tags %}
-              <a href="{{ site.baseurl }}/tag.html?tag={{ tag | downcase | replace: " ", "-" }}" class="post__tags-tag">{{ tag }}</a>
+              <a href="{{ site.baseurl }}/topics/{{ tag | downcase | replace: " ", "-" | uri_escape }}/" class="post__tags-tag">{{ tag }}</a>
             {% endfor %}
           </div>
           {% endif %}

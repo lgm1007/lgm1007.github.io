@@ -1,30 +1,41 @@
-// tag.html
+(function () {
+  var title = document.getElementById('tag_title');
+  if (!title) return;
 
-// URL 뒤 ? 이후 파라미터 값을 가져오는 함수
-function getParameterByName(name, url) {
-	if (!url) url = window.location.href;
-	name = name.replace(/[\[\]]/g, '\\$&');
-	let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-		results = regex.exec(url);
-	if (!results) return null;
-	if (!results[2]) return '';
-	return decodeURIComponent(results[2]);
-}
+  function normalizeTag(value) {
+    return value.trim().toLowerCase().replace(/\s+/g, '-');
+  }
 
-let tagValue = getParameterByName('tag');
-let tagArticles = document.getElementsByClassName('tag_article');
+  var selectedTag = new URLSearchParams(window.location.search).get('tag');
+  selectedTag = selectedTag ? normalizeTag(selectedTag) : '';
+  if (selectedTag) title.textContent = '주제: ' + selectedTag;
 
-// 태그 페이지 제목 내용 처리
-document.getElementById('tag_title').innerText = 'Tag: ' + tagValue.toUpperCase();
+  var articles = document.querySelectorAll('.tag_article');
+  var visibleCount = 0;
 
-for (const tagArticle of tagArticles) {
-	let articleTagBox = tagArticle.querySelector('.article-tags__box');
-	let articleTag = articleTagBox.querySelector('.article__tag');
+  articles.forEach(function (article) {
+    var tags = Array.from(article.querySelectorAll('.article__tag'));
+    var matches = !selectedTag || tags.some(function (tag) {
+      return normalizeTag(tag.textContent) === selectedTag;
+    });
 
-	// 현재 파라미터로 받아온 태그와 같지 않은 태그인 포스트는 보이지 않게 처리
-	if (articleTag.innerHTML != tagValue) {
-		tagArticle.style.display = 'none';
-	}
-}
+    article.hidden = !matches;
+    article.style.display = matches ? '' : 'none';
+    if (matches) visibleCount += 1;
+  });
 
-// /tag.html
+  if (!visibleCount) {
+    var container = document.querySelector('.tag_content_wrapper');
+    if (!container) return;
+
+    var message = document.createElement('p');
+    message.className = 'tag-empty';
+    message.textContent = '이 주제에 해당하는 글이 없습니다. ';
+
+    var archiveLink = document.createElement('a');
+    archiveLink.href = window.location.pathname;
+    archiveLink.textContent = '모든 주제의 글 보기';
+    message.appendChild(archiveLink);
+    container.appendChild(message);
+  }
+})();

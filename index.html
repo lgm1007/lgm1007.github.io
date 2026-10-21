@@ -3,11 +3,15 @@ layout: default
 ---
 {% include hero.html %}
 
+{% if paginator.page == 1 %}
+  {% include reading-guide.html %}
+{% endif %}
+
 <div class="container">
 	<div class="row">
 		<div class="col col-12">
 			{% if site.posts.size > 0 %}
-				<h4 class="lates-title">Latest Posts</h4>
+				<h2 class="lates-title">최근 글</h2>
 			{% endif %}
 		</div>
 	</div>

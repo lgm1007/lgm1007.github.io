@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
-
-{% include javascript-theme.html %}
+<html lang="{{ page.lang | default: site.lang | default: 'ko' }}">
 
 {% include head.html %}
 

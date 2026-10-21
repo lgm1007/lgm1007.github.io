@@ -2,9 +2,9 @@ $container-offset: 20px;
 
 .tag_article {
   margin-bottom: 40px;
-  width: 500px;
-  height: 500px;
-  display: inline-table;
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
 
   .tag_article_container {
     padding-left: $container-offset;
@@ -136,4 +136,14 @@ $container-offset: 20px;
 .tag_content_wrapper {
   max-width: 1600px;
   margin: 0 auto;
+
+  > .row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    > .row { grid-template-columns: 1fr; }
+  }
 }

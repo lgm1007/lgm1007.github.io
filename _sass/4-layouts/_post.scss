@@ -78,6 +78,7 @@
 }
 
 .post {
+  min-width: 0;
   margin: 80px auto;
 
   &.post-no-image {
@@ -243,3 +244,22 @@
     margin-bottom: 40px;
   }
 }
+
+.post__content,
+.page__content {
+  min-width: 0;
+  overflow-wrap: anywhere;
+
+  :not(pre) > code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+.post-title { overflow-wrap: anywhere; }

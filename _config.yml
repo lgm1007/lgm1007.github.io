@@ -6,13 +6,13 @@ title: "규띵의 명한 기술블로그"
 description: "백엔드 개발자 이규명의 기술 블로그입니다. Spring Boot, Java, Kotlin, Kafka, AWS 등 백엔드 기술에 대한 실무 경험과 학습 내용을 공유합니다."
 author: "Gyumyung Lee"
 lang: "ko"
+locale: "ko_KR"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 plugins:
   - jekyll-paginate
-  - jekyll/tagging
   - jekyll-seo-tag
 
 paginate: 10
@@ -29,11 +29,6 @@ defaults:
 include:
   - _pages
 
-
-# Tags
-tag_page_dir:         tag
-tag_page_layout:      tag_page
-tag_permalink_style:  pretty
 
 sass:
   sass_dir: _sass

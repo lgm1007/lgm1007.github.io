@@ -4,7 +4,7 @@ title: 개인정보처리방침 (Privacy Policy)
 permalink: /privacy-policy/
 ---
 
-**최종 수정일: 2026년 2월 19일**
+**최종 수정일: 2026년 10월 21일**
 
 본 개인정보처리방침은 **규띵의 명한 기술블로그**(이하 "본 사이트", https://lgm1007.github.io)에서 수집하는 정보와 그 사용 방법을 설명합니다. 본 사이트를 이용함으로써 본 방침에 동의하는 것으로 간주됩니다.
 
@@ -25,15 +25,12 @@ permalink: /privacy-policy/
 ## 2. 제3자 서비스
 
 ### 2.1 Google AdSense
-본 사이트는 **Google AdSense**를 통해 광고를 게재합니다. Google AdSense는 사용자의 관심사에 맞는 광고를 제공하기 위해 쿠키를 사용할 수 있습니다.
+본 사이트는 **Google AdSense**를 통한 광고를 도입할 예정이며 광고를 게재할 수 있습니다. Google AdSense는 사용자의 관심사에 맞는 광고를 제공하기 위해 쿠키를 사용할 수 있습니다.
 
 - Google은 사용자가 본 사이트 및 다른 웹사이트를 방문한 이력을 바탕으로 관심 기반 광고를 게재할 수 있습니다.
 - 사용자는 [Google 광고 설정](https://www.google.com/settings/ads)에서 관심 기반 광고를 비활성화할 수 있습니다.
 - Google의 쿠키 사용에 대한 자세한 내용은 [Google 개인정보 보호정책](https://policies.google.com/privacy)을 참조하십시오.
 - 제3자 광고 업체의 쿠키 사용을 거부하려면 [Network Advertising Initiative의 수신 거부 페이지](http://optout.networkadvertising.org/)를 방문하십시오.
-
-### 2.2 Disqus 댓글 시스템
-본 사이트는 **Disqus** 댓글 서비스를 사용합니다. Disqus를 통해 댓글을 작성할 경우, Disqus의 개인정보처리방침에 따라 정보가 수집됩니다. 자세한 내용은 [Disqus 개인정보 보호정책](https://disqus.com/privacy-policy/)을 참조하십시오.
 
 ---
 

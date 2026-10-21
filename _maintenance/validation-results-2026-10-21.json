@@ -1,0 +1,123 @@
+{
+  "checked_on": "2026-10-21",
+  "java": {
+    "java_version": "17.0.13",
+    "spring_boot": "3.5.0",
+    "spring_security": "6.5.0",
+    "compiled_classes": [
+      "OAuth SecurityConfig",
+      "CurrentUserController",
+      "Basic SecurityConfig",
+      "SecurityCheckController"
+    ],
+    "http_checks": [
+      {
+        "module": "basic",
+        "method": "GET",
+        "path": "/health",
+        "authenticated_basic": false,
+        "status": 200,
+        "body": "ok"
+      },
+      {
+        "module": "basic",
+        "method": "GET",
+        "path": "/public/hello",
+        "authenticated_basic": false,
+        "status": 200,
+        "body": "public"
+      },
+      {
+        "module": "basic",
+        "method": "GET",
+        "path": "/private/hello",
+        "authenticated_basic": false,
+        "status": 401
+      },
+      {
+        "module": "basic",
+        "method": "GET",
+        "path": "/private/hello",
+        "authenticated_basic": true,
+        "status": 200,
+        "body": "private"
+      },
+      {
+        "module": "basic",
+        "method": "POST",
+        "path": "/private/hello",
+        "authenticated_basic": true,
+        "status": 403
+      },
+      {
+        "module": "oauth",
+        "method": "GET",
+        "path": "/",
+        "authenticated_basic": false,
+        "status": 200
+      },
+      {
+        "module": "oauth",
+        "method": "GET",
+        "path": "/api/me",
+        "authenticated_basic": false,
+        "status": 302,
+        "redirect_origin_path": "http://127.0.0.1:18281/oauth2/authorization/github"
+      },
+      {
+        "module": "oauth",
+        "method": "GET",
+        "path": "/oauth2/authorization/github",
+        "authenticated_basic": false,
+        "status": 302,
+        "redirect_origin_path": "https://github.com/login/oauth/authorize",
+        "oauth_redirect_uri": [
+          "http://127.0.0.1:18281/login/oauth2/code/github"
+        ]
+      }
+    ],
+    "not_verified": [
+      "GitHub account login",
+      "OAuth token exchange",
+      "authenticated /api/me response"
+    ]
+  },
+  "mysql": {
+    "version": "8.4.11",
+    "isolation": "READ COMMITTED",
+    "checks": [
+      {
+        "name": "shared_lock_allows_other_shared_lock",
+        "passed": true,
+        "expected_stock": 10
+      },
+      {
+        "name": "shared_lock_blocks_update_until_commit",
+        "passed": true,
+        "stock_after_release": 9
+      },
+      {
+        "name": "exclusive_lock_allows_plain_select_under_read_committed",
+        "passed": true,
+        "expected_stock": 10
+      },
+      {
+        "name": "exclusive_lock_waiter_reads_latest_value_after_commit",
+        "passed": true,
+        "expected_stock": 9
+      }
+    ],
+    "observed_lock_waits": true,
+    "test_container_removed": true
+  },
+  "site": {
+    "rendered_html_pages_excluding_verification": 145,
+    "checked_internal_links": 3486,
+    "broken_internal_links": 0,
+    "rss_items": 20,
+    "sitemap_unique_urls": 144,
+    "static_topics": 14,
+    "disqus_scripts": 0,
+    "search_index_posts": 112
+  }
+}
