@@ -10,7 +10,7 @@ description: 백엔드 개발자 이규명의 기술 블로그입니다. Spring 
 author:
   name: Gyumyung Lee
   image: hero.jpg
-  say-hello: 백엔드 개발자 <strong>이규명</strong>의 기록
+  say-hello: 백엔드 개발자 <strong>이규명</strong>의 블로그
   bio: <strong>Spring Boot · Java · Kotlin</strong>을 사용하며 만난 문제와 배운 점을 정리합니다. 프로젝트의 설계와 문제 해결 과정, 코드로 확인하는 개념, 독서 노트를 함께 기록합니다.
 
 
